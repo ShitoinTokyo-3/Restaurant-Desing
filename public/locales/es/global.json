@@ -1,14 +1,14 @@
 {
     "navbar":{
         "Categorías":{
-            "Título":"Categorias"
+            "Título":"Categorias",
             "Categorías1":"Identidad de Marca",
             "Categorías2":"Publicidad",
             "Categorías3":"Embalaje y Etiquetas",
             "Categorías4":"Prendas y Mercancía",
             "Categorías5":"Redes Sociales",
             "Categorías6":"Videos"
-        } 
+        } ,
         "Servicios":{
             "Título":"Servicios",
             "Servicios1":"Diseño de papeleria",
@@ -18,7 +18,7 @@
         "Servicios5":"Generadores de escena",
         "Servicios6":"UX y UI",
         "Servicios7":"Diseño de posters",
-        "Servicio8":"Anuncios para periódico"
+        "Servicio8":"Anuncios para periódico",
         "Servicios9":"Infografías",
         "Servicios10":"Vallas publicitarias",
         "Servicios11":"Postales",
@@ -38,7 +38,7 @@
         "Servicios25":"Portadas para LinkedIn",
         "Servicios26":"Videos corporativos 15-60 segundos",
         "Servicios27":"Video comercial 15 segundos"
-        }
+        },
         "Ayuda":"Ayuda"
     },
     "underSlice":{
@@ -48,4 +48,5 @@
 "underSlice2":{
 "Title":"Las grandes marcas usan su identidad de marca para alcanzar el Éxito",
     "texto":"Logos, publicidad, redes sociales y mucho más..."
+}
 }
