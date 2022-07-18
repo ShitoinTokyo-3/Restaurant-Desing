@@ -1,3 +1,14 @@
 {
-    "navbar":  "Hola bebes"
+    "navbar":{
+        "Categories":"Categorias", 
+        "Services":{
+            "title":"Servicios",
+            "op1":"Branding"
+        }
+        "Help":"Ayuda"
+    },
+    "underSlice":{
+       "Title":"Leave the image of your business in our hands"
+        
+    }
 }
