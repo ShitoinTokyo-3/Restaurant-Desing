@@ -1,3 +1,50 @@
 {
-    "navbar":  "Hello babys"
+    "navbar":{
+        "Categories":{
+            "title":"Categories"
+            "Categories1":"Brand & Identity",
+            "Categories2":"Advertising",
+            "Categories3":"Packaging & Label",
+            "Categories4":"Clothing & Merchandise",
+            "Categories5":"Social Media",
+            "Categories6":"Videos"
+        } 
+        "Services":{
+            "title":"Services",
+            "service1":"Stationery design",
+        "service2":"Business card design",
+        "service3":"Logo Design",
+        "service4":"Product Mockups",
+        "service5":"Scene generators",
+        "service6":"UX and UI kits",
+        "service7":"Poster design",
+        "service8":"Infographic design",
+        "service9":"Billboard design",
+        "service10":"Postcard design",
+        "service11":"Print flyer design",
+        "service12":"Advertising design",
+        "service13":"Wrap film design",
+        "service14":"QR Codes",
+        "service15":"Packaging designs",
+        "service16":"Label design",
+        "service17":"T-shirt design",
+        "service18":"Custom mug or mug design",
+        "service19":"Hat and cap design",
+        "service20":"Apron design",
+        "service21":"Twitter header design",
+        "service22":"Facebook cover design",
+        "service23":"Social media page",
+        "service24":"LinkedIn cover design",
+        "service25":"Corporate video 15-60 seconds",
+        "service26":"Video commercial 15 seconds"
+        }
+        "Help":"Help"
+    },
+    "underSlice":{
+       "Title":"Leave the image of your business in our hands",
+        "text":"All packages include full ownership of the copyright of the final design"
+    },
+"underSlice2":{
+"Title":"Big brands use their identity to captivate success",
+    "texto":"Logos, brand identity, advertising and more..."
 }
