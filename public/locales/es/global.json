@@ -1,14 +1,51 @@
 {
     "navbar":{
-        "Categories":"Categorias", 
-        "Services":{
-            "title":"Servicios",
-            "op1":"Branding"
+        "Categorías":{
+            "Título":"Categorias"
+            "Categorías1":"Identidad de Marca",
+            "Categorías2":"Publicidad",
+            "Categorías3":"Embalaje y Etiquetas",
+            "Categorías4":"Prendas y Mercancía",
+            "Categorías5":"Redes Sociales",
+            "Categorías6":"Videos"
+        } 
+        "Servicios":{
+            "Título":"Servicios",
+            "Servicios1":"Diseño de papeleria",
+        "Servicios2":"Tarjetas de Presentación",
+        "Servicios3":"Logos",
+        "Servicios4":"Mockups de prodcutos",
+        "Servicios5":"Generadores de escena",
+        "Servicios6":"UX y UI",
+        "Servicios7":"Diseño de posters",
+        "Servicio8":"Anuncios para periódico"
+        "Servicios9":"Infografías",
+        "Servicios10":"Vallas publicitarias",
+        "Servicios11":"Postales",
+        "Servicios12":"Flyers para imprimir",
+        "Servicios13":"Diseño publicitario",
+        "Servicios14":"Película Envolvente",
+        "Servicios15":"Códigos QR",
+        "Servicios16":"Diseño de Empaques",
+        "Servicios17":"Diseño de Etiquetas",
+        "Servicios18":"Diseño de Camisetas",
+        "Servicios19":"Tazas personalizadas",
+        "Servicios20":"Diseño para Gorras",
+        "Servicios21":"Diseño para Delantales",
+        "Servicios22":"Encabezado para Twitter",
+        "Servicios23":"Portada para Facebook",
+        "Servicios24":"Página de Redes Sociales",
+        "Servicios25":"Portadas para LinkedIn",
+        "Servicios26":"Videos corporativos 15-60 segundos",
+        "Servicios27":"Video comercial 15 segundos"
         }
-        "Help":"Ayuda"
+        "Ayuda":"Ayuda"
     },
     "underSlice":{
-       "Title":"Leave the image of your business in our hands"
-        
-    }
+       "Title":"La imagen de tu negocio en nuestras manos",
+        "text":"Todos los paquetes incluyen la propiedad total de los derechos de autor del diseño final"
+    },
+"underSlice2":{
+"Title":"Las grandes marcas usan su identidad de marca para alcanzar el Éxito",
+    "texto":"Logos, publicidad, redes sociales y mucho más..."
 }
