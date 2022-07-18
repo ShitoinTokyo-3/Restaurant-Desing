@@ -1,0 +1,29 @@
+{
+    "kind": [
+        {
+            "name": "visual",
+            "id": 1
+        },
+        {
+            "name": "carta",
+            "id": 2
+        },
+        {
+            "name": "camisa",
+            "id": 3
+        },
+        {
+            "name": "pop-up",
+            "id": 4
+        },
+        {
+            "name": "kk",
+            "id": 5
+        },
+        {
+            "name": "jorge",
+            "id": 6
+        }
+    ]
+    
+}
