@@ -18,7 +18,7 @@ const CarouselImgContainer = ({ img, srcText }) => {
             >
                 <span className={s.embla__slide__img_text_span1}>{srcText?.title}</span>
                 <p>{srcText?.description}</p>
-                <span className={s.embla__slide__img_text_span2}>{t('See more designs')}</span>
+                <span className={s.embla__slide__img_text_span2}>{t('carouselLink')}</span>
             </div>
         </div>
     )
