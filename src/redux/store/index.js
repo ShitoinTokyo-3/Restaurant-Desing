@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import kindsReducer from "../features/mainKinds/index";
+import carousels from "../features/carouselMain/index";
 
 const store = configureStore({
     reducer: {
-        mainKinds: kindsReducer
+        carousels: carousels
     }
 })
 

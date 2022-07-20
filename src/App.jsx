@@ -1,22 +1,15 @@
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel/Carousel';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <Suspense fallback='Loading...'>
-      <div>
-        <Navbar />
-        <Carousel />
-        {/* <Routes>
+        <Routes>
             <Route path="/" element={<Home/>} />
-        </Routes> */}
-      </div>
+        </Routes>
     </Suspense>
   )
 }
-
-
 
 export default App

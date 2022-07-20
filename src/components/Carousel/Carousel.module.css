@@ -1,10 +1,152 @@
 .embla {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    position: relative;
-    flex: 0 0 100%;
-  }
+  position: relative;
+  background-color: transparent;
+  padding: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  padding-left: 10px;
+  min-width: 400px;
+  position: relative;
+}
+
+.embla__slide__inner {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.embla__slide__parallax {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel__img__container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.embla__slide__img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+.embla__slide__img_text{
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide__img_text:hover{
+  opacity: 0.9;
+}
+
+.embla__slide__img_text .embla__slide__img_text_span1{
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+
+.embla__slide__img_text .embla__slide__img_text_span2{
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 60px;
+}
+
+.embla__slide__img_text p{
+  font-size: 16px;
+}
+
+.embla__slide__img_text p, span{
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  fill: #1bcacd;
+  padding: 0;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+#embla__button__prev {
+  left: 27px;
+}
+
+#embla__button__next {
+  right: 27px;
+}
