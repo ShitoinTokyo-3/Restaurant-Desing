@@ -2,7 +2,7 @@ import s from '../../Carousel.module.css';
 import { useTranslation } from 'react-i18next';
 
 const CarouselImgContainer = ({ img, srcText }) => {
-    const { t } = useTranslation(['global']);
+    const { t } = useTranslation(['translation']);
 
     return (
         <div 

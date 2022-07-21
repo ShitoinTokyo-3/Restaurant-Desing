@@ -4,7 +4,7 @@ import { NavLink as Link } from "react-router-dom";
 export const NavbarContainer = styled.nav`
     width: 100%;
     height: 80px;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 99;
     box-shadow: 0px 10px 5px -6px rgba(122,122,122,1);

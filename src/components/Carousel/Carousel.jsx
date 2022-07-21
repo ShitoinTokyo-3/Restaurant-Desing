@@ -8,7 +8,7 @@ import s from './Carousel.module.css'
 
 const Carousel = ({ slides, media, carouselInfo }) => {
 
-    const { i18n } = useTranslation();
+    const { i18n } = useTranslation(['translation']);
     let lanCarouselInfo;
     if (i18n.language === 'en') lanCarouselInfo = carouselInfo.en;
     else if (i18n.language === 'es') lanCarouselInfo = carouselInfo.es;

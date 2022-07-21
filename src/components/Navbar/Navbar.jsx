@@ -3,13 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 
+import { FaBars, FaTimes } from "react-icons/fa";
+import { GoChevronDown } from "react-icons/go";
+
 import Logo from '../../assets/Logo/Logo_Restaurant_Design_Bar.png'
 import { ButtonGreen } from "../../styled-components/Buttons/Buttons.elements";
 import { removeSpaces } from "../../utilities/Strings/Strings";
-
-import { FaBars, FaTimes } from "react-icons/fa";
-import { BsChevronDown } from "react-icons/bs";
-import { GoChevronDown } from "react-icons/go";
 
 import {
   NavbarContainer,
@@ -36,8 +35,6 @@ const Navbar = () => {
   const handleCategoriesClick = () => {
     setCategoriesClick(!categoriesClick);
   }
-
-
 
   const { i18n } = useTranslation();
   const Categories = {
@@ -74,7 +71,7 @@ const Navbar = () => {
 
         <Menu click={click}>
 
-          <MenuItem onClick={handleClick}>
+          <MenuItem onClick={handleClick} key='0'>
               <SelectorDropdown 
                 type="text" 
                 placeholder="Categories" 
@@ -89,23 +86,23 @@ const Navbar = () => {
                   {lanCategories.map((item, index) => {
                     return (
                         <SelectorOptionsNav to={removeSpaces(Categories.en[index])}>
-                          <div>{item}</div>
+                          <div key={index}>{item}</div>
                         </SelectorOptionsNav>
                     )
                   })}
                 </SelectorOptions>
           </MenuItem>
 
-          <MenuItem onClick={handleClick}>
+          <MenuItem onClick={handleClick} key='1'>
             <MenuItemLink to='/services'>Services</MenuItemLink>
           </MenuItem>
 
-          <MenuItem onClick={handleClick}>
+          <MenuItem onClick={handleClick} key='2'>
             <MenuItemLink to='/help'>Help</MenuItemLink>
           </MenuItem> 
 
-          <MenuItem onClick={handleClick}>
-            <Link to='/'><ButtonGreen>NEED A DESING?</ButtonGreen></Link>
+          <MenuItem onClick={handleClick} key='3'>
+            <Link to='/'><ButtonGreen>NEED A DESIGN?</ButtonGreen></Link>
           </MenuItem>
         </Menu>
 
