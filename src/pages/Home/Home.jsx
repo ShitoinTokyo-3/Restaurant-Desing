@@ -1,9 +1,11 @@
+import Navbar from "../../components/Navbar/Navbar";
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
 
 const Home = () => {
     return (
         <div>
-            <HomeCarousel/>
+            <Navbar/>
+            {/* <HomeCarousel/> */}
         </div>
     )
 

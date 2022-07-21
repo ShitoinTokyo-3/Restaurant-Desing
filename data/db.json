@@ -96,6 +96,25 @@
                 "color": "#fff"
             }
         ]
+    },
+
+    "categories":{
+        "en":[
+            "Brand & Identity",
+            "Advertising",
+            "Packaging & Label",
+            "Clothing & Merchandise",
+            "Social Media",
+            "Videos"
+        ],
+        "es":[
+            "Identidad de Marca",
+            "Publicidad",
+            "Embalaje y Etiquetas",
+            "Prendas y Mercancía",
+            "Redes Sociales",
+            "Videos"
+        ]
     }
     
     
