@@ -18,11 +18,11 @@ const HomeCarousel = () => {
     , [dispatch]);
 
     return (
-        <div>
+        <>
             {mainCarouselInfo?.en?
             <Carousel slides={slides} media={mediaByIndex} carouselInfo={mainCarouselInfo}/>:
             ''}
-        </div>
+        </>
     )
 };
 
