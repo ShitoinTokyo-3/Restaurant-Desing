@@ -1,9 +1,11 @@
 import { setMainCarousel } from "../index";
 import axios from "axios";
 
-export const fechCarouselInfo = () => {
+const BACKEND_URL = 'http://localhost:3001';
+
+export const fechCarouselInfo = ( data ) => {
     return async (dispatch) => {
-        axios.get("http://localhost:8000/mainCarousel")
+        axios.post(`${BACKEND_URL}/categories/mainCarousel`, data )
             .then((res) => {
                 dispatch(setMainCarousel(res.data));
             })

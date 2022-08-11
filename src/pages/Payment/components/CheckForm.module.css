@@ -1,0 +1,38 @@
+.container{
+    width: 40%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 3rem;
+}
+
+
+.stripeElements{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.form_rowNumber span{
+    margin: 10px 0;
+}
+.form_row{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    margin: 20px 0;
+}
+.form_row input{
+    margin: 10px 0;
+}
+.form_element{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+

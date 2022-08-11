@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react'
 import CarouselNextButton from "./components/CarouselNextButton/CarouselNextButton";
 import CarouselPrevButton from "./components/CarouselPrevButton/CarouselPrevButton";
@@ -8,10 +8,10 @@ import s from './Carousel.module.css'
 
 const Carousel = ({ slides, media, carouselInfo }) => {
 
-    const { i18n } = useTranslation(['translation']);
-    let lanCarouselInfo;
-    if (i18n.language === 'en') lanCarouselInfo = carouselInfo.en;
-    else if (i18n.language === 'es') lanCarouselInfo = carouselInfo.es;
+    // const { i18n } = useTranslation(['translation']);
+    // let lanCarouselInfo;
+    // if (i18n.language === 'en') lanCarouselInfo = carouselInfo.en;
+    // else if (i18n.language === 'es') lanCarouselInfo = carouselInfo.es;
 
 
     const PARALLAX_FACTOR = 2;
@@ -79,10 +79,12 @@ const Carousel = ({ slides, media, carouselInfo }) => {
                                 className={s.embla__slide__parallax}
                                 style={{ transform: `translateX(${parallaxValues[index]}%)` }}
                             >
-                                <CarouselImgContainer
-                                    img={media(index)}
-                                    srcText={lanCarouselInfo[index]}
-                                />
+                                <Link to={`${carouselInfo[index].link}/${index}`}>
+                                    <CarouselImgContainer
+                                        img={media(index)}
+                                        srcText={carouselInfo[index]}
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import { mediaByIndex } from "../../utilities/mediaCarousel/media";
 import { fechCarouselInfo } from "../../../../redux/features/carouselMain/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const HomeCarousel = () => {
 
@@ -12,14 +13,17 @@ const HomeCarousel = () => {
     const dispatch = useDispatch();
     const mainCarouselInfo = useSelector(state => state.carousels.carouselMainInfo);
 
+    const { i18n } = useTranslation(['translation']);
+
+
     useEffect(() => {
-        dispatch(fechCarouselInfo());
+        dispatch(fechCarouselInfo({ lang: i18n.language }));
     }
     , [dispatch]);
 
     return (
         <>
-            {mainCarouselInfo?.en?
+            {mainCarouselInfo.length?
             <Carousel slides={slides} media={mediaByIndex} carouselInfo={mainCarouselInfo}/>:
             ''}
         </>

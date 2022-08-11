@@ -34,3 +34,43 @@ export const TextMain = styled.div`
         font-size: 1.5rem;
     }
 `;
+
+
+export const ContainerModalChildren = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    h1{
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: 'Montserrat', sans-serif;
+        align-self: start;
+    }
+
+    p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    img{
+        width: 100%;
+        vertical-align: top;
+        border-radius: 3px;
+    }
+`;
+
+export const ContainerModal2ChildrenRow = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+`;
+
+export const ContainerTextModal = styled.div`
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin-bottom: 15px;
+`;
