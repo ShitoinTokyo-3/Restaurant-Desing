@@ -67,10 +67,35 @@ export const ContainerModal2ChildrenRow = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const ContainerTextModal = styled.div`
     font-family: 'Roboto', sans-serif;
     width: 100%;
     margin-bottom: 15px;
+`;
+
+
+export const ContainerModalChildrenRegister = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: 'Montserrat', sans-serif;
+        align-self: start;
+    }
+    p {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 15px;
+        
+    }
 `;

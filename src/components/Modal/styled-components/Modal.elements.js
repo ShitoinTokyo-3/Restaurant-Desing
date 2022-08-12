@@ -6,13 +6,14 @@ export const Overlay = styled.div`
     position: fixed;
     top: 0; 
     left: 0;
-    background: rgba(0,0,0,.5);
-    padding: 40px;
+    background: transparent;
+    padding-left: 0;
+    margin-left: 0;
     z-index: 1000;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 `;
 
 
@@ -27,13 +28,12 @@ export const ContainerModal = styled.div`
     z-index: 2000;
 `;
 export const OverlayFake = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: fixed;
     top: 0; 
     left: 0;
-    background: translation;
-    padding: 40px;
+    background: rgba(0,0,0,.5);
     z-index: 1010;
 `;
 

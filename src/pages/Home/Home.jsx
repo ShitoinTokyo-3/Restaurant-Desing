@@ -11,9 +11,11 @@ import {
 } from "../../styled-components/Containers/Containers";
 //Components
 import Navbar from "../../components/Navbar/Navbar";
+import ModalLogin from "../../components/ModalLogin/ModalLogin";
+import ModalRegister from "../../components/ModalRegister/ModalRegister";
+//Components Home
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
 import HomeVideo from "./components/HomeVideo/HomeVideo";
-import HomeModalLogin from "./components/HomeModalLogin/HomeModalLogin";
 
 const Home = () => {
     const { t } = useTranslation(['translation']);
@@ -44,11 +46,17 @@ const Home = () => {
             </BigLetter>
             <HomeCarousel/>
 
-            <HomeModalLogin
+            <ModalLogin
                 open={modal}
                 functionUse={setModalFunction}
                 openModal={setModal}
-            />          
+            />
+            {/* <ModalRegister
+                open={modal}
+                functionUse={setModalFunction}
+                openModal={setModal}
+            /> */}
+
         </div>
     )
 

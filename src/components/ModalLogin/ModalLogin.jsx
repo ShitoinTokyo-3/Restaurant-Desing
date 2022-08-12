@@ -1,14 +1,14 @@
 //Components
-import FormUser from "../../../../components/FormUser/FormUser"
-import LoginFacebook from "../../../../components/LoginFacebook/LoginFacebook"
-import LoginGoogle from "../../../../components/LoginGoogle/LoginGoogle"
-import Modal from "../../../../components/Modal/Modal"
+import FormUser from "../FormUser/FormUser"
+import LoginFacebook from "../LoginFacebook/LoginFacebook"
+import LoginGoogle from "../LoginGoogle/LoginGoogle"
+import Modal from "../Modal/Modal"
 //Styled Components
-import { ContainerModal2ChildrenRow, ContainerModalChildren, ContainerTextModal } from "../../../../styled-components/Containers/Containers"
+import { ContainerModal2ChildrenRow, ContainerModalChildren, ContainerTextModal } from "../../styled-components/Containers/Containers"
 //Services
-import { signIn } from "../../../../services/Register and Login/sigIn"
+import { signIn } from "../../services/Register and Login/sigIn"
 
-const HomeModalLogin = ({ open, functionUse, openModal }) => {
+const ModalLogin = ({ open, functionUse, openModal }) => {
   return (
     <Modal
         open={open}
@@ -33,4 +33,4 @@ const HomeModalLogin = ({ open, functionUse, openModal }) => {
   )
 }
 
-export default HomeModalLogin
+export default ModalLogin

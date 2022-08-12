@@ -50,6 +50,8 @@ const ForgotPassword = () => {
         if (email.valid) {
             //TODO: Send email to user
             setModalFunction()
+        }else{
+            setEmail({ ...email, valid: false })
         }
     }
 

@@ -9,6 +9,11 @@ import { FormUsers, InputFormUsers } from "../../styled-components/Form and Inpu
 
 const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) => {
 
+    const firebaseErrors ={
+        'auth/user-not-found': 'User not found',
+        'auth/wrong-password': 'Wrong password',
+    }
+    const [errorFirebase, setErrorFirebase] = useState('');
 
 
     const [user, setUser] = useState({
@@ -28,7 +33,7 @@ const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) =
         setUser({ ...user, [name]: value })
 
         if(regularExpression[name].test(value)){
-            setUser({ ...user, [`valid${name}`]: true })
+            setUser({ ...user,[name]: value , [`valid${name}`]: true })
         }
     };
 
@@ -47,9 +52,26 @@ const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) =
             try {
                 await loginAndRegister(user.email, user.password);
                 openModal(false);
+                setUser({
+                    email: "",
+                    validemail: null,
+                    password: "",
+                    validpassword: null,
+                })
+                setErrorFirebase('');
             } catch (error) {
-                console.log(error);
+                if(firebaseErrors[error.code]) setErrorFirebase(firebaseErrors[error.code]);
+                else setErrorFirebase(error.code);
             }
+        }
+        if(!user.validemail && !user.validpassword){
+            setUser({ ...user, validemail: false, validpassword: false })
+        }
+        if(!user.validemail && user.validpassword){
+            setUser({ ...user, validemail: false })
+        }
+        if(!user.validpassword && user.validemail){
+            setUser({ ...user, validpassword: false })
         }
     }
 
@@ -84,6 +106,7 @@ const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) =
         {forgotPassword ? <ForgotPasswordComponent/> : ''}
     
         <ButtonLoginEmail type="submit">{textButton}</ButtonLoginEmail>
+        {errorFirebase && <ErrorInput registerButton={true} last={true}>{errorFirebase}</ErrorInput>}
     </FormUsers>
   )
 }

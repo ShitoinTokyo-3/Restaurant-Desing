@@ -33,6 +33,11 @@ export const ButtonMediaLogin = styled.button`
     &:hover {
         background-color: #f5f5f5;
     }
+
+    @media (max-width: 768px) {
+        margin: 0.5rem 0;
+        width: 211px;
+    }
 `;
 
 export const ButtonLoginEmail = styled.button`
@@ -45,6 +50,8 @@ export const ButtonLoginEmail = styled.button`
     background-color: #444EC3;
     padding: 0.6rem 0;
     cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
 
     &:hover {
         background-color: #363fa9;
