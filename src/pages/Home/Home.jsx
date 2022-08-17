@@ -25,9 +25,6 @@ const Home = () => {
     const setModalFunction = () => {
         setModal(false);
     }
-
-    const user = useSelector(state => state.user.userInfo);
-    console.log(user);
     return (
         <div>
             <Navbar modalOpen={modal} setModal={setModal} />
@@ -41,6 +38,7 @@ const Home = () => {
                     {t("underSlice2.title")}
                 </BolderLetter>
             </YellowContainer>
+
             <BigLetter>
                     {t("underSlice2.text")}
             </BigLetter>

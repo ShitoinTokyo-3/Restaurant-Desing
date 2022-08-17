@@ -53,6 +53,17 @@ export const ErrorInputs = styled.div`
     padding-left: 1rem;
 `;
 
+export const GoodMessage = styled.div`
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    color: #008f39;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding-left: 1rem;
+`;
+
 export const CheckboxForm = styled.div`
     position: relative;
     margin: 2px 0;

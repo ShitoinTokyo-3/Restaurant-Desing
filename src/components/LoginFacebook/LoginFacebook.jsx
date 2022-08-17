@@ -2,13 +2,13 @@ import { LoginWithFacebookService } from "../../services/Register and Login/Logi
 import { SiFacebook } from "react-icons/si";
 import { ButtonMediaLogin } from "../../styled-components/Buttons/Buttons.elements";
 
-const LoginFacebook = ({ openModal }) => {
+const LoginFacebook = ({ openModal, errorHandle }) => {
     const handleFacebookLogin = async () => {
         try {
             const user = await LoginWithFacebookService()
             openModal(false);
         } catch (error) {
-            console.log(error);
+            errorHandle(error.code);
         }
             
     }

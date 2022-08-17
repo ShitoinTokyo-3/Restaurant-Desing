@@ -10,17 +10,27 @@ import ErrorInput from "../../components/ErrorInput/ErrorInput"
 import { FormUsers, InputFormUsers } from "../../styled-components/Form and Inputs/FormAndInputs"
 //Pages
 import Home from "../Home/Home"
-//Icons
+//Services
+import { recoverPassword } from "../../services/Register and Login/recoverPassword"
+import GoodMesage from "../../components/GoodMessage/GoodMesage"
 
 const ForgotPassword = () => {
 
+    const errorsFirebase = {
+        'auth/user-not-found': 'User not found',
+    }
+
+    const [firebaseError, setFirebaseError] = useState('')
     const [navi, setNavi] = useState(false)
     const [email, setEmail] = useState({
         value: "",
         valid: null,
     })
+    const [goodMessage, setGoodMessage] = useState(false)
 
-    const regularExpression = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    const regularExpression ={ 
+        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+    }
 
     const setModalFunction = () =>{
         setNavi(true)
@@ -33,23 +43,29 @@ const ForgotPassword = () => {
     const handleChangeInput = ({target: { value }}) => {
         setEmail({ ...email, value: value })
 
-        if(regularExpression.test(value)){
-            setEmail({ ...email, valid: true })
+        if(regularExpression['email'].test(value)){
+            setEmail({ ...email, value: value, valid: true })
         }
     }
     const handleInputBlur = (e) => {
-        if (regularExpression.test(email.value)) {
+        if (regularExpression['email'].test(email.value)) {
             setEmail({ ...email, valid: true })
         } else {
             setEmail({ ...email, valid: false })
         }
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (email.valid) {
-            //TODO: Send email to user
-            setModalFunction()
+            try {
+                await recoverPassword(email.value)
+                setGoodMessage(true)
+                setFirebaseError('')
+            } catch (error) {
+                if(errorsFirebase[error.code]) setFirebaseError(errorsFirebase[error.code])
+                else setFirebaseError(error.code)
+            }
         }else{
             setEmail({ ...email, valid: false })
         }
@@ -58,7 +74,6 @@ const ForgotPassword = () => {
 
   return (
     <>
-        <Home/>
         <Modal
             open={true}
             functionUse={setModalFunction}
@@ -76,6 +91,8 @@ const ForgotPassword = () => {
                     />
                     {email.valid === false && <ErrorInput>Please enter a valid email</ErrorInput>}  
                     <ButtonLoginEmail type="submit">Send</ButtonLoginEmail>
+                    {firebaseError  && <ErrorInput registerButton={true} last={true}>{firebaseError}</ErrorInput>}
+                    {goodMessage && <GoodMesage registerButton={true} last={true}>We sent you an email with a link to reset your password. Please also check your span</GoodMesage>}
                 </FormUsers>
             </ContainerModalChildren>
             

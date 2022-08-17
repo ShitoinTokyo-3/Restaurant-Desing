@@ -8,6 +8,11 @@ export const NavbarContainer = styled.nav`
     top: 0;
     z-index: 99;
     box-shadow: 0px 10px 5px -6px rgba(122,122,122,1);
+    @media screen and (max-width: 968px) {
+        width: 100%;
+
+    }
+
 `;
 
 export const NavbarWrapper = styled.div`
@@ -19,6 +24,7 @@ export const NavbarWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 `;
 
 export const IconLogo = styled.div`
@@ -38,8 +44,8 @@ export const Menu = styled.ul`
 
     @media screen and (max-width: 968px) {
         width: 100%;
-        height: 98vh;
-        position: absolute;
+        height:100vh;
+        position: fixed;
         top: 68px;
         left: ${({click}) => click ? 0 : "-100%" };	
         flex-direction: column;
@@ -97,40 +103,21 @@ export const SelectorDropdown = styled.input`
     }
 `;
 
-export const SelectorOptions = styled.div`
-    position: absolute;
-    top: 60px;
-    left: -40px;
-    width: 150px;
-    background: #fff;
-    border-shadow: 0px 30px 30px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 199;
-    transition: all 0.5s ease-in-out;
-    display: ${({click}) => click ? "block" : "none" };
 
-    div{
-        padding: 12px 15px;
-        cursor: pointer;
-        border-bottom: 1px solid #e6e6e6;
-
-        &:hover{
-            background: #62baea;
-            color: #fff;
-        }
+export const UserNavbar  = styled.div`
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
-`;
 
-export const SelectorOptionsNav = styled(Link)`
-    text-decoration: none;
-    color: #555;
-    font-size: 0.9rem;
-
-    &:focus, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
-    &:hover {
-        color: #fff;
+    span{
+        font-size: 0.9rem;
+        color: #555;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
     }
 `;
