@@ -4,9 +4,9 @@ import LoginGoogle from "../LoginGoogle/LoginGoogle"
 import Modal from "../Modal/Modal"
 import FormUserRegister from "../FormUserRegister/FormUserRegister"
 //Styled Components
-import { ContainerModal2ChildrenRow, ContainerModalChildrenRegister, ContainerTextModal } from "../../styled-components/Containers/Containers"
+import { ContainerModal2ChildrenRow, ContainerModalChildrenRegister } from "../../styled-components/Containers/Containers"
 //Services
-import { sigUp } from "../../services/RegisterandLogin/SignUp"
+import { sigUp } from "../../services/RegisterandLogin/signUp"
 
 const ModalRegister = ({ open, functionUse, openModal }) => {
 
