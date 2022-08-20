@@ -7,7 +7,6 @@ const LoginGoogle = ({ openModal, errorHandle }) => {
     const handleGoogleLogin = async () => {
         try {
             const user = await LoginWithGoogleService()
-            console.log(user)
             openModal(false);
         } catch (error) {
             errorHandle(error.code);

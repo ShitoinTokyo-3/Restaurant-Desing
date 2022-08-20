@@ -9,7 +9,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 //Assets
 import Logo from '../../assets/Logo/Logo_Restaurant_Design_Bar.png'
 //Styled Components
-import { ButtonYellowLogin } from "../../styled-components/Buttons/Buttons.elements";
+import { ButtonLogin } from "../../styled-components/Buttons/Buttons.elements";
 import {
   NavbarContainer,
   NavbarWrapper,
@@ -23,12 +23,18 @@ import {
 //Services
 import { signOutService } from "../../services/Register and Login/logout";
 
-const Navbar = ({ setModal, modalOpen }) => {
+const Navbar = ({ setModal, modalOpen}) => {
 
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
     setClick(!click);
+    if(!click){
+      const x = window.scrollX;
+      const y = window.scrollY;
+      window.onscroll = function(){ window.scrollTo(x, y) };
+    }else window.onscroll = null;
+
   }
   const user = useSelector(state => state.user.userInfo);
 
@@ -51,33 +57,39 @@ const Navbar = ({ setModal, modalOpen }) => {
 
         <Menu click={click}>
 
-          <MenuItem onClick={handleClick} key='1'>
-            <MenuItemLink to='/services'>Services</MenuItemLink>
+          <MenuItem onClick={handleClick} key='22'>
+            Upcoming Services
           </MenuItem>
 
-          <MenuItem onClick={handleClick} key='2'>
+          <MenuItem onClick={handleClick} key='33'>
             <MenuItemLink to='/about'>About</MenuItemLink>
           </MenuItem>
 
-          <MenuItem onClick={handleClick} key='3'>
-            <MenuItemLink to='/blog'>Blog</MenuItemLink>
-          </MenuItem>
-
-          <MenuItem onClick={handleClick} key='4'>
+          <MenuItem onClick={handleClick} key='44'>
             <MenuItemLink to='/help'>Help</MenuItemLink>
           </MenuItem>
 
           {user?.email? (
-            <MenuItem onClick={handleClick} key='5'>
+            <MenuItem onClick={handleClick} key='55'>
               <UserNavbar >
-                <img referrerPolicy="no-referrer" src= {user.photoURL} alt=""/>
-                <span>{user.displayName? user.displayName.split(' ')[0] : user.email.split('@')[0]}</span>
-                <a href='http://localhost:5173/'><ButtonYellowLogin onClick={handleLogout}>Log out</ButtonYellowLogin></a>
+              
+              {user.photoURL ?
+                <img referrerPolicy="no-referrer" src= {user.photoURL} alt=""/> :
+                <img referrerPolicy="no-referrer" src= 'https://graph.facebook.com/110674471745137/picture' alt=""/>}
+                
+                <span>
+                  {user.displayName? 
+                    user.displayName.split(' ')[0] : 
+                    user.email.split('@')[0].replace(/[0-9]+/g,'')}
+                </span>
+                <a href='http://localhost:5173/'><ButtonLogin onClick={handleLogout}>Log out</ButtonLogin></a>
               </UserNavbar>
             </MenuItem>):(
-            <MenuItem onClick={handleClick} key='5'>
-              <ButtonYellowLogin onClick={()=>setModal(!modalOpen)}>Log in</ButtonYellowLogin>
-            </MenuItem>)}
+              <>
+                <MenuItem onClick={handleClick} key='66'>
+                  <ButtonLogin onClick={()=>setModal(!modalOpen)}>Log in</ButtonLogin>
+                </MenuItem>
+              </>)}
 
         </Menu>
 

@@ -113,7 +113,7 @@ const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassw
             <InputFormUsers 
                 type="text"
                 name="name"
-                placeholder="Your email"
+                placeholder="Your name"
                 onChange={handleChange}
                 onBlur={handleBlurInput}
                 style={user.validname === false ? 

@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
-export const ButtonYellowLogin = styled.button`
-    background-color: #FAC710;
+export const ButtonLogin = styled.button`
+    background-color: #5627AE;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        background-color: #ddae04;
+        transform: translateY(-1px);
+        background-color: #441f8b;
         color: #fff;
     }
 `;

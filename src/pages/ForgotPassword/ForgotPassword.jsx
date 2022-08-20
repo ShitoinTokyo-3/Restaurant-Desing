@@ -92,7 +92,7 @@ const ForgotPassword = () => {
                     {email.valid === false && <ErrorInput>Please enter a valid email</ErrorInput>}  
                     <ButtonLoginEmail type="submit">Send</ButtonLoginEmail>
                     {firebaseError  && <ErrorInput registerButton={true} last={true}>{firebaseError}</ErrorInput>}
-                    {goodMessage && <GoodMesage registerButton={true} last={true}>We sent you an email with a link to reset your password. Please also check your span</GoodMesage>}
+                    {goodMessage && <GoodMesage registerButton={true} last={true}>We sent you an email with a link to reset your password. Please also check your spam</GoodMesage>}
                 </FormUsers>
             </ContainerModalChildren>
             

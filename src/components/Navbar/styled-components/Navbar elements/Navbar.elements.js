@@ -7,7 +7,7 @@ export const NavbarContainer = styled.nav`
     position: relative;
     top: 0;
     z-index: 99;
-    box-shadow: 0px 10px 5px -6px rgba(122,122,122,1);
+    box-shadow: 0px 13px 30px -10px rgba(0,0,0,0.58);
     @media screen and (max-width: 968px) {
         width: 100%;
 
@@ -74,7 +74,7 @@ export const MenuItem = styled.li`
 `;
 export const MenuItemLink = styled(Link)` 
     text-decoration: none;
-    color: #555;
+    color: #000;
     cursor: pointer;
 `;
 

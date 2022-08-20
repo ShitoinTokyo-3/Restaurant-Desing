@@ -7,15 +7,17 @@ import {
     BigLetter,
     BolderLetter,
     TextMain,
-    YellowContainer
+    GrayContainer
 } from "../../styled-components/Containers/Containers";
 //Components
 import Navbar from "../../components/Navbar/Navbar";
 import ModalLogin from "../../components/ModalLogin/ModalLogin";
-import ModalRegister from "../../components/ModalRegister/ModalRegister";
 //Components Home
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
-import HomeVideo from "./components/HomeVideo/HomeVideo";
+import HomeBanner from "./components/HomeBanner/HomeBanner";
+import HomeChef from "./components/HomeChef/HomeChef";
+import HomeSteps from "./components/HomeSteps/HomeSteps";
+import HomeForm from "./components/HomeForm/HomeForm";
 
 const Home = () => {
     const { t } = useTranslation(['translation']);
@@ -25,35 +27,40 @@ const Home = () => {
     const setModalFunction = () => {
         setModal(false);
     }
+
+
+
     return (
         <div>
-            <Navbar modalOpen={modal} setModal={setModal} />
-            <HomeVideo/>
+            <Navbar modalOpen={modal} setModal={setModal}/>
+            <HomeBanner/>
             <TextMain>
                 <h3>{t('underSlice.Title')}</h3>
                 <p>{t('underSlice.text')}</p>
             </TextMain>
-            <YellowContainer>
+            <GrayContainer>
                 <BolderLetter>
                     {t("underSlice2.title")}
                 </BolderLetter>
-            </YellowContainer>
-
+            </GrayContainer>
             <BigLetter>
                     {t("underSlice2.text")}
             </BigLetter>
             <HomeCarousel/>
+            <HomeChef/>
+            <GrayContainer>
+                <BolderLetter>
+                    That's how easy it will be to place your order!
+                </BolderLetter>
+            </GrayContainer>
+            <HomeSteps/>
+            <HomeForm/>
 
             <ModalLogin
                 open={modal}
                 functionUse={setModalFunction}
                 openModal={setModal}
             />
-            {/* <ModalRegister
-                open={modal}
-                functionUse={setModalFunction}
-                openModal={setModal}
-            /> */}
 
         </div>
     )

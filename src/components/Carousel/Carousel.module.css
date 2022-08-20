@@ -4,6 +4,8 @@
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
+
+
 }
 
 .embla__viewport {
@@ -152,18 +154,17 @@
 }
 
 @media screen and (max-width: 768px) {
-  .embla {
-    transform: scale(0.8);
-    width: 100%;
-  }
+
   .embla__container{
     margin-left: 0;
   }
+
+
   .embla__button{
     display: none;
   }
   .carousel__img__container{
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
 }
   

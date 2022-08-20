@@ -10,10 +10,11 @@ import { GrFormClose } from 'react-icons/gr';
 import { BiArrowBack } from 'react-icons/bi';
 
 const Modal = ({children, open, functionUse, back }) => {
+
+    const display = open ? 'flex' : 'none';
   return (
     <>
-    {open && 
-        <Overlay >
+        <Overlay style={{display:display}}>
             <OverlayFake onClick={functionUse}/>
             <ContainerModal >
                 <EncabezadoModal>
@@ -34,7 +35,6 @@ const Modal = ({children, open, functionUse, back }) => {
                 </ModalChildrens>
             </ContainerModal>
         </Overlay>
-    }
     </>
     )
 }

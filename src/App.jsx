@@ -9,8 +9,8 @@ import { auth } from './firebase.config';
 //Pages
 import Home from './pages/Home/Home';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import Payment from './pages/Payment/Payment';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import SignUp from './pages/SignUp/SignUp';
 //CSS
 import './App.css';
 
@@ -29,7 +29,7 @@ function App() {
     <Suspense fallback='Loading...'>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/payment/:id" element={<Payment/>} />
+            <Route path="/signup" element={<SignUp/>} />
             <Route path="/forgot-password" element={<ForgotPassword/>} />
             <Route path="*" element={<NotFoundPage/>} />
         </Routes>

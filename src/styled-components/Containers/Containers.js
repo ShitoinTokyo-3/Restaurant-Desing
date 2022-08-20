@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 
-export const YellowContainer = styled.div`
-    background-color: #FAC710;
+export const GrayContainer = styled.div`
+    background-color: #E6E6E6;
     padding: 40px;
+    text-align: center;
+    
+
 `;
 
 export const BolderLetter = styled.p`
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 2.2rem;
