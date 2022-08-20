@@ -1,4 +1,4 @@
-import { LoginWithFacebookService } from "../../services/Register and Login/LoginWithFacebook";
+import { LoginWithFacebookService } from "../../services/RegisterandLogin/LoginWithFacebook";
 import { SiFacebook } from "react-icons/si";
 import { ButtonMediaLogin } from "../../styled-components/Buttons/Buttons.elements";
 

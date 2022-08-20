@@ -6,7 +6,7 @@ import FormUserRegister from "../FormUserRegister/FormUserRegister"
 //Styled Components
 import { ContainerModal2ChildrenRow, ContainerModalChildrenRegister, ContainerTextModal } from "../../styled-components/Containers/Containers"
 //Services
-import { sigUp } from "../../services/Register and Login/SignUp"
+import { sigUp } from "../../services/RegisterandLogin/SignUp"
 
 const ModalRegister = ({ open, functionUse, openModal }) => {
 

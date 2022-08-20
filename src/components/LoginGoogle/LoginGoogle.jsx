@@ -1,4 +1,4 @@
-import { LoginWithGoogleService } from "../../services/Register and Login/LoginWithGoogle"
+import { LoginWithGoogleService } from "../../services/RegisterandLogin/LoginWithGoogle"
 import { ButtonMediaLogin } from "../../styled-components/Buttons/Buttons.elements";
 import {FcGoogle} from "react-icons/fc";
 
