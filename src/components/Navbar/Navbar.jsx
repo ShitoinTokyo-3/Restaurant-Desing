@@ -21,7 +21,7 @@ import {
   UserNavbar,
 } from "./styled-components/Navbar elements/Navbar.elements";
 //Services
-import { signOutService } from "../../services/Register and Login/logout";
+import { signOutService } from "../../services/RegisterandLogin/logout";
 
 const Navbar = ({ setModal, modalOpen}) => {
 

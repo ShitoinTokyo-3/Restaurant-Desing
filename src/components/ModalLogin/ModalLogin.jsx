@@ -9,7 +9,7 @@ import ErrorInput from "../ErrorInput/ErrorInput"
 //Styled Components
 import { ContainerModal2ChildrenRow, ContainerModalChildren, ContainerTextModal } from "../../styled-components/Containers/Containers"
 //Services
-import { signIn } from "../../services/Register and Login/sigIn"
+import { signIn } from "../../services/RegisterandLogin/sigIn"
 import { TextLink } from "./styled-components/Text.element"
 import { NavLink } from "react-router-dom"
 
