@@ -11,7 +11,7 @@ import { FormUsers, InputFormUsers } from "../../styled-components/Form and Inpu
 //Pages
 import Home from "../Home/Home"
 //Services
-import { recoverPassword } from "../../services/Register and Login/recoverPassword"
+import { recoverPassword } from "../../services/RegisterandLogin/recoverPassword"
 import GoodMesage from "../../components/GoodMessage/GoodMesage"
 
 const ForgotPassword = () => {
