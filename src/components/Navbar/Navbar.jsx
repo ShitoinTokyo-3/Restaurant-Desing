@@ -29,12 +29,16 @@ const Navbar = ({ setModal, modalOpen}) => {
 
   const handleClick = () => {
     setClick(!click);
+
     if(!click){
       const x = window.scrollX;
       const y = window.scrollY;
       window.onscroll = function(){ window.scrollTo(x, y) };
     }else window.onscroll = null;
 
+  }
+  const handleCLickNavItem = () => {
+    setClick(false);
   }
   const user = useSelector(state => state.user.userInfo);
 
@@ -57,20 +61,20 @@ const Navbar = ({ setModal, modalOpen}) => {
 
         <Menu click={click}>
 
-          <MenuItem onClick={handleClick} key='22'>
+          <MenuItem onClick={handleCLickNavItem} key='22'>
             Upcoming Services
           </MenuItem>
 
-          <MenuItem onClick={handleClick} key='33'>
+          <MenuItem onClick={handleCLickNavItem} key='33'>
             <MenuItemLink to='/about'>About</MenuItemLink>
           </MenuItem>
 
-          <MenuItem onClick={handleClick} key='44'>
+          <MenuItem onClick={handleCLickNavItem} key='44'>
             <MenuItemLink to='/help'>Help</MenuItemLink>
           </MenuItem>
 
           {user?.email? (
-            <MenuItem onClick={handleClick} key='55'>
+            <MenuItem onClick={handleCLickNavItem} key='55'>
               <UserNavbar >
               
               {user.photoURL ?
@@ -86,7 +90,7 @@ const Navbar = ({ setModal, modalOpen}) => {
               </UserNavbar>
             </MenuItem>):(
               <>
-                <MenuItem onClick={handleClick} key='66'>
+                <MenuItem onClick={handleCLickNavItem} key='66'>
                   <ButtonLogin onClick={()=>setModal(!modalOpen)}>Log in</ButtonLogin>
                 </MenuItem>
               </>)}
