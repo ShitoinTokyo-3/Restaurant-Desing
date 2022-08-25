@@ -2,10 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
+/* News Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+
 *{
     box-sizing: 0;
     padding: 0;
     margin: 0;
+}
 
-    
+:root{
+    /* Fuentes */
+    --Font-Family-Titles: 'Figtree', sans-serif;
+    --Font-Family-Title-Bold: 'Figtree', sans-serif;
+    --Font-Family-Text: 'Roboto', sans-serif;
+
+    /* Colores Background*/
+    --Color-Background-Modal: #fff;
+    --Color-Background-Modal-Overlay: rgba(0,0,0,.5);
+    --Color-Background-Modal-Close: #f2f2f2;
+    --Color-Background-Navbar-Responsive: #fff;
+
+    /* Colores de Botones */
+    --Color-Button-Blue: #5810E8;
+    --Color-Button-Blue-Hover: #4a0dc5;
+    --Color-Button-White: #fff;
+    --Color-Button-White-Hover: #f5f5f5;
+
+    /* Colores de Texto */
+    --Color-Text-White: #fff;
+    --Color-Text-Black: #000;
+    --Color-Text-Error-Form: #cb3234;
+    --Color-Text-Good-Form: #008f39;
+    --Color-Text-Button-Google-Facebook: #444;
+    --Color-Text-Inputs-Placeholder: #bbb;
+    --Color-Text-User-Navbar: #555;
+
+    /* Colores de Contenedores */
+    --Color-Container-Gray-Light: #E6E6E6;
+
+    /* Colores de Bg de Inputs */
+    --Color-Bg-Input-Home: #E6E6E6;
+
+    /* Colores de Iconos */
+    --Color-Icon-Close-Modal: #1766dc;
+    --Color-Input-Icon-Signup: #bbb;
+
+    /* Sombras de contenedores */
+    --Box-Shadow-Button: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --Box-Shadow-Modal: rgba(100,100,111,.2) 0px 7px 29px 0px;
+    --Box-Shadow-Navbar: 0px 13px 30px -10px rgba(0,0,0,0.58);
+
+    /* Transition (Velocidad de como cambios de apariencia, como hover y otros movimientos) */
+    --Transition-Button: all 0.3s ease-in-out;
+    --Transition-Navbar-Responsive: all 0.5s ease-in-out;
+    --Transition-Modal: .3s ease all;
 }

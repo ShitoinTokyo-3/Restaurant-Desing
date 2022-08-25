@@ -4,8 +4,6 @@
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
-
-
 }
 
 .embla__viewport {
@@ -82,7 +80,7 @@
   min-width: 100%;
   max-width: none;
   transform: translate(-50%, -50%);
-  font-family: Arial;
+  font-family: var(--Font-Family-Text);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

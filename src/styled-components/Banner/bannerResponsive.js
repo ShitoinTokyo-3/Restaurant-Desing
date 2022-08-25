@@ -17,16 +17,15 @@ export const InfoBannerRes = styled.div`
     bottom: 0;
     left: 0;
     width: 60%;
-    height: 90%;
+    height: 85%;
     background: transparent;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 
 export const TextBannerRes = styled.div`
-    height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,36 +33,44 @@ export const TextBannerRes = styled.div`
     text-align: center;
     padding: 0 .8rem;
     .TitleBanner {
-        color: #fff;
-        font-family: "Montserrat";
+        color: var(--Color-Text-White);
+        font-family: var(--Font-Family-Titles);
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.5rem;
+        line-height: 1;
     }
     p{
-        color: #fff;
-        font-family:'Poppins';
-        font-size: .7rem;
+        color: var(--Color-Text-White);
+        font-family:var(--Font-Family-Text);
+        font-size: .9rem;
         margin-top: 20px;
+        width: 85%;
+    }
+    span{
+        font-family:var(--Font-Family-Text);
+        color: var(--Color-Text-White);
+        font-size: .55rem;
     }
 `;
 
 
 export const ButtonBannerToFormRes= styled.button`
-    background: #5810E8;
+    background: var(--Color-Button-Blue);
     border: none;
-    color: #fff;
-    font-family: "Montserrat";
-    font-size: .8rem;
+    color: var(--Color-Text-White);
+    font-family: var(--Font-Family-Titles);
+    font-size: .85rem;
     font-weight: bold;
     border-radius: 10px;
-    padding: .5rem .5rem;
+    padding: .5rem 1.2rem;
+    text-transform: uppercase;
     margin: 20px auto;
+    margin-bottom: 7px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: var(--Transition-Button);
 
     &:hover {
         transform: translateY(-1px);
-        background-color: #441f8b;
-
+        background-color: var(--Color-Button-Blue-Hover);
     }
 `;

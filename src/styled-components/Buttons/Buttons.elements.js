@@ -1,28 +1,30 @@
 import styled from "styled-components";
 
 export const ButtonLogin = styled.button`
-    background-color: #5627AE;
+
+    background-color: var(--Color-Button-Blue);
+    
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--Box-Shadow-Button);
     cursor: pointer;
-    color: #fff;
+    color: var(--Color-Text-White);
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    transition: var(--Transition-Button);
 
     &:hover {
         transform: translateY(-1px);
-        background-color: #441f8b;
-        color: #fff;
+        background-color: var(--Color-Button-Blue-Hover);
+        color: var(--Color-Text-White);
     }
 `;
 
 export const ButtonMediaLogin = styled.button`
-    font-family: 'Montserrat';
+    font-family: var(--Font-Family-Titles);
     font-size: .8rem;
-    background-color: #fff;
-    color: #444;
+    background-color: var(--Color-Button-White);
+    color: var(--Color-Text-Button-Google-Facebook);
     border: 1px solid #777;
     padding: 0.4rem 1.5rem;
     padding-left: .7rem;
@@ -32,7 +34,7 @@ export const ButtonMediaLogin = styled.button`
     align-items: center;
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: var(--Color-Button-White-Hover);
     }
 
     @media (max-width: 768px) {
@@ -42,20 +44,21 @@ export const ButtonMediaLogin = styled.button`
 `;
 
 export const ButtonLoginEmail = styled.button`
-    font-family: 'Montserrat';
+    font-family: var(--Font-Family-Titles);
+    background-color: var(--Color-Button-Blue);
     font-size: 1.5rem;
     margin:auto;
     width: 50%;
-    color : #fff;
+    color : var(--Color-Text-White);
     border: none;
-    background-color: #444EC3;
     padding: 0.6rem 0;
     cursor: pointer;
     margin-bottom: 1rem;
     margin-top: .5rem;
+    transition: var(--Transition-Button);
 
     &:hover {
-        background-color: #363fa9;
+        background-color: var(--Color-Button-Blue-Hover);
     }
 `;
 

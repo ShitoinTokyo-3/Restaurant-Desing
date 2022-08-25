@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const HomeBannerImg = styled.div`
     position: relative;
+    cursor: default;
     img {
         width: 100%;
     }
 
-    @media (max-width: 1050px) {
+    @media (max-width: 769px) {
         display: none;
     }
 `;
@@ -24,36 +25,39 @@ export const InfoBanner = styled.div`
 
 export const RellenoDiv = styled.div`
     height: 100%;
-    width: 20%;
+    width: 15%;
 `;
 
 export const TextBanner = styled.div`
     width: 71%;
-    height: 85%;
+    height: 80%;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    .MessageFriend {
-        font-size: 2.6rem;
-        font-family: "Montserrat";
-        font-weight: 500;
-        color: #fff;
-        line-height: 2.8rem;
-        align-self: flex-end;
-    }
+    text-align: center;
+    align-items: center;
     .TitleBanner {
         margin-top: 45px;
-        font-size: 2.5rem;
-        color: #fff;
-        font-family: "Montserrat";
+        font-size: 3rem;
+        color: var(--Color-Text-White);
+        font-family: var(--Font-Family-Titles);
         font-weight: bold;
-        margin-right: 3.5rem;
+        line-height: 1.1;
     }
     p{
-        color: #fff;
-        font-family:'Poppins';
+        margin: auto;
+        color: var(--Color-Text-White);
+
+        font-family:var(--Font-Family-Text);
         font-size: 1.2rem;
-        margin-top: 40px;
+        margin-top: 20px;
+        width: 75%;
+        margin-bottom:0;
+    }
+    span{
+        font-family:var(--Font-Family-Text);
+        color: var(--Color-Text-White);
+        font-size: .9rem;
     }
 
     @media (max-width: 1100px) {
@@ -66,21 +70,22 @@ export const TextBanner = styled.div`
 
 
 export const ButtonBannerToForm = styled.button`
-    background: #5627AE;
+    background: var(--Color-Button-Blue);
     border: none;
-    color: #fff;
-    font-family: "Montserrat";
-    font-size: 1.2rem;
+    color: var(--Color-Text-White);
+    font-family: var(--Font-Family-Titles);
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 18px;
     padding: 1rem 2rem;
-    margin: 40px auto;
+    margin: 30px auto;
+    margin-bottom: 15px;
     cursor: pointer;
-    transition: 0.3s;
+    text-transform: uppercase;
+    transition: var(--Transition-Button);
 
     &:hover {
         transform: translateY(-1px);
-        background-color: #441f8b;
-
+        background-color: var(--Color-Button-Blue-Hover);
     }
 `;

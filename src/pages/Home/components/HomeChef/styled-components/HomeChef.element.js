@@ -5,11 +5,11 @@ export const HomeChefContainer = styled.div`
     padding: 3rem;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
     
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0;
+        margin: 3rem 0;
     }
 `;
 
@@ -37,25 +37,35 @@ export const HomeChefRight = styled.div`
     padding: 0 3rem;
     h3{
         font-size: 2.3rem;
-        font-family: 'Montserrat';
+        font-family: var(--Font-Family-Titles);
         font-weight: bold;
-    }
-    strong{
-        font-family: 'Courgette', cursive;
+        line-height: 1;
     }
     p{
-        font-size: 1.3rem;
-        font-family: 'Poppins';
-        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-family: var(--Font-Family-Text);
+        margin-top: 1.5rem;
     }
-    span{
-        font-family: 'Montserrat';
-        font-size: 1.5rem;
-        font-weight: bold;
+    .ButtonChef{
+        margin-top: 3rem;
     }
+
     @media (max-width: 768px) {
         width: 80%;
         margin-top: 2rem;
         padding: 0;
+
+        h3{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 0.9rem;
+            width: 85%;
+        }
+        .ButtonChef{
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
     }
 `;

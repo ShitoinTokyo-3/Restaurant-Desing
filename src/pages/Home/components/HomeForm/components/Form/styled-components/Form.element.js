@@ -16,17 +16,17 @@ export const FormInputSecondContainer = styled.div`
 
 export const FormInput = styled.input`
     width: 400px;
-    background-color: #E6E6E6;
+    background-color: var(--Color-Bg-Input-Home);
     padding: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--Font-Family-Text);
 
     &::placeholder {
         font-size: 1.2rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: var(--Font-Family-Text);
     }
 
     @media (max-width: 768px) {
@@ -36,7 +36,7 @@ export const FormInput = styled.input`
 
 export const FormArea = styled.textarea`
     width: 400px;
-    background-color: #E6E6E6;
+    background-color: var(--Color-Bg-Input-Home);
     padding: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
@@ -44,12 +44,12 @@ export const FormArea = styled.textarea`
     height: 130px;
 
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--Font-Family-Text);
     
 
     &::placeholder {
         font-size: 1.2rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: var(--Font-Family-Text);
     }
     @media (max-width: 768px) {
         width: 218px;
@@ -58,7 +58,7 @@ export const FormArea = styled.textarea`
 
 export const TermsAndConditions = styled.div`
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--Font-Family-Titles);
     text-align: center;
     cursor:default;
     margin-bottom: 1rem;
@@ -72,28 +72,28 @@ export const TermsAndConditions = styled.div`
 `;
 
 export const InputSubmit = styled.input`
-    background: #5627AE;
+    background: var(--Color-Button-Blue);
     border: 1px solid #aaa;
-    color: #fff;
-    font-family: "Montserrat";
+    color: var(--Color-Button-White);
+    font-family: var(--Font-Family-Titles);;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 18px;
     padding: 1rem 2rem;
     margin: 2rem auto;
     cursor: pointer;
-    transition: 0.3s;
+    transition: var(--Transition-Button);
 
     &:hover {
         transform: translateY(-1px);
-        background-color: #441f8b;
+        background-color: var(--Color-Button-Blue-Hover);
 
     }
 `;
 
 export const FormInputModal = styled.input`
     width: 300px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--Font-Family-Text);
     font-size: 1rem;
     padding: .7rem 2rem;
     border-radius: 5px;
@@ -101,13 +101,20 @@ export const FormInputModal = styled.input`
     border: 2px solid #ccc;
 
     &::placeholder {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--Font-Family-Titles);
         font-size: 1rem;
     }
+    @media (max-width: 768px) {
+        margin:auto;
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+
+
 `;
 
 export const FormAreaModal = styled.textarea`
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--Font-Family-Titles);
     font-size: 1rem;
     padding: .7rem 2rem;
     border-radius: 5px;
@@ -117,35 +124,39 @@ export const FormAreaModal = styled.textarea`
     width: 300px;
 
     &::placeholder {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--Font-Family-Titles);
         font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+        margin:auto;
+        margin-bottom: 1rem;
+        width: 80%;
     }
 `;
 
 export const InputSubmitModal = styled.input`
-    background: #5627AE;
+    background: var(--Color-Button-Blue);
     border: 1px solid #aaa;
-    color: #fff;
-    font-family: "Montserrat";
+    color: var(--Color-Button-White);
+    font-family: var(--Font-Family-Titles);
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 18px;
     padding: 1rem 2rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: var(--Transition-Button);
 
     &:hover {
         transform: translateY(-1px);
-        background-color: #441f8b;
-
+        background-color: var(--Color-Button-Blue-Hover);
     }
 `;
 
 export const TermsAndConditionsModal = styled.div`
     font-size: .9rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--Font-Family-Titles);
     text-align: center;
-    cursor:default;
+    cursor: default;
     margin-top: 1rem;
 
     span{

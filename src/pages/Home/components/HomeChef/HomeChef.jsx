@@ -1,7 +1,8 @@
 import { HomeChefContainer, HomeChefLeft, HomeChefRight } from "./styled-components/HomeChef.element"
+import { ButtonBannerToForm } from "../../../../styled-components/Banner/banner"
 import Chef from '../../../../assets/HomeImages/CocineroRDB.png'
 
-const HomeChef = () => {
+const HomeChef = ({setModal}) => {
   return (
     <HomeChefContainer>
         <HomeChefLeft>
@@ -9,21 +10,23 @@ const HomeChef = () => {
         </HomeChefLeft>
         <HomeChefRight>
             <h3>
-                Don't take your eyes off the <strong>Grill!</strong>
+                Get a FREE consultation with one of our experts
             </h3>
             <p>
-                We take care of communicating your art with food.
+                Our seasoned team has more than 40 years of combined experience. 
+                Our team consists of graphic designers, brand experts, restaurant owners, 
+                coffee roasters and Qgraders, POS experts, etc.  
             </p>
             <p>
-                Get help from an expert to tell the world what your business does and bring more guests to the table.
+                We've studied how customers, followers, and shoppers make decisions in order 
+                to understand what factors in the way they interact with food brands. 
             </p>
             <p>
-                Our designs include full copyright ownership.<br/>
-                <span>No additional or hidden costs!</span>
+                Learn more about our marketing process and discover how RDB may help you maximize results.
             </p>
-            <p>
-
-            </p>
+            <ButtonBannerToForm className="ButtonChef"  onClick={setModal}>
+                Book a 15 min call with us
+            </ButtonBannerToForm>
 
         </HomeChefRight>
     </HomeChefContainer>

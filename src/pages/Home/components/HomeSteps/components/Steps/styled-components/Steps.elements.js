@@ -13,10 +13,10 @@ export const StepsContainer = styled.div`
     h3{
         font-size: 2.5rem; 
         font-weight: bold;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--Font-Family-Titles);
     }
     p{
         margin: 0.5rem 0;
-        font-family: 'Poppins', sans-serif;
+        font-family: var(--Font-Family-Text);
     }
 `;

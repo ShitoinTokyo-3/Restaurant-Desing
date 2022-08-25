@@ -14,17 +14,17 @@ export const Overlay = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in-out;
+    transition: var(--Transition-Button);
 `;
 
 
 export const ContainerModal = styled.div`
     width: 500px;
     min-height: 100px;
-    background: #fff;
+    background: var(--Color-Background-Modal);
     position: relative;
     border-radius: 5px;
-    box-shadow: rgba(100,100,111,.2) 0px 7px 29px 0px;
+    box-shadow: var(--Box-Shadow-Modal);
     padding: 20px;
     z-index: 2000;
 `;
@@ -34,7 +34,7 @@ export const OverlayFake = styled.div`
     position: fixed;
     top: 0; 
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: var(--Color-Background-Modal-Overlay);
     z-index: 1010;
 `;
 
@@ -63,9 +63,9 @@ export const BotonCerrar = styled.button`
     border: none;
     background: transparent;
     cursor: pointer;
-    transition: .3s ease all;
+    transition: var(--Transition-Modal);
     border-radius: 5px;
-    color: #1766dc;
+    color: var(--Color-Icon-Close-Modal);
 
     &:hover {
         background: #f2f2f2;

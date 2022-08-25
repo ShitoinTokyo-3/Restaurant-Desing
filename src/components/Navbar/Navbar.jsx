@@ -62,7 +62,7 @@ const Navbar = ({ setModal, modalOpen}) => {
         <Menu click={click}>
 
           <MenuItem onClick={handleCLickNavItem} key='22'>
-            Upcoming Services
+          <MenuItemLink to='/'>Upcoming Services</MenuItemLink>
           </MenuItem>
 
           <MenuItem onClick={handleCLickNavItem} key='33'>

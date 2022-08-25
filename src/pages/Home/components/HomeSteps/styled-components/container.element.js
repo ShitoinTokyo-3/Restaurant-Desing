@@ -9,7 +9,6 @@ export const StepsContainer = styled.div`
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
-
 `;
 
 export const StepsText = styled.div`
@@ -19,14 +18,12 @@ export const StepsText = styled.div`
     h3{
         font-size: 2.3rem;
         font-weight: bold;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--Font-Family-Titles);
     }
     p{
         margin: 0.5rem 0;
-        font-family: 'Poppins', sans-serif;
+        font-family: var(--Font-Family-Text);
         font-size: 1.2rem;
         font-weight: bold;
-
     }
-
 `;

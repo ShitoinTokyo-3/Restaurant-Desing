@@ -6,17 +6,8 @@ import { HomeBannerImg, InfoBanner, TextBanner, RellenoDiv, ButtonBannerToForm }
 import { ButtonBannerToFormRes, HomeBannerImgRes, InfoBannerRes, TextBannerRes } from '../../../../styled-components/Banner/bannerResponsive'
 import ModalForm from './components/ModalForm/ModalForm'
 
-const HomeBanner = () => {
+const HomeBanner = ({setModal}) => {
 
-    const [modal, setModal] = useState(false)
-    const [openModalCheckEmail, setOpenModalCheckEmail] = useState(false)
-
-    const setModalFunction = (ModalCheckEmail) => {
-        setModal(false)
-
-        if (ModalCheckEmail === 'ModalCheckEmail') setOpenModalCheckEmail(true)
-
-    }
   return (
     <>
       <HomeBannerImg>
@@ -25,19 +16,18 @@ const HomeBanner = () => {
               <RellenoDiv />
               <TextBanner>
 
-                  <h2 className='MessageFriend'>
-                      Welcome <br />
-                      My name is Carla ...
-                  </h2>
                   <h2 className='TitleBanner'>
-                    We are cooking something very special for your business.
+                    Make customers fall in love with your food and brand.
                   </h2>
                   <p>
-                    While we set the table, we invite you to receive a consultation with an expert in gastronomic marketing
+                    While we set the table, 
+                    we invite you over for a free 
+                    consultation with one of our Restaurant Marketing experts.
                   </p>
-                  <ButtonBannerToForm onClick={() => setModal(true)}>
-                  FREE CONSULTING
+                  <ButtonBannerToForm onClick={() => setModal()}>
+                    Book a 15 min call with us
                   </ButtonBannerToForm>
+                  <span>FREE. No commitment. No hidden fees.</span>
               </TextBanner>
           </InfoBanner>
       </HomeBannerImg>
@@ -46,20 +36,20 @@ const HomeBanner = () => {
           <InfoBannerRes>
             <TextBannerRes>
               <h2 className='TitleBanner'>
-                We are cooking something very special for your business.
+                Make customers fall in love with your food and brand.
               </h2>
               <p>
-                While we set the table, we invite you to receive a consultation with an expert in gastronomic marketing
+                While we set the table, 
+                we invite you over for a free 
+                consultation with one of our Restaurant Marketing experts.
               </p>
-              <ButtonBannerToFormRes onClick={() => setModal(true)}>
-              FREE CONSULTING
+              <ButtonBannerToFormRes onClick={() => setModal()}>
+                Book a 15 min <br/>call with us
               </ButtonBannerToFormRes>
+              <span>FREE. No commitment.<br/> No hidden fees.</span>
             </TextBannerRes>
           </InfoBannerRes>
       </HomeBannerImgRes>
-      <ModalForm open={modal} functionUse={setModalFunction} />
-      <ModalCheckEmail open={openModalCheckEmail} functionUse={() => setOpenModalCheckEmail(false)}/>
-
     </>
   )
 }

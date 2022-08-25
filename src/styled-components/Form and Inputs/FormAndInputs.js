@@ -9,13 +9,13 @@ export const FormUsers = styled.form`
 
 export const InputFormUsers = styled.input`
     font-size: 1.1rem;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--Font-Family-Text);
     padding: .5rem 1rem;
     margin-bottom: 1rem;
     border: 2px solid #ccc;
 
     &::placeholder {
-        color: #bbb;
+        color: var(--Color-Text-Inputs-Placeholder);
     }
 `;
 
@@ -31,34 +31,34 @@ export const ContainerInputFormUsersRegister = styled.div`
         position: absolute;
         top: 7px;
         left: 10px;
-        color: #bbb;
+        color: var(--Color-Input-Icon-Signup);
     }
 `;
 
 export const ForgotPasswordForm = styled.div`
-    font-family: "Roboto", sans-serif;
-    color: #000;
+    font-family: var(--Font-Family-Text);
+    color: var(--Color-Text-Black);
     margin-bottom: 1rem;
     display: inline-block;
 `;
 
 export const ErrorInputs = styled.div`
-    font-family: "Roboto", sans-serif;
+    font-family: var(--Font-Family-Text);
     font-size: .8rem;
     display: flex;
     align-items: center;
-    color: #cb3234;
+    color: var(--Color-Text-Error-Form);
     margin-top: -.5rem;
     margin-bottom: .5rem;
     padding-left: 1rem;
 `;
 
 export const GoodMessage = styled.div`
-    font-family: "Roboto", sans-serif;
+    font-family: var(--Font-Family-Text);
     font-size: .8rem;
     display: flex;
     align-items: center;
-    color: #008f39;
+    color: var(--Color-Text-Good-Form);
     margin-top: 1rem;
     margin-bottom: .5rem;
     padding-left: 1rem;
@@ -78,8 +78,7 @@ export const CheckboxForm = styled.div`
         }
     }
     label{
-        font-family: "Roboto", sans-serif;
-        padding: 0 0 5px 43px;
+        font-family: var(--Font-Family-Text);
         font-size: .8em;
     }
 `;

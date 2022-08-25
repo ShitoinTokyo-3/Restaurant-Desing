@@ -18,6 +18,8 @@ import HomeBanner from "./components/HomeBanner/HomeBanner";
 import HomeChef from "./components/HomeChef/HomeChef";
 import HomeSteps from "./components/HomeSteps/HomeSteps";
 import HomeForm from "./components/HomeForm/HomeForm";
+import ModalForm from "./components/HomeBanner/components/ModalForm/ModalForm";
+import ModalCheckEmail from "../../components/ModalCheckEmail/ModalCheckEmail";
 
 const Home = () => {
     const { t } = useTranslation(['translation']);
@@ -28,15 +30,27 @@ const Home = () => {
         setModal(false);
     }
 
+    const [ModalFormHome, setModalFormHome] = useState(false);
+    const [ModalFormCheckEmail, setModalFormCheckEmail] = useState(false);
 
+    const setModalFormHomeFunction = (ModalCheckEmail) => {
+        setModalFormHome(false);
+
+        if (ModalCheckEmail === 'ModalCheckEmail') setModalFormCheckEmail(true)
+    }
+
+    const setModalFormFunction = () => {
+        setModalFormHome(true);
+    }
 
     return (
         <div>
             <Navbar modalOpen={modal} setModal={setModal}/>
-            <HomeBanner/>
+            <HomeBanner setModal={setModalFormFunction}/>
             <TextMain>
                 <h3>{t('underSlice.Title')}</h3>
                 <p>{t('underSlice.text')}</p>
+                <p>{t('underSlice.text2')}</p>
             </TextMain>
             <GrayContainer>
                 <BolderLetter>
@@ -47,7 +61,7 @@ const Home = () => {
                     {t("underSlice2.text")}
             </BigLetter>
             <HomeCarousel/>
-            <HomeChef/>
+            <HomeChef setModal={setModalFormFunction}/>
             <GrayContainer>
                 <BolderLetter>
                     That's how easy it will be to place your order!
@@ -61,6 +75,8 @@ const Home = () => {
                 functionUse={setModalFunction}
                 openModal={setModal}
             />
+            <ModalForm open={ModalFormHome} functionUse={setModalFormHomeFunction} />
+            <ModalCheckEmail open={ModalFormCheckEmail} functionUse={() => setModalCheckEmail(false)}/>
 
         </div>
     )

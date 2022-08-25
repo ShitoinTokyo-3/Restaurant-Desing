@@ -10,12 +10,12 @@ export const TextContainer = styled.div`
     padding-bottom: 0;
 
     h3 {
-        font-family:'Montserrat', sans-serif;
+        font-family: var(--Font-Family-Titles);
         font-size: 2.5rem;
         font-weight: bold;
     }
     p {
-        font-family: 'Poppins', sans-serif;
+        font-family: var(--Font-Family-Text);
         font-size: 1.2rem;
         margin: .8rem 0;
     }

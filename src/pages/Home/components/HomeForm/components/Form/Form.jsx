@@ -92,6 +92,20 @@ const Form = ({setOpenModal, isModal}) => {
             if(isModal) setOpenModal('ModalCheckEmail')
             else setOpenModal(true)
             
+        }else if(!form.validname && !form.validemail && !form.validphone){
+            setForm({...form, validname: false, validemail: false, validphone: false, })
+        }else if(!form.validname && !form.validemail && form.validphone){
+            setForm({...form, validname: false, validemail: false })
+        }else if(!form.validname && form.validemail && !form.validphone){
+            setForm({...form, validname: false, validphone: false })
+        }else if(form.validname && !form.validemail && !form.validphone){
+            setForm({...form, validemail: false, validphone: false })
+        }else if(!form.validname && form.validemail && form.validphone){
+            setForm({...form, validname: false })
+        }else if(form.validname && !form.validemail && form.validphone){
+            setForm({...form, validemail: false })
+        }else if(form.validname && form.validemail && !form.validphone){
+            setForm({...form, validphone: false, })
         }
     }
 
