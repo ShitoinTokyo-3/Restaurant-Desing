@@ -26,8 +26,8 @@
 
     "sigup":{
         "title":"You are already part of Restaurant Design Bar!",
-        "text1":"Create a user to access whenever you want and receive a ",
-        "text2":"10% discount on your order.",
+        "text1":"Create a user to access your account whenever you want and receive a ",
+        "text2":"10% discount on your first design or website.",
         "textButton":"Register",
         "errorTerms":"Please accept the terms and conditions",
         "orUse":"or sign up with:",

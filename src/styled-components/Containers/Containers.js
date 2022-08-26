@@ -41,7 +41,7 @@ export const TextMain = styled.div`
         font-size: 2rem;
     }
     p {
-        width: 70vw;
+        width: 75vw;
         margin: auto;
         margin-top: 0.9rem;
         font-family: var(--Font-Family-Text);

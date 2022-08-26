@@ -14,7 +14,7 @@ const ModalForm = ({ open, functionUse }) => {
     >
         <ContainerModalChildrenRegister>
             <h1>{t('formModal.title')}</h1>
-            <p>{t('formModal.text')}</p>
+            <p>{t('formModal.text')}<br/>{t('formModal.text2')}</p>
         </ContainerModalChildrenRegister>
         <Form isModal={true} setOpenModal={functionUse}/>
     </Modal>

@@ -43,11 +43,11 @@
         "textReady":"Our designers will be ready to work on your order."
     },
 
-    "titleForm":"Do you need help with the Marketing of your Restaurant?",
+    "titleForm":"Restaurant Graphic Design & Branding Services. Find an Expert for Anything",
 
-    "textForm1":"Tell us how we can help you, an expert in Marketing for",
+    "textForm1":"A great brand identity will help your customers and prospects recognize you and consequently choose among your competitors.",
 
-    "textForm2":"restaurants will contact you.",
+    "textForm2":"The designs of your restaurant's menu, flyers, QR images, business cards, and logo should all convey your brand's essence and cuisine. Let us help you create a brand identity that will resonate with your customers' appetite.",
 
     "form":{
         "placeholder1":"Name",
@@ -64,19 +64,27 @@
     },
 
     "formModal":{
-        "title":"We help you Identify and Design Solutions",
-        "text":"15 minutes connected with an expert in Gastronomic Marketing to create strategies.",
+        "title":"Let us help you create an amazing Restaurant Marketing strategy.",
+        "text":"Let's discuss current positioning of your brand and immediate needs. Fill out this quick form and we will reply with an invite and a link to book your consultation.",
+        "text2":"Remember, it is totally FREE.",
         "placeholder1":"Name",
         "errorInput1":"Only letters and spaces",
         "placeholder2":"Email",
         "errorInput2":"Please enter a valid email",
         "placeholder3":"Phone",
         "errorInput3":"Please enter a valid phone",
-        "placeholder4":"I need help with...",
-        "buttonForm":"Send information",
+        "placeholder4":"I feel I need the most help with...",
+        "buttonForm":"Book a 15 min call with us",
         "termsAndConditions1":"All Rights Reserved ",
         "termsAndConditions2":"Restaurant Design Bar",
         "termsAndConditions3":"Terms and Conditions"
+    },
+
+    "checkModal":{
+        "title":"Thanks for registering. Check your email!",
+        "text1":"We have sent you a link to schedule your FREE Marketing consultation.",
+        "text2":"If you do not see the email in a few minutes, check your “junk mail” folder or “spam” folder. We make every effort to ensure that these emails are delivered.",
+        "button":"Ok"
     }
     
 }
