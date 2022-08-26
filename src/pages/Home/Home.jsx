@@ -24,7 +24,6 @@ const Home = () => {
     
     const { t } = useTranslation(['home']);
 
-
     const [modal, setModal] = useState(false);
 
     const setModalFunction = () => {
