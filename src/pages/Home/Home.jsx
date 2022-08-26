@@ -1,7 +1,6 @@
 //Node modules
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
 //Styled Components
 import { 
     BigLetter,
@@ -22,7 +21,9 @@ import ModalForm from "./components/HomeBanner/components/ModalForm/ModalForm";
 import ModalCheckEmail from "../../components/ModalCheckEmail/ModalCheckEmail";
 
 const Home = () => {
-    const { t } = useTranslation(['translation']);
+    
+    const { t } = useTranslation(['home']);
+
 
     const [modal, setModal] = useState(false);
 
@@ -48,23 +49,23 @@ const Home = () => {
             <Navbar modalOpen={modal} setModal={setModal}/>
             <HomeBanner setModal={setModalFormFunction}/>
             <TextMain>
-                <h3>{t('underSlice.Title')}</h3>
-                <p>{t('underSlice.text')}</p>
-                <p>{t('underSlice.text2')}</p>
+                <h3>{t('introUnderBanner.title')}</h3>
+                <p>{t('introUnderBanner.text')}</p>
+                <p>{t('introUnderBanner.text2')}</p>
             </TextMain>
             <GrayContainer>
                 <BolderLetter>
-                    {t("underSlice2.title")}
+                    {t("firstGreyContainer")}
                 </BolderLetter>
             </GrayContainer>
             <BigLetter>
-                    {t("underSlice2.text")}
+                    {t("aboveCarousel")}
             </BigLetter>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>
             <GrayContainer>
                 <BolderLetter>
-                    That's how easy it will be to place your order!
+                    {t("secondGreyContainer")}
                 </BolderLetter>
             </GrayContainer>
             <HomeSteps/>

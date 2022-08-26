@@ -62,7 +62,7 @@ export const TermsAndConditions = styled.div`
     text-align: center;
     cursor:default;
     margin-bottom: 1rem;
-
+    font-weight: 400;
     span{
         padding:0;
         margin:0;

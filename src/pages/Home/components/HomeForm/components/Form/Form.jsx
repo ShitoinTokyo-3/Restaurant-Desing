@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { useTranslation } from "react-i18next";
 import emailjs from 'emailjs-com';
 import { 
     FormArea, 
@@ -15,6 +16,8 @@ import {
 import ErrorInput from '../../../../../../components/ErrorInput/ErrorInput';
 
 const Form = ({setOpenModal, isModal}) => {
+
+    const { t } = useTranslation(['home']);
 
     const formRef = useRef();
 
@@ -116,102 +119,102 @@ const Form = ({setOpenModal, isModal}) => {
             <FormInputSecondContainer>
                 <FormInput
                     type="text"
-                    placeholder="Name"
+                    placeholder={t('form.placeholder1')}
                     name='name'
                     value={form.name}
                     onChange={handleChange}
                     onBlur={handleName}
                 />
-                {form.validname === false && <ErrorInput>Only letters and spaces</ErrorInput>}
+                {form.validname === false && <ErrorInput>{t('form.errorInput1')}</ErrorInput>}
             </FormInputSecondContainer>
             
             <FormInputSecondContainer>
                 <FormInput
                     type="text"
-                    placeholder="Email"
+                    placeholder={t('form.placeholder2')}
                     name='email'
                     value={form.email}
                     onChange={handleChange}
                     onBlur={handleBlurInput}
                 />
-                {form.validemail === false && <ErrorInput>Please enter a valid email</ErrorInput>}
+                {form.validemail === false && <ErrorInput>{t('form.errorInput2')}</ErrorInput>}
                 
             </FormInputSecondContainer>
 
             <FormInputSecondContainer>
                 <FormInput
                     type='text'
-                    placeholder="Phone"
+                    placeholder={t('form.placeholder3')}
                     name='phone'
                     value={form.phone}
                     onChange={handleChange}
                     onBlur={handleBlurInput}
                 />
-                {form.validphone === false && <ErrorInput>Please enter a valid phone</ErrorInput>}
+                {form.validphone === false && <ErrorInput>{t('form.errorInput3')}</ErrorInput>}
             </FormInputSecondContainer>
             <FormInputSecondContainer>
                 <FormArea
-                    placeholder="I need help with..."
+                    placeholder={t('form.placeholder4')}
                     autoComplete="on"
                     name='message'
                     value={form.message}
                     onChange={handleChange}
                 />
             </FormInputSecondContainer>
-            <InputSubmit type='submit' value='Send information'/>
+            <InputSubmit type='submit' value={t('form.buttonForm')}/>
             <TermsAndConditions>
-                All Rights Reserved <span>Restaurant Design Bar</span><br/>
-                <span>Terms and Conditions</span>
+                {t('form.termsAndConditions1')}<span>{t('form.termsAndConditions2')}</span><br/>
+                <span>{t('form.termsAndConditions3')}</span>
             </TermsAndConditions>
         </FormInputsContainer> : 
         <FormInputsContainer ref={formRef} onSubmit={handleSubmit}>
             <div>
                 <FormInputModal
                     type="text"
-                    placeholder="Name"
+                    placeholder={t('formModal.placeholder1')}
                     name='name'
                     value={form.name}
                     onChange={handleChange}
                     onBlur={handleName}
                 />
-                {form.validname === false && <ErrorInput>Only letters and spaces</ErrorInput>}
+                {form.validname === false && <ErrorInput>{t('formModal.errorInput1')}</ErrorInput>}
             </div>
                         
             <div>
                 <FormInputModal
                     type="text"
-                    placeholder="Email"
+                    placeholder={t('formModal.placeholder2')}
                     name='email'
                     value={form.email}
                     onChange={handleChange}
                     onBlur={handleBlurInput}
                 />
-                {form.validemail === false && <ErrorInput>Please enter a valid email</ErrorInput>}
+                {form.validemail === false && <ErrorInput>{t('formModal.errorInput2')}</ErrorInput>}
                 
             </div>
 
             <div>
                 <FormInputModal
                     type='text'
-                    placeholder="Phone"
+                    placeholder={t('formModal.placeholder3')}
                     name='phone'
                     value={form.phone}
                     onChange={handleChange}
                     onBlur={handleBlurInput}
                 />
-                {form.validphone === false && <ErrorInput>Please enter a valid phone</ErrorInput>}
+                {form.validphone === false && <ErrorInput>{t('formModal.errorInput3')}</ErrorInput>}
             </div>
             <FormAreaModal
-                placeholder="I need help with..."
+                placeholder={t('formModal.placeholder4')}
                 autoComplete="on"
                 name='message'
                 value={form.message}
                 onChange={handleChange}
             />
-            <InputSubmitModal type='submit' value='Send information'/>
+            <InputSubmitModal type='submit' value={t('formModal.buttonForm')}/>
             <TermsAndConditionsModal>
-                All Rights Reserved <span>Restaurant Design Bar</span><br/>
-                <span>Terms and Conditions</span>
+                {t('formModal.termsAndConditions1')}<span>{t('formModal.termsAndConditions2')}</span><br/>
+                <span>{t('formModal.termsAndConditions3')}</span>
             </TermsAndConditionsModal>
         </FormInputsContainer>
         }

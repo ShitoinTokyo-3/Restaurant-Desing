@@ -25,6 +25,8 @@ import { signOutService } from "../../services/RegisterandLogin/logout";
 
 const Navbar = ({ setModal, modalOpen}) => {
 
+  const { t } = useTranslation(['navbar']);
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -62,15 +64,15 @@ const Navbar = ({ setModal, modalOpen}) => {
         <Menu click={click}>
 
           <MenuItem onClick={handleCLickNavItem} key='22'>
-          <MenuItemLink to='/'>Upcoming Services</MenuItemLink>
+          <MenuItemLink to='/'>{t('option1')}</MenuItemLink>
           </MenuItem>
 
           <MenuItem onClick={handleCLickNavItem} key='33'>
-            <MenuItemLink to='/about'>About</MenuItemLink>
+            <MenuItemLink to='/about'>{t('option2')}</MenuItemLink>
           </MenuItem>
 
           <MenuItem onClick={handleCLickNavItem} key='44'>
-            <MenuItemLink to='/help'>Help</MenuItemLink>
+            <MenuItemLink to='/help'>{t('option3')}</MenuItemLink>
           </MenuItem>
 
           {user?.email? (
@@ -86,12 +88,12 @@ const Navbar = ({ setModal, modalOpen}) => {
                     user.displayName.split(' ')[0] : 
                     user.email.split('@')[0].replace(/[0-9]+/g,'')}
                 </span>
-                <a href='http://localhost:5173/'><ButtonLogin onClick={handleLogout}>Log out</ButtonLogin></a>
+                <a href='http://localhost:5173/'><ButtonLogin onClick={handleLogout}>{t('logout')}</ButtonLogin></a>
               </UserNavbar>
             </MenuItem>):(
               <>
                 <MenuItem onClick={handleCLickNavItem} key='66'>
-                  <ButtonLogin onClick={()=>setModal(!modalOpen)}>Log in</ButtonLogin>
+                  <ButtonLogin onClick={()=>setModal(!modalOpen)}>{t('login')}</ButtonLogin>
                 </MenuItem>
               </>)}
 

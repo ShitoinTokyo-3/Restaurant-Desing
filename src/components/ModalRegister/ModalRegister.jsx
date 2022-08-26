@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 //Components
 import LoginFacebook from "../LoginFacebook/LoginFacebook"
 import LoginGoogle from "../LoginGoogle/LoginGoogle"
@@ -10,20 +11,23 @@ import { sigUp } from "../../services/RegisterandLogin/signUp"
 
 const ModalRegister = ({ open, functionUse, openModal }) => {
 
+    const { t } = useTranslation(['modal']);
+
   return (
     <>
         <Modal
             open={open}
             functionUse={functionUse}
+            back={true}
         >
             <ContainerModalChildrenRegister>
-                <h1>You are already part of Restaurant Design Bar!</h1>
-                <p>Create a user to access whenever you want and receive a <strong>10% discount on your order.</strong></p>
+                <h1>{t('sigup.title')}</h1>
+                <p>{t('sigup.text1')}<strong>{t('sigup.text2')}</strong></p>
 
                 <FormUserRegister
                     openModal={openModal} 
                     loginAndRegister={sigUp}
-                    textButton={'Register'}
+                    textButton={t('sigup.textButton')}
                 >
                 </FormUserRegister>
             </ContainerModalChildrenRegister>

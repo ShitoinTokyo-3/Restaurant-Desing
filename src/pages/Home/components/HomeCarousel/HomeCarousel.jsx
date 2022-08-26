@@ -13,7 +13,7 @@ const HomeCarousel = () => {
     const dispatch = useDispatch();
     const mainCarouselInfo = useSelector(state => state.carousels.carouselMainInfo);
 
-    const { i18n } = useTranslation(['translation']);
+    const { i18n } = useTranslation(['home']);
 
 
     useEffect(() => {

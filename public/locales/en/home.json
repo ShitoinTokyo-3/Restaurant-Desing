@@ -1,0 +1,82 @@
+{
+    "homeBanner":{
+        "title":"Make customers fall in love with your food and brand",
+        "text":"While we set the table, we invite you over for a free consultation with one of our Restaurant Marketing experts.", 
+        "buttonText":"Book a 15 min call with us",
+        "underButtonText":"FREE. No commitment. No hidden fees.",
+        "buttonTextResponsive":"Book a 15 min ",
+        "buttonTextResponsive2":"call with us",
+        "underButtonTextResponsive":"FREE. No commitment.",
+        "underButtonTextResponsive2":"No hidden fees."
+    },
+
+    "introUnderBanner":{
+        "title":"Project-Based or Full-Service Marketing",
+        "text":"The restaurant world has undergone a real revolution in recent years, both in concept and management. But few establishments have adapted to the new times.",
+        "text2":"RestaurantDesignBar aims to provide restaurant businesses with a modern vision on these issues and lay the foundations to help your restaurant or food brand convert customers into loyal ambassadors."
+    },
+
+    "firstGreyContainer":"Coming soon: Restaurants and food companies will choose from a variety of branding and strategy services.",
+
+    "aboveCarousel":"Logos, Flyers, Social Media, Websites, T-shirts & More!",
+
+    "carouselLink":"Coming soon.",
+
+    "homeChef":{
+        "title":"Get a FREE consultation with one of our experts",
+        "text1":"Our seasoned team has more than 40 years of combined experience. Our team consists of graphic designers, brand experts, restaurant owners, coffee roasters and Qgraders, POS experts, etc.",
+        "text2":"We've studied how customers, followers, and shoppers make decisions in order to understand what factors in the way they interact with food brands.",
+        "text3":"Learn more about our marketing process and discover how RDB may help you maximize results.",
+        "buttonText":"Book a 15 min call with us"
+    },
+
+    "secondGreyContainer":"That's how easy it will be to place your order!",
+
+    "steps":{
+        "title1":"Step 1",
+        "text1":"Choose the category to which your business or restaurant belongs.",
+        "title2":"Step 2",
+        "text2":"Choose some logos for reference and the color palette of your brand.",
+        "title3":"Step 3",
+        "text3":"Type in your business information for the designer to start working.",
+        "titleReady":"And ready!",
+        "textReady":"Our designers will be ready to work on your order."
+    },
+
+    "titleForm":"Do you need help with the Marketing of your Restaurant?",
+
+    "textForm1":"Tell us how we can help you, an expert in Marketing for",
+
+    "textForm2":"restaurants will contact you.",
+
+    "form":{
+        "placeholder1":"Name",
+        "errorInput1":"Only letters and spaces",
+        "placeholder2":"Email",
+        "errorInput2":"Please enter a valid email",
+        "placeholder3":"Phone",
+        "errorInput3":"Please enter a valid phone",
+        "placeholder4":"I need help with...",
+        "buttonForm":"Send information",
+        "termsAndConditions1":"All Rights Reserved ",
+        "termsAndConditions2":"Restaurant Design Bar",
+        "termsAndConditions3":"Terms and Conditions"
+    },
+
+    "formModal":{
+        "title":"We help you Identify and Design Solutions",
+        "text":"15 minutes connected with an expert in Gastronomic Marketing to create strategies.",
+        "placeholder1":"Name",
+        "errorInput1":"Only letters and spaces",
+        "placeholder2":"Email",
+        "errorInput2":"Please enter a valid email",
+        "placeholder3":"Phone",
+        "errorInput3":"Please enter a valid phone",
+        "placeholder4":"I need help with...",
+        "buttonForm":"Send information",
+        "termsAndConditions1":"All Rights Reserved ",
+        "termsAndConditions2":"Restaurant Design Bar",
+        "termsAndConditions3":"Terms and Conditions"
+    }
+    
+}

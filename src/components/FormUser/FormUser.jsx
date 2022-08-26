@@ -1,5 +1,6 @@
 //Node Modules
 import { useState } from "react"
+import { useTranslation } from "react-i18next";
 //Components
 import ErrorInput from "../ErrorInput/ErrorInput";
 import ForgotPasswordComponent from '../ForgotPasswordComponent/ForgotPasswordComponent'
@@ -8,6 +9,8 @@ import { ButtonLoginEmail } from "../../styled-components/Buttons/Buttons.elemen
 import { FormUsers, InputFormUsers } from "../../styled-components/Form and Inputs/FormAndInputs";
 
 const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) => {
+
+    const { t } = useTranslation(['modal']);
 
     const firebaseErrors ={
         'auth/user-not-found': 'User not found',
@@ -81,27 +84,27 @@ const FormUser = ({ openModal, loginAndRegister, textButton, forgotPassword }) =
             type="email"
             name="email"
             id="email"
-            placeholder="Your email"
+            placeholder={t('login.form.placeholder1')}
             onChange={handleChange}
             onBlur={handleBlurInput}
             style={user.validemail === false ? 
                 {borderColor: "#cb3234", color:"#cb3234"} : 
                 {borderColor: "#ccc", color:'#000'}}
         />
-        {user.validemail === false && <ErrorInput>Please enter a valid email</ErrorInput>}
+        {user.validemail === false && <ErrorInput>{t('login.form.error1')}</ErrorInput>}
 
         <InputFormUsers
             type="password"
             name="password"
             id="password"
-            placeholder="Password"
+            placeholder={t('login.form.placeholder2')}
             onChange={handleChange}
             onBlur={handleBlurInput}
             style={user.validpassword === false ? 
                 {borderColor: "#cb3234", color:"#cb3234"} : 
                 {borderColor: "#ccc", color:'#000'}}
         />
-        {user.validpassword === false && <ErrorInput>Please enter at least 6 characters</ErrorInput>}
+        {user.validpassword === false && <ErrorInput>{t('login.form.error2')}</ErrorInput>}
 
         {forgotPassword ? <ForgotPasswordComponent/> : ''}
     

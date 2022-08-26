@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Navigate } from "react-router-dom";
 import ModalRegister from "../../components/ModalRegister/ModalRegister";
-import Navbar from "../../components/Navbar/Navbar"
 
 const SignUp = () => {
     const [navi, setNavi] = useState(false);
@@ -18,7 +17,6 @@ const SignUp = () => {
 
   return (
     <>
-        <Navbar/>
         <ModalRegister
             open={true}
             functionUse={setModalFunction}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from "react-i18next";
 import banner from '../../../../assets/MainBanner/NewBannerRestaD.png'
 import bannerRes from '../../../../assets/MainBanner/NewBannerRestDM.png'
 import { HomeBannerImg, InfoBanner, TextBanner, RellenoDiv, ButtonBannerToForm } from '../../../../styled-components/Banner/banner'
@@ -6,12 +7,13 @@ import { ButtonBannerToFormRes, HomeBannerImgRes, InfoBannerRes, TextBannerRes }
 
 const HomeBanner = ({setModal}) => {
 
+  const { t } = useTranslation(['home']);
   
-const [bannerImg, setBannerImg] = useState(false)
+  const [bannerImg, setBannerImg] = useState(false)
 
-const setBannerImgFunction = () => {
-    setBannerImg(true)
-}
+  const setBannerImgFunction = () => {
+      setBannerImg(true)
+  }
 
   return (
     <>
@@ -21,19 +23,16 @@ const setBannerImgFunction = () => {
             <InfoBanner>
                 <RellenoDiv />
                 <TextBanner>
-
                     <h2 className='TitleBanner'>
-                      Make customers fall in love with your food and brand.
+                      {t('homeBanner.title')}
                     </h2>
                     <p>
-                      While we set the table, 
-                      we invite you over for a free 
-                      consultation with one of our Restaurant Marketing experts.
+                      {t('homeBanner.text')}
                     </p>
                     <ButtonBannerToForm onClick={() => setModal()}>
-                      Book a 15 min call with us
+                      {t('homeBanner.buttonText')}
                     </ButtonBannerToForm>
-                    <span>FREE. No commitment. No hidden fees.</span>
+                    <span>{t('homeBanner.underButtonText')}</span>
                 </TextBanner>
             </InfoBanner>
           }
@@ -44,17 +43,19 @@ const setBannerImgFunction = () => {
             <InfoBannerRes>
               <TextBannerRes>
                 <h2 className='TitleBanner'>
-                  Make customers fall in love with your food and brand.
+                  {t('homeBanner.title')}
                 </h2>
                 <p>
-                  While we set the table, 
-                  we invite you over for a free 
-                  consultation with one of our Restaurant Marketing experts.
+                  {t('homeBanner.text')}
                 </p>
                 <ButtonBannerToFormRes onClick={() => setModal()}>
-                  Book a 15 min <br/>call with us
+                  {t('homeBanner.buttonTextResponsive')}<br/>
+                  {t('homeBanner.buttonTextResponsive2')}
                 </ButtonBannerToFormRes>
-                <span>FREE. No commitment.<br/> No hidden fees.</span>
+                <span>
+                {t('homeBanner.underButtonTextResponsive')}<br/>
+                {t('homeBanner.underButtonTextResponsive2')}
+                </span>
               </TextBannerRes>
             </InfoBannerRes>
           }

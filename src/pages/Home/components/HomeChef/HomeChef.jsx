@@ -1,31 +1,29 @@
 import { HomeChefContainer, HomeChefLeft, HomeChefRight } from "./styled-components/HomeChef.element"
 import { ButtonBannerToForm } from "../../../../styled-components/Banner/banner"
 import Chef from '../../../../assets/HomeImages/CocineroRDB.png'
+import { useTranslation } from "react-i18next";
 
 const HomeChef = ({setModal}) => {
-  return (
+
+    const { t } = useTranslation(['home']);
+
+    return (
     <HomeChefContainer>
         <HomeChefLeft>
             <img src={Chef} alt=""/>
         </HomeChefLeft>
         <HomeChefRight>
-            <h3>
-                Get a FREE consultation with one of our experts
-            </h3>
-            <p>
-                Our seasoned team has more than 40 years of combined experience. 
-                Our team consists of graphic designers, brand experts, restaurant owners, 
-                coffee roasters and Qgraders, POS experts, etc.  
-            </p>
-            <p>
-                We've studied how customers, followers, and shoppers make decisions in order 
-                to understand what factors in the way they interact with food brands. 
-            </p>
-            <p>
-                Learn more about our marketing process and discover how RDB may help you maximize results.
-            </p>
+
+            <h3>{t("homeChef.title")}</h3>
+
+            <p>{t("homeChef.text1")}</p>
+
+            <p>{t("homeChef.text2")}</p>
+
+            <p>{t("homeChef.text3")}</p>
+
             <ButtonBannerToForm className="ButtonChef"  onClick={setModal}>
-                Book a 15 min call with us
+                {t("homeChef.buttonText")}
             </ButtonBannerToForm>
 
         </HomeChefRight>

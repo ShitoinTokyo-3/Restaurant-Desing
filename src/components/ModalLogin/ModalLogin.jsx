@@ -1,5 +1,6 @@
 //Node Modules
 import { useState } from "react"
+import { useTranslation } from "react-i18next";
 //Components
 import FormUser from "../FormUser/FormUser"
 import LoginFacebook from "../LoginFacebook/LoginFacebook"
@@ -15,6 +16,8 @@ import { NavLink } from "react-router-dom"
 
 
 const ModalLogin = ({ open, functionUse, openModal }) => {
+
+  const { t } = useTranslation(['modal']);
 
   const errorMedia = {
     'auth/account-exists-with-different-credential': 'This account is already registered with a different provider. Sign in using that provider.',
@@ -39,23 +42,22 @@ const ModalLogin = ({ open, functionUse, openModal }) => {
           functionUse={functionUse}
       >
           <ContainerModalChildren>
-              <h1>Login</h1>
+              <h1>{t('login.title')}</h1>
               <ContainerModal2ChildrenRow>
                   <LoginGoogle openModal={openModal} errorHandle={handleMedaiLoginError}/>
                   <LoginFacebook openModal={openModal} errorHandle={handleMedaiLoginError} />
               </ContainerModal2ChildrenRow>
               {errorLoginMedia.error && <ErrorInput>{errorLoginMedia.errorMessage}</ErrorInput>}
-              <ContainerTextModal>or use your email to login:</ContainerTextModal>
+              <ContainerTextModal>{t('login.orUse')}</ContainerTextModal>
               <FormUser
                 openModal={openModal} 
                 loginAndRegister={signIn}
-                textButton={'Login'}
+                textButton={t('login.textButton')}
                 forgotPassword={true}
-              >
-              </FormUser>
+              />
               <TextLink>
                 <NavLink to={'/signup'} style={{textDecoration:'none'}}>
-                You don't have an account? Sign up
+                  {t('login.textToRegister')}
                 </NavLink>
               </TextLink>
 

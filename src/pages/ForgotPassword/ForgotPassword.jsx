@@ -1,6 +1,7 @@
 //Node Modules
 import { useState } from "react"
 import { Navigate } from "react-router-dom"
+import { useTranslation } from "react-i18next";
 //Components
 import Modal from "../../components/Modal/Modal"
 import { ButtonLoginEmail } from "../../styled-components/Buttons/Buttons.elements"
@@ -15,6 +16,8 @@ import { recoverPassword } from "../../services/RegisterandLogin/recoverPassword
 import GoodMesage from "../../components/GoodMessage/GoodMesage"
 
 const ForgotPassword = () => {
+
+    const { t } = useTranslation(['modal']);
 
     const errorsFirebase = {
         'auth/user-not-found': 'User not found',
@@ -80,19 +83,19 @@ const ForgotPassword = () => {
             back={true}
         >
             <ContainerModalChildren>
-                <h1>Recover Password</h1>
+                <h1>{t('forgotPassword.title')}</h1>
                 <FormUsers onSubmit={handleSubmit}>
                     <InputFormUsers
                         type="email"
                         name="email"
-                        placeholder="Your email"
+                        placeholder={t('forgotPassword.form.placeholder1')}
                         onChange={handleChangeInput}
                         onBlur={handleInputBlur}
                     />
-                    {email.valid === false && <ErrorInput>Please enter a valid email</ErrorInput>}  
-                    <ButtonLoginEmail type="submit">Send</ButtonLoginEmail>
+                    {email.valid === false && <ErrorInput>{t('forgotPassword.form.error1')}</ErrorInput>}  
+                    <ButtonLoginEmail type="submit">{t('forgotPassword.form.textButton')}</ButtonLoginEmail>
                     {firebaseError  && <ErrorInput registerButton={true} last={true}>{firebaseError}</ErrorInput>}
-                    {goodMessage && <GoodMesage registerButton={true} last={true}>We sent you an email with a link to reset your password. Please also check your spam</GoodMesage>}
+                    {goodMessage && <GoodMesage registerButton={true} last={true}>{t('forgotPassword.form.goodText')}</GoodMesage>}
                 </FormUsers>
             </ContainerModalChildren>
             

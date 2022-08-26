@@ -1,5 +1,6 @@
 //Node Modules
 import { useState } from "react"
+import { useTranslation } from "react-i18next";
 //Components
 import ErrorInput from "../ErrorInput/ErrorInput";
 import ForgotPasswordComponent from '../ForgotPasswordComponent/ForgotPasswordComponent'
@@ -13,6 +14,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BiLock } from "react-icons/bi";
 
 const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassword }) => {
+    
+    const { t } = useTranslation(['modal']);
 
     const firebaseErrors ={
         'auth/email-already-in-use': 'Email already in use',
@@ -113,7 +116,7 @@ const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassw
             <InputFormUsers 
                 type="text"
                 name="name"
-                placeholder="Your name"
+                placeholder={t('sigup.form.placeholder1')}
                 onChange={handleChange}
                 onBlur={handleBlurInput}
                 style={user.validname === false ? 
@@ -122,13 +125,13 @@ const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassw
             />
             <FiUser className="iconInput" color={user.validname === false? '#cb3234' : '#bbb'}/>
         </ContainerInputFormUsersRegister>
-        {user.validname === false && <ErrorInput register={true}>Only letters and spaces</ErrorInput>}
+        {user.validname === false && <ErrorInput register={true}>{t('sigup.form.error1')}</ErrorInput>}
         
         <ContainerInputFormUsersRegister>
             <InputFormUsers 
                 type="email"
                 name="email"
-                placeholder="Your email"
+                placeholder={t('sigup.form.placeholder2')}
                 onChange={handleChange}
                 onBlur={handleBlurInput}
                 style={user.validemail === false ? 
@@ -137,13 +140,13 @@ const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassw
             />
             <HiOutlineMail className="iconInput" color={user.validemail === false? '#cb3234' : '#bbb'}/>
         </ContainerInputFormUsersRegister>
-        {user.validemail === false && <ErrorInput register={true}>Please enter a valid email</ErrorInput>}
+        {user.validemail === false && <ErrorInput register={true}>{t('sigup.form.error2')}</ErrorInput>}
 
         <ContainerInputFormUsersRegister>
             <InputFormUsers
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder={t('sigup.form.placeholder3')}
                 onChange={handleChange}
                 onBlur={handleBlurInput}
                 style={user.validpassword === false ? 
@@ -152,27 +155,28 @@ const FormUserRegister = ({ openModal, loginAndRegister, textButton, forgotPassw
             />
             <BiLock className="iconInput" color={user.validpassword === false? '#cb3234' : '#bbb'} />
         </ContainerInputFormUsersRegister>
-        {user.validpassword === false && <ErrorInput register={true} last={true}>Please enter at least 6 characters</ErrorInput>}
+        {user.validpassword === false && <ErrorInput register={true} last={true}>{t('sigup.form.error3')}</ErrorInput>}
 
         {forgotPassword ? <ForgotPasswordComponent/> : ''}
+
         <TermsOfConditions valid={handleSetTerms}>
-            I accept the{" "} 
+            {t('sigup.termsAndConditions.firstTerms1')} 
             <a style={{textDecoration:'underline', cursor:'pointer'}}>
-                Terms of Services
+                {t('sigup.termsAndConditions.firstTerms2')} 
             </a> 
-            {" "}and the{" "} 
+            {t('sigup.termsAndConditions.firstTerms3')}
             <a style={{textDecoration:'underline', cursor:'pointer'}}>
-                Privacy Policy
+                {t('sigup.termsAndConditions.firstTerms4')}
             </a>.
         </TermsOfConditions>
         
         <TermsOfConditions>
-            I agree to receive news and updates from Restaurant Design
+            {t('sigup.termsAndConditions.secondTerms')}
         </TermsOfConditions>
         <ButtonLoginEmail type="submit">{textButton}</ButtonLoginEmail>
-        {errorTerms && <ErrorInput registerButton={true} last={true}>Please accept the terms and conditions</ErrorInput>}
+        {errorTerms && <ErrorInput registerButton={true} last={true}>{t('sigup.errorTerms')}</ErrorInput>}
         {errorFirebase && <ErrorInput registerButton={true} last={true}>{errorFirebase}</ErrorInput>}
-        <p style={{textAlign:'left'}}>or sign up with:</p>
+        <p style={{textAlign:'left'}}>{t('sigup.orUse')}</p>
     </FormUsers>
   )
 }

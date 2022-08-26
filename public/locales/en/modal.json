@@ -1,0 +1,55 @@
+{
+    "login":{
+        "title":"Login",
+        "orUse":"or use your email to login:",
+        "textButton":"Login",
+        "textToRegister":"You don't have an account? Sign up",
+
+        "form":{
+            "placeholder1":"Your email",
+            "error1":"Please enter a valid email",
+            "placeholder2":"Password",
+            "error2":"Please enter at least 6 characters"
+        }
+    },
+
+    "forgotPassword":{
+        "title":"Recover Password",
+
+        "form":{
+            "placeholder1":"Your email",
+            "error1":"Please enter a valid email",
+            "textButton":"Send",
+            "goodText":"We sent you an email with a link to reset your password. Please also check your spam"
+        }
+    },
+
+    "sigup":{
+        "title":"You are already part of Restaurant Design Bar!",
+        "text1":"Create a user to access whenever you want and receive a ",
+        "text2":"10% discount on your order.",
+        "textButton":"Register",
+        "errorTerms":"Please accept the terms and conditions",
+        "orUse":"or sign up with:",
+
+        "form":{
+            "placeholder1":"Your name",
+            "error1":"Only letters and spaces",
+            "placeholder2":"Your email",
+            "error2":"Please enter a valid email",
+            "placeholder3":"Password",
+            "error3":"Please enter at least 6 characters"
+        },
+
+        "termsAndConditions":{
+            "firstTerms1":"I accept the ",
+            "firstTerms2":"Terms of Services",
+            "firstTerms3":" and the ",
+            "firstTerms4":"Privacy Policy",
+            "secondTerms":"I agree to receive news and updates from Restaurant Design"
+        }
+
+
+
+    }
+}
