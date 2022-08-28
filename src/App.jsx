@@ -26,7 +26,7 @@ function App() {
     return () => unsubscribe();
   }, []);
   return (
-    <Suspense fallback='Loading...'>
+    <Suspense fallback='Loading....'>
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/signup" element={<SignUp/>} />

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from "react-i18next";
-import banner from '../../../../assets/MainBanner/NewBannerRestaD.png'
-import bannerRes from '../../../../assets/MainBanner/NewBannerRestDM.png'
+import banner from '../../../../assets/MainBanner/NewBannerRestaD.jpg'
+import bannerRes from '../../../../assets/MainBanner/NewBannerRestDM.jpg'
 import { HomeBannerImg, InfoBanner, TextBanner, RellenoDiv, ButtonBannerToForm } from '../../../../styled-components/Banner/banner'
 import { ButtonBannerToFormRes, HomeBannerImgRes, InfoBannerRes, TextBannerRes } from '../../../../styled-components/Banner/bannerResponsive'
 
@@ -12,13 +12,19 @@ const HomeBanner = ({setModal}) => {
   const [bannerImg, setBannerImg] = useState(false)
 
   const setBannerImgFunction = () => {
-      setBannerImg(true)
+      const bannerImg = document.getElementById('bannerImg')
+      if(bannerImg.complete && bannerImg.naturalHeight !== 0) setBannerImg(true)
+  }
+
+  const setBannerImgFunctionRes = () => {
+    const bannerImg = document.getElementById('bannerImgRes')
+    if(bannerImg.complete && bannerImg.naturalHeight !== 0) setBannerImg(true)
   }
 
   return (
     <>
       <HomeBannerImg>
-          <img src={banner} alt="banner" onLoad={setBannerImgFunction}/>
+          <img src={banner} alt="banner" onLoad={setBannerImgFunction} id='bannerImg' />
           {bannerImg &&
             <InfoBanner>
                 <RellenoDiv />
@@ -38,7 +44,7 @@ const HomeBanner = ({setModal}) => {
           }
       </HomeBannerImg>
       <HomeBannerImgRes>
-          <img src={bannerRes} alt="banner" onLoad={setBannerImgFunction}/>
+          <img src={bannerRes} alt="banner" onLoad={setBannerImgFunctionRes} id='bannerImgRes'/>
           {bannerImg &&
             <InfoBannerRes>
               <TextBannerRes>
