@@ -19,6 +19,7 @@ import HomeSteps from "./components/HomeSteps/HomeSteps";
 import HomeForm from "./components/HomeForm/HomeForm";
 import ModalForm from "./components/HomeBanner/components/ModalForm/ModalForm";
 import ModalCheckEmail from "../../components/ModalCheckEmail/ModalCheckEmail";
+import HomeCheckList from "./components/HomeCheckList/HomeCheckList";
 
 const Home = () => {
     
@@ -53,12 +54,13 @@ const Home = () => {
                 <p>{t('introUnderBanner.text2')}</p>
             </TextMain>
             <GrayContainer>
+                <HomeCheckList/>
+            </GrayContainer>
+            <BigLetter>
                 <BolderLetter>
                     {t("firstGreyContainer")}
                 </BolderLetter>
-            </GrayContainer>
-            <BigLetter>
-                    {t("aboveCarousel")}
+                {t("aboveCarousel")}
             </BigLetter>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>

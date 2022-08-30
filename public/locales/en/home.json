@@ -16,6 +16,27 @@
         "text2":"RestaurantDesignBar aims to provide restaurant businesses with a modern vision on these issues and lay the foundations to help your restaurant or food brand convert customers into loyal ambassadors."
     },
 
+    "homeCheckList":{
+        "left":{
+            "title":"Full-Service Marketing",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "check1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check4":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "buttonText":"HIRE A DESIGNER"
+        },
+        "right":{
+            "title":"Project-Based ",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "check1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "check4":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "buttonText":"PLACER AN ORDER"
+        }
+    },
+
     "firstGreyContainer":"Coming soon: Restaurants and food companies will choose from a variety of branding and strategy services.",
 
     "aboveCarousel":"Logos, Flyers, Social Media, Websites, T-shirts & More!",

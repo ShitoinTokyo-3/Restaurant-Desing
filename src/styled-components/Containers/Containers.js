@@ -14,6 +14,8 @@ export const BolderLetter = styled.p`
     text-align: center;
     font-size: 2.2rem;
     font-weight: 700;
+    margin: 40px 50px;
+    margin-top: 20px;
 
     @media (max-width: 768px) {
         font-size: 1.5rem;
