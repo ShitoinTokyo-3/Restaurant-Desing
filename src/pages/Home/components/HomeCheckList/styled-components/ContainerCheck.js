@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const ContainerCheck = styled.div`
     display: flex;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const ListContainer = styled.div`
@@ -26,6 +30,14 @@ export const ListContainer = styled.div`
     button{
         margin-top: 20px;
     }
+
+    @media (max-width: 768px) {
+        box-sizing: border-box;
+        padding: 30px 30px;
+        margin: auto;
+        width: auto;
+    }
+
 `;
 
 export const ButtonPurple = styled.button`

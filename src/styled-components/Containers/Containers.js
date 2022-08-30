@@ -6,6 +6,10 @@ export const GrayContainer = styled.div`
     padding: 40px;
     text-align: center;
 
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+
 `;
 
 export const BolderLetter = styled.p`
