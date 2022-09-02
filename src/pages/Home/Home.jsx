@@ -52,7 +52,6 @@ const Home = () => {
                 <TextMain>
                     <h3>{t('introUnderBanner.title')}</h3>
                     <p>{t('introUnderBanner.text')}</p>
-                    <p>{t('introUnderBanner.text2')}</p>
                 </TextMain>
                 <TextMain>
                     <h3>{t('introUnderBanner.title2')}</h3>

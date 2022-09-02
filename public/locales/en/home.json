@@ -12,8 +12,7 @@
 
     "introUnderBanner":{
         "title":"Build Your Brand and Marketing Strategy",
-        "text":"The restaurant world has undergone a real revolution in recent years, both in concept and management. But few establishments have adapted to the new times.",
-        "text2":"RestaurantDesignBar aims to provide restaurant businesses with a modern vision on these issues and lay the foundations to help your restaurant or food brand convert customers into loyal ambassadors.",
+        "text":"The restaurant world has undergone a real revolution in recent years, both in concept and management. But few establishments have adapted to the new times. RestaurantDesignBar aims to provide restaurant businesses with a modern vision on these issues and lay the foundations to help your restaurant or food brand convert customers into loyal ambassadors.",
         "title2":"Project-Based or Full-Service Marketing"
     },
 
@@ -22,19 +21,17 @@
             "title":"Full-Service",
             "text":"Full-Service offers ",
             "text2Strong":"Restaurant Marketing Services",
-            "text3":" for a flexible or fixed number of hours a week. You are in control of how many hours you want to invest in your marketing and you can pretty much expect us to do everything. Each member of the staff at RDB is trained and skilled in a different area of marketing. By selecting full-service, you essentially delegate to our team the responsibility of developing, testing, and executing your complete marketing strategy. This covers everything you need, such as branding, promotion, website development, design, and advertising. Start with a ",
-            "text4Strong":"free consultation",
-            "text5":" with one of our restaurant marketing experts, we can help craft the ultimate marketing strategy.",
-            "check1":"Keep track of the work done by RDB. We will give you access to our time tracking software.",
-            "check2":"Single point of contact, saving you the time and effort of keeping track of who is doing what. We will assign a project manager to you.",
+            "text3":" for a flexible or fixed number of hours a week. By selecting full-service, you essentially delegate to our team the responsibility of developing, testing, and executing your complete marketing strategy. This covers everything you need, such as branding, promotion, website development, design, and advertising.",
+            "check1":"Access to our time and project completion tracking software.",
+            "check2":"Single point of contact. We will assign a project manager to you.",
             "check3":"Full-Service handles branding and strategy for your small or new restaurant, making sure that everything aligns with your goal.",
-            "check4":" Allows restauranteurs to focus on main restaurant operations rather than having to stay current with digital marketing trends or develop their own own brand.",
-            "check5":"No annual fees, no minimums, no setup fee. Grow week by week",
+            "check4":"Allows restauranteurs to focus on main restaurant operations rather than having to stay current with digital marketing trends or develop their own brand.",
+            "check5":"No annual fees, no minimums, no setup fee. Grow week by week.",
             "buttonText":"Get a free consultation"
         },
         "right":{
             "title":"Project-Based ",
-            "text":"Everything starts with the idea that each customer is a special project. A social media banner or post, a flyer with a QR code, an online store or delivery store, a video for a Youtube commercial, a website with delivery options, etc. Our goal is to design a “one-of-a-kind” solution for your restaurant. In this “a la carte” service our team is tasked to “think outside the box” and deliver a striking design that will make your customers and prospect fall in love with your restaurant or food brand.",
+            "text":"Everything starts with the idea that each customer is a special project. A social media post, a flyer with a QR code, an online store, a corporate video, etc. In this “a la carte” service our team is tasked to “think outside the box” and deliver a striking design that will make your customers and prospect fall in love with your restaurant or food brand.",
             "check1":"Each design adheres to your branding. You will work directly with the designer.",
             "check2":"Quick turnaround times. You will have a first draft within the first 24 hrs.",
             "check3":"Unlimited revisions. Request unlimited changes to a work, before it is accepted.",

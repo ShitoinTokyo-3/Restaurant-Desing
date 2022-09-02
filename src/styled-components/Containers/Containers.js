@@ -18,10 +18,13 @@ export const BolderLetter = styled.p`
     text-align: center;
     font-family: var(--Font-Family-Titles);
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin: 40px 50px;
+    width: 65vw;
+    margin: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
+
 
     @media (max-width: 768px) {
         font-size: 1.5rem;
@@ -32,7 +35,7 @@ export const BigLetter = styled.p`
     font-family: var(--Font-Family-Text);
     padding: 2rem 0;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     @media (max-width: 768px) {
         font-size: 1.5rem;

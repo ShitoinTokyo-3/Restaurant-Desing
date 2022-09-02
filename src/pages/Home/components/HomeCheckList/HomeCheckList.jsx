@@ -43,8 +43,6 @@ const HomeCheckList = () => {
           {t('homeCheckList.left.text')}
           <strong>{t('homeCheckList.left.text2Strong')}</strong>
           {t('homeCheckList.left.text3')}
-          <strong>{t('homeCheckList.left.text4Strong')}</strong>
-          {t('homeCheckList.left.text5')}
         </p>
       </CheckSide>
 

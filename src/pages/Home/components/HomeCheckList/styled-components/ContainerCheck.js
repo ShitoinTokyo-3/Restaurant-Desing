@@ -23,7 +23,8 @@ export const ListContainer = styled.div`
 
     h2{
         font-family: var(--Font-Family-Titles);
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin: auto;
     }
     p{
         margin: 10px 0;

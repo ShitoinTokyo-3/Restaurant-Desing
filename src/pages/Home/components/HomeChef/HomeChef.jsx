@@ -1,6 +1,6 @@
 import { HomeChefContainer, HomeChefLeft, HomeChefRight } from "./styled-components/HomeChef.element"
 import { ButtonBannerToForm } from "../../../../styled-components/Banner/banner"
-import Chef from '../../../../assets/HomeImages/CocineroRDB.png'
+import Chef from '../../../../assets/HomeImages/HomeChefNew.png'
 import { useTranslation } from "react-i18next";
 
 const HomeChef = ({setModal}) => {
