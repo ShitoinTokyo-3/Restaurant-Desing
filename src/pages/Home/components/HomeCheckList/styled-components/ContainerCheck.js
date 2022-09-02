@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerCheck = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -16,19 +17,20 @@ export const ListContainer = styled.div`
     font-family: var(--Font-Family-Text);  
     font-size: 1rem;
     width: 100%;
-    padding: 30px 60px;
+    padding: 50px 60px;
     text-align: left;
+    height: auto;
 
     h2{
         font-family: var(--Font-Family-Titles);
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     p{
         margin: 10px 0;
     }
 
     button{
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     @media (max-width: 768px) {
@@ -46,7 +48,7 @@ export const ButtonPurple = styled.button`
     border: none;
     font-family: var(--Font-Family-Titles);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 15px 20px;
     border-radius: 10px;
     text-transform: uppercase;
@@ -66,7 +68,7 @@ export const ButtonPurpleVariant = styled.button`
     border: 2.5px solid var(--Color-Text-Purple);
     font-family: var(--Font-Family-Titles);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 15px 20px;
     border-radius: 10px;
     text-transform: uppercase;
@@ -83,12 +85,19 @@ export const ButtonPurpleVariant = styled.button`
 
 export const List = styled.div`
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    margin-top: 18px;
     align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+
 
     span {
         margin:0;
         margin-left: 10px;
+        width: 100%;
+    }
+
+    .iconCheck{
+        font-size: 2rem;
     }
 `;

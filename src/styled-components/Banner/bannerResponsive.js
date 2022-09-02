@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HomeBannerImgRes = styled.div`
     position: relative;
+    margin-bottom: -1.3rem;
     img {
         width: 100%;
     }

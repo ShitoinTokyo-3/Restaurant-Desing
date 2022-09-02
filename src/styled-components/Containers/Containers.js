@@ -5,9 +5,11 @@ export const GrayContainer = styled.div`
     background-color: var(--Color-Container-Gray-Light);
     padding: 40px;
     text-align: center;
+    padding-top: 10px;
 
     @media (max-width: 768px) {
         padding: 0;
+        padding-top: 2rem;
     }
 
 `;
@@ -40,8 +42,9 @@ export const BigLetter = styled.p`
 export const TextMain = styled.div`
     text-align: center;
     margin: auto;
-    padding: 2rem 1rem;
-    padding-bottom: 3rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
     h3 {
         font-family: var(--Font-Family-Titles);
         font-size: 2rem;

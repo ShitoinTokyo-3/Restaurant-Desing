@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HomeBannerImg = styled.div`
     position: relative;
     cursor: default;
+    margin-bottom: -.3rem;
     img {
         width: 100%;
     }

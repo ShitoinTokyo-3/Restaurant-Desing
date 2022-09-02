@@ -11,33 +11,43 @@ const HomeCheckList = () => {
     t('homeCheckList.left.check2'),
     t('homeCheckList.left.check3'),
     t('homeCheckList.left.check4'),
+    t('homeCheckList.left.check5'),
   ]
   const listRight =[
     t('homeCheckList.right.check1'),
     t('homeCheckList.right.check2'),
     t('homeCheckList.right.check3'),
     t('homeCheckList.right.check4'),
+    t('homeCheckList.right.check5'),
   ]
 
   return (
     <ContainerCheck>
       <CheckSide 
-        checkList={listLeft}
-        title={t('homeCheckList.left.title')}
-        text={t('homeCheckList.left.text')}
-        buttonText={t('homeCheckList.left.buttonText')}
-      >
-
-      </CheckSide>
-      <CheckSide 
         checkList={listRight} 
-        variant={true}
+        variant={false}
         title={t('homeCheckList.right.title')}
-        text={t('homeCheckList.right.text')}
         buttonText={t('homeCheckList.right.buttonText')}
       >
-
+        <p>
+          {t('homeCheckList.right.text')}
+        </p>
       </CheckSide>
+      <CheckSide
+        variant={true}
+        checkList={listLeft}
+        title={t('homeCheckList.left.title')}
+        buttonText={t('homeCheckList.left.buttonText')}
+      >
+        <p>
+          {t('homeCheckList.left.text')}
+          <strong>{t('homeCheckList.left.text2Strong')}</strong>
+          {t('homeCheckList.left.text3')}
+          <strong>{t('homeCheckList.left.text4Strong')}</strong>
+          {t('homeCheckList.left.text5')}
+        </p>
+      </CheckSide>
+
     </ContainerCheck>
   )
 }

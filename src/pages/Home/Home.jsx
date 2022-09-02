@@ -48,13 +48,17 @@ const Home = () => {
         <div>
             <Navbar modalOpen={modal} setModal={setModal}/>
             <HomeBanner setModal={setModalFormFunction}/>
-            <TextMain>
-                <h3>{t('introUnderBanner.title')}</h3>
-                <p>{t('introUnderBanner.text')}</p>
-                <p>{t('introUnderBanner.text2')}</p>
-            </TextMain>
             <GrayContainer>
+                <TextMain>
+                    <h3>{t('introUnderBanner.title')}</h3>
+                    <p>{t('introUnderBanner.text')}</p>
+                    <p>{t('introUnderBanner.text2')}</p>
+                </TextMain>
+                <TextMain>
+                    <h3>{t('introUnderBanner.title2')}</h3>
+                </TextMain>
                 <HomeCheckList/>
+
             </GrayContainer>
             <BigLetter>
                 <BolderLetter>
