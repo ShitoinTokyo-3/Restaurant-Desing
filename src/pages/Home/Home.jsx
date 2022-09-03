@@ -64,7 +64,6 @@ const Home = () => {
                 <BolderLetter>
                     {t("firstGreyContainer")}
                 </BolderLetter>
-                {t("aboveCarousel")}
             </BigLetter>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>

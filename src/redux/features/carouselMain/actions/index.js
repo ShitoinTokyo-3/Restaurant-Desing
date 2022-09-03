@@ -15,44 +15,44 @@ export const fechCarouselInfo = ( data ) => {
                 "link":"/payment"
             },{
                 "title": "Social Media",
-                "description": "",
-                "backgroundColor": "#F5B700",
-                "color": "#fff",
+                "description": "Pieces for social networks, posts, stories, short videos.",
+                "backgroundColor": "#E6C229",
+                "color": "#000000",
                 "link":"/payment"
             },{
                 "title": "Advertisement Design",
                 "description": "Billboard, car/van wraps, newspaper, trade show, etc...",
-                "backgroundColor": "#7D387D",
+                "backgroundColor": "#861657",
                 "color": "#fff",
                 "link":"/payment"
             },{     
                 "title": "Menu Design",
-                "description": "",
-                "backgroundColor": "#05E0F9",
-                "color": "#000",
+                "description": "We create your menu to print or your digital menu",
+                "backgroundColor": "#00171F",
+                "color": "#FFFFFF",
                 "link":"/payment"
             },{     
                 "title": "Printing Design",
                 "description": "Flyers, postcards, posters, brochures, banner, etc...",
-                "backgroundColor": "#1F7E01",
-                "color": "#fff",
+                "backgroundColor": "#D12D27",
+                "color": "#FFFFFF",
                 "link":"/payment"
             },{     
                 "title": " Packaging and Label",
-                "description": "",
-                "backgroundColor": "#1F7E01",
+                "description": "We create packages and labels that talk about the benefits of the product.",
+                "backgroundColor": "#0FA3B1",
                 "color": "#fff",
                 "link":"/payment"
             },{     
                 "title": "Clothing and Merch",
                 "description": "Stickers, merchandise, mugs, totes, aprons, tshirts",
-                "backgroundColor": "#1F7E01",
+                "backgroundColor": "#FB5012",
                 "color": "#fff",
                 "link":"/payment"
             },{     
                 "title": "Website Design",
                 "description": "Banner ad, blog, Landing page, online ordering page, etc...",
-                "backgroundColor": "#1F7E01",
+                "backgroundColor": "#2E86AB",
                 "color": "#fff",
                 "link":"/payment"
             }

@@ -21,7 +21,7 @@ export const HomeChefLeft = styled.div`
 
     @media (max-width: 768px) {
         display:flex;
-        
+        width: 100%;
         img {
             height: auto;
             width: 90%;

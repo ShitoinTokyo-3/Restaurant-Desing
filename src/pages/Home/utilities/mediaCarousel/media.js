@@ -1,10 +1,22 @@
-import media_01 from "../../../../assets/MainCarousel/media_01.png"
-import media_02 from "../../../../assets/MainCarousel/media_02.png"
-import media_05 from "../../../../assets/MainCarousel/media_05.png"
-import media_06 from "../../../../assets/MainCarousel/media_06.png"
-import media_09 from "../../../../assets/MainCarousel/media_09.png"
+import BrandIdentify from "../../../../assets/MainCarousel/BrandIdentity.png";
+import SocialMedia from "../../../../assets/MainCarousel/SocialMedia.png";
+import AdvertisementDesign from "../../../../assets/MainCarousel/AdvertisementDesign.png";
+import MenuDesign from "../../../../assets/MainCarousel/MenuDesign.png";
+import PrintingDesign from "../../../../assets/MainCarousel/PrintingDesign.png";
+import PackingandLabel from "../../../../assets/MainCarousel/PackingandLabel.png";
+import ClothingandMerch from "../../../../assets/MainCarousel/ClothingandMerch.png";
+import WebsiteDesign from "../../../../assets/MainCarousel/WebsiteDesign.png";
 
-export const media = [ media_01, media_02, media_05, media_06, media_09, media_09, media_09, media_09 ];
+export const media = [ 
+    BrandIdentify,
+    SocialMedia,
+    AdvertisementDesign,
+    MenuDesign,
+    PrintingDesign,
+    PackingandLabel,
+    ClothingandMerch,
+    WebsiteDesign
+];
 export const mediaByIndex = index => media[index % media.length];
 
 

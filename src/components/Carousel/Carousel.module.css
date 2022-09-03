@@ -31,15 +31,15 @@
 
 .embla__slide {
   position: relative;
-  min-width: 350px;
-  padding-left: 30px;
+  min-width: 444px;
+  padding-left: 20px;
 }
 
 .embla__slide__inner {
   position: relative;
   overflow: hidden;
-  height: 350px;
-  width: 350px;
+  height: 370px;
+  width: 444px;
 }
 
 .carousel__img__container{
@@ -150,6 +150,11 @@
     position: relative;
     min-width: 100%;
     padding-left: 0;
+  }
+  
+  .embla__slide__inner {
+    height: 350px;
+    width: 420px;
   }
 
   .embla__button{
