@@ -8,32 +8,50 @@ export const fechCarouselInfo = ( data ) => {
 
         const info = [
             {
-                "title": "Packaging & Label",
-                "description": "Looking for someone who could think outside the box? Our professional packaging designers can help.",
+                "title": "Brand Identity",
+                "description": "Logo, stationery, business cards, leterhead, etc...",
                 "backgroundColor": "#FF6337",
                 "color": "#fff",
                 "link":"/payment"
             },{
-                "title": "Business card design",
-                "description": "Generate a memory of your brand with a professional business card.",
+                "title": "Social Media",
+                "description": "",
                 "backgroundColor": "#F5B700",
                 "color": "#fff",
                 "link":"/payment"
             },{
-                "title": "Print flyer design",
-                "description": "Boost your brand with high-quality marketing materials, right from the get-go!",
+                "title": "Advertisement Design",
+                "description": "Billboard, car/van wraps, newspaper, trade show, etc...",
                 "backgroundColor": "#7D387D",
                 "color": "#fff",
                 "link":"/payment"
             },{     
-                "title": "Logo Design",
-                "description": "Get a logo that impacts your audience and that they recognize your brand in the blink of an eye",
+                "title": "Menu Design",
+                "description": "",
                 "backgroundColor": "#05E0F9",
                 "color": "#000",
                 "link":"/payment"
             },{     
-                "title": "Stationery design",
-                "description": "Avoid following molds and give personality to your business with just a few clicks",
+                "title": "Printing Design",
+                "description": "Flyers, postcards, posters, brochures, banner, etc...",
+                "backgroundColor": "#1F7E01",
+                "color": "#fff",
+                "link":"/payment"
+            },{     
+                "title": " Packaging and Label",
+                "description": "",
+                "backgroundColor": "#1F7E01",
+                "color": "#fff",
+                "link":"/payment"
+            },{     
+                "title": "Clothing and Merch",
+                "description": "Stickers, merchandise, mugs, totes, aprons, tshirts",
+                "backgroundColor": "#1F7E01",
+                "color": "#fff",
+                "link":"/payment"
+            },{     
+                "title": "Website Design",
+                "description": "Banner ad, blog, Landing page, online ordering page, etc...",
                 "backgroundColor": "#1F7E01",
                 "color": "#fff",
                 "link":"/payment"

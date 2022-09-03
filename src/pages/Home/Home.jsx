@@ -10,6 +10,7 @@ import {
 } from "../../styled-components/Containers/Containers";
 //Components
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import ModalLogin from "../../components/ModalLogin/ModalLogin";
 //Components Home
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
@@ -74,6 +75,7 @@ const Home = () => {
             </GrayContainer>
             <HomeSteps/>
             <HomeForm/>
+            <Footer/>
 
             <ModalLogin
                 open={modal}

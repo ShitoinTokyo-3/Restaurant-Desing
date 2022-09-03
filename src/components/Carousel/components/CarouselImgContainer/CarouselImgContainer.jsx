@@ -1,5 +1,6 @@
 import s from '../../Carousel.module.css';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 const CarouselImgContainer = ({ img, srcText }) => {
     const { t } = useTranslation(['home']);
@@ -12,6 +13,7 @@ const CarouselImgContainer = ({ img, srcText }) => {
                 className={s.embla__slide__img}
                 src={img}
             />
+
             <div  
                 className={s.embla__slide__img_text}
                 style={{backgroundColor: `${srcText?.backgroundColor}`, color: `${srcText?.color}`}}

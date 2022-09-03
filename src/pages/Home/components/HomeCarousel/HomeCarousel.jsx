@@ -7,15 +7,15 @@ import { useTranslation } from "react-i18next";
 
 const HomeCarousel = () => {
 
-    const SLIDE_COUNT = 5;
-    const slides = Array.from(Array(SLIDE_COUNT).keys());
-
+    
     const dispatch = useDispatch();
     const mainCarouselInfo = useSelector(state => state.carousels.carouselMainInfo);
-
+    
     const { i18n } = useTranslation(['home']);
-
-
+    
+    const SLIDE_COUNT = mainCarouselInfo.length;
+    const slides = Array.from(Array(SLIDE_COUNT).keys());
+    
     useEffect(() => {
         dispatch(fechCarouselInfo({ lang: i18n.language }));
     }

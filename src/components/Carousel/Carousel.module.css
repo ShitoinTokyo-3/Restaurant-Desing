@@ -1,13 +1,15 @@
 .embla {
   position: relative;
-  background-color: transparent;
-  max-width: 95%;
+  background: transparent;
+  padding: 20px;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .embla__viewport {
   overflow: hidden;
+  width: 100%;
 }
 
 .embla__viewport.is-draggable {
@@ -25,31 +27,19 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  margin-left: -450px;
 }
 
 .embla__slide {
-  padding-left: 20px;
-  min-width: 400px;
   position: relative;
+  min-width: 350px;
+  padding-left: 30px;
 }
 
 .embla__slide__inner {
   position: relative;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-
-}
-
-.embla__slide__parallax {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  height: 350px;
+  width: 350px;
 }
 
 .carousel__img__container{
@@ -63,13 +53,13 @@
   display: block;
   top: 50%;
   left: 50%;
-  width: 300px;
+  width: 100%;
   min-height: 100%;
   min-width: 100%;
   max-width: none;
   transform: translate(-50%, -50%);
-
 }
+
 .embla__slide__img_text{
   position: absolute;
   display: block;
@@ -151,18 +141,23 @@
   right: 27px;
 }
 
-@media screen and (max-width: 768px) {
 
-  .embla__container{
-    margin-left: 0;
+@media (max-width: 768px) {
+  .embla{
+    max-width: 100%;
   }
-
+  .embla__slide {
+    position: relative;
+    min-width: 100%;
+    padding-left: 0;
+  }
 
   .embla__button{
     display: none;
   }
-  .carousel__img__container{
-    transform: scale(0.9);
+  .embla__slide__inner{
+    width: 100%;
   }
 }
+
   

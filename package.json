@@ -14,7 +14,7 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "emailjs-com": "^3.2.0",
-    "embla-carousel-autoplay": "^7.0.0-rc05",
+    "embla-carousel-autoplay": "^7.0.2",
     "embla-carousel-react": "^7.0.0-rc05",
     "firebase": "^9.9.2",
     "i18next": "^21.8.14",

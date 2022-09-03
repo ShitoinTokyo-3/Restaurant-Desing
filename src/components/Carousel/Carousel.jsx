@@ -1,88 +1,74 @@
-import { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from 'embla-carousel-react'
+import { useState, useEffect, useCallback, useRef } from "react";
 import CarouselNextButton from "./components/CarouselNextButton/CarouselNextButton";
 import CarouselPrevButton from "./components/CarouselPrevButton/CarouselPrevButton";
 import CarouselImgContainer from "./components/CarouselImgContainer/CarouselImgContainer";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import s from './Carousel.module.css'
 
 const Carousel = ({ slides, media, carouselInfo }) => {
-    const PARALLAX_FACTOR = 4.5;
 
-    const [viewportRef, embla] = useEmblaCarousel({
-        loop: false,
-        dragFree: true,
-    })
 
+
+    const options = { 
+        loop: true, 
+        align: "center", 
+        skipSnaps: false 
+    };
+
+    const autoplay = useRef(
+        Autoplay(
+          { delay: 4000, stopOnInteraction: true },
+          (emblaRoot) => emblaRoot.parentElement
+        )
+      );
+    
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-    const [parallaxValues, setParallaxValues] = useState([]);
-
-    const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-    const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+    
+    const scrollNext = useCallback(() => {
+        if (!emblaApi) return;
+        emblaApi.scrollNext();
+        autoplay.current.reset();
+    }, [emblaApi]);
+    
+    const scrollPrev = useCallback(() => {
+        if (!emblaApi) return;
+        emblaApi.scrollPrev();
+        autoplay.current.reset();
+    }, [emblaApi]);
 
     const onSelect = useCallback(() => {
-        if (!embla) return;
-        setPrevBtnEnabled(embla.canScrollPrev());
-        setNextBtnEnabled(embla.canScrollNext());
-    }, [embla]);
-
-    const onScroll = useCallback(() => {
-        if (!embla) return;
-            
-        const engine = embla.internalEngine();
-        const scrollProgress = embla.scrollProgress();
-            
-        const styles = embla.scrollSnapList().map((scrollSnap, index) => {
-            if (!embla.slidesInView().includes(index)) return 0;
-            let diffToTarget = scrollSnap - scrollProgress;
-                
-            if (engine.options.loop) {
-                engine.slideLooper.loopPoints.forEach((loopItem) => {
-                    const target = loopItem.getTarget();
-                    if (index === loopItem.index && target !== 0) {
-                        const sign = Math.sign(target);
-                        if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
-                        if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
-                    }
-                });
-            }
-            return diffToTarget * (-1 / PARALLAX_FACTOR) * 100;
-        });
-        setParallaxValues(styles);
-    }, [embla, setParallaxValues]);
+        if (!emblaApi) return;
+        setPrevBtnEnabled(emblaApi.canScrollPrev());
+        setNextBtnEnabled(emblaApi.canScrollNext());
+    }, [emblaApi]);
     
     useEffect(() => {
-        if (!embla) return;
+        if (!emblaApi) return;
         onSelect();
-        onScroll();
-        embla.on("select", onSelect);
-        embla.on("scroll", onScroll);
-        embla.on("resize", onScroll);
-    }, [embla, onSelect, onScroll]);
-     
+        emblaApi.on("select", onSelect);
+    }, [emblaApi, onSelect]);
+
     return (
     <div className={s.embla}>
-        <div className={s.embla__viewport} ref={viewportRef}>
-            <div className={s.embla__container}>
-                {slides.map((index) => (
-                    <div className={s.embla__slide} key={index}>
-                        <div className={s.embla__slide__inner}>
-                            <div
-                                className={s.embla__slide__parallax}
-                                style={{ transform: `translateX(${parallaxValues[index]}%)` }}
-                            >
-                                    <CarouselImgContainer
-                                        img={media(index)}
-                                        srcText={carouselInfo[index]}
-                                    />
-                            </div>
-                        </div>
-                    </div>
-                ))}
+      <div className={s.embla__viewport} ref={emblaRef}>
+        <div className={s.embla__container}>
+          {slides.map((index) => (
+            <div className={s.embla__slide} key={index}>
+              <div className={s.embla__slide__inner}>
+                <CarouselImgContainer
+                    img={media(index)}
+                    srcText={carouselInfo[index]}
+                />
+              </div>
             </div>
+          ))}
         </div>
-        <CarouselPrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-        <CarouselNextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+      </div>
+      <CarouselPrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+      <CarouselNextButton onClick={scrollNext} enabled={nextBtnEnabled} />
     </div>
     )
 }

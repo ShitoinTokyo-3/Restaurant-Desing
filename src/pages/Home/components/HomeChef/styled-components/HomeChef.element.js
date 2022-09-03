@@ -14,8 +14,9 @@ export const HomeChefContainer = styled.div`
 `;
 
 export const HomeChefLeft = styled.div`
+    width: 50%;
     img {
-        height: 500px;
+        width: 100%;
     }
 
     @media (max-width: 768px) {
