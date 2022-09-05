@@ -6,7 +6,8 @@ import {
     BigLetter,
     BolderLetter,
     TextMain,
-    GrayContainer
+    GrayContainer,
+    GrayContainervariant
 } from "../../styled-components/Containers/Containers";
 //Components
 import Navbar from "../../components/Navbar/Navbar";
@@ -54,9 +55,6 @@ const Home = () => {
                     <h3>{t('introUnderBanner.title')}</h3>
                     <p>{t('introUnderBanner.text')}</p>
                 </TextMain>
-                <TextMain>
-                    <h3>{t('introUnderBanner.title2')}</h3>
-                </TextMain>
                 <HomeCheckList/>
 
             </GrayContainer>
@@ -67,12 +65,12 @@ const Home = () => {
             </BigLetter>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>
-            <GrayContainer>
+            <GrayContainervariant>
                 <BolderLetter>
                     {t("secondGreyContainer")}
                 </BolderLetter>
-            </GrayContainer>
-            <HomeSteps/>
+                <HomeSteps/>
+            </GrayContainervariant>
             <HomeForm/>
             <Footer/>
 

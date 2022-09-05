@@ -50,7 +50,7 @@ const Navbar = ({ setModal, modalOpen}) => {
   }
 
   return (
-    <NavbarContainer>
+    <NavbarContainer id="#">
       <NavbarWrapper>
 
         <IconLogo>
@@ -63,7 +63,7 @@ const Navbar = ({ setModal, modalOpen}) => {
 
         <Menu click={click}>
 
-          <MenuItem onClick={handleCLickNavItem} key='22'>
+          {/* <MenuItem onClick={handleCLickNavItem} key='22'>
           <MenuItemLink to='/'>{t('option1')}</MenuItemLink>
           </MenuItem>
 
@@ -73,7 +73,7 @@ const Navbar = ({ setModal, modalOpen}) => {
 
           <MenuItem onClick={handleCLickNavItem} key='44'>
             <MenuItemLink to='/help'>{t('option3')}</MenuItemLink>
-          </MenuItem>
+          </MenuItem> */}
 
           {user?.email? (
             <MenuItem onClick={handleCLickNavItem} key='55'>

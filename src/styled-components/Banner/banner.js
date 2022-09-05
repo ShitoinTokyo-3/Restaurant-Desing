@@ -79,7 +79,7 @@ export const ButtonBannerToForm = styled.button`
     font-weight: bold;
     border-radius: 18px;
     padding: 1rem 2rem;
-    margin: 30px auto;
+    margin: 50px auto;
     margin-bottom: 15px;
     cursor: pointer;
     text-transform: uppercase;

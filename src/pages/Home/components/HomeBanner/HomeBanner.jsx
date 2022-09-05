@@ -55,12 +55,10 @@ const HomeBanner = ({setModal}) => {
                   {t('homeBanner.text')}
                 </p>
                 <ButtonBannerToFormRes onClick={() => setModal()}>
-                  {t('homeBanner.buttonTextResponsive')}<br/>
-                  {t('homeBanner.buttonTextResponsive2')}
+                  {t('homeBanner.buttonTextResponsive')}
                 </ButtonBannerToFormRes>
                 <span>
-                {t('homeBanner.underButtonTextResponsive')}<br/>
-                {t('homeBanner.underButtonTextResponsive2')}
+                {t('homeBanner.underButtonTextResponsive')}
                 </span>
               </TextBannerRes>
             </InfoBannerRes>

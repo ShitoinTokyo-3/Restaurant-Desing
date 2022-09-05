@@ -2,58 +2,53 @@
     "homeBanner":{
         "title":"Make customers fall in love with your food and brand",
         "text":"While we set the table, we invite you over for a free consultation with one of our Restaurant Marketing experts.", 
-        "buttonText":"Book a 15 min call with us",
+        "buttonText":"BOOK A 15 MIN CALL",
         "underButtonText":"FREE. No commitment. No hidden fees.",
-        "buttonTextResponsive":"Book a 15 min ",
-        "buttonTextResponsive2":"call with us",
+        "buttonTextResponsive":"BOOK A 15 MIN CALL",
         "underButtonTextResponsive":"FREE. No commitment.",
         "underButtonTextResponsive2":"No hidden fees." 
     },
 
     "introUnderBanner":{
         "title":"Build Your Brand and Marketing Strategy",
-        "text":"The restaurant world has undergone a real revolution in recent years, both in concept and management. But few establishments have adapted to the new times. RestaurantDesignBar aims to provide restaurant businesses with a modern vision on these issues and lay the foundations to help your restaurant or food brand convert customers into loyal ambassadors.",
-        "title2":"Project-Based or Full-Service Marketing"
+        "text":"The restaurant world has undergone a real revolution in recent years, both in concept and management. But few establishments have adapted to the new times. RestaurantDesignBar provides a modern vision on branding and marketing issues and help restaurants and food brands convert customers into loyal ambassadors."
     },
 
     "homeCheckList":{
         "left":{
             "title":"Full-Service",
-            "text":"Full-Service offers ",
-            "text2Strong":"Restaurant Marketing Services",
-            "text3":" for a flexible or fixed number of hours a week. By selecting full-service, you essentially delegate to our team the responsibility of developing, testing, and executing your complete marketing strategy. This covers everything you need, such as branding, promotion, website development, design, and advertising.",
+            "text":"Choose our Full-Service and we will develop, test, and execute your complete branding and marketing strategy for a flexible or fixed number of hours a week. This covers everything you need, such as branding, promotion, website development, design, and advertising.",
             "check1":"Access to our time and project completion tracking software.",
             "check2":"Single point of contact. We will assign a project manager to you.",
-            "check3":"Full-Service handles branding and strategy for your small or new restaurant, making sure that everything aligns with your goal.",
-            "check4":"Allows restauranteurs to focus on main restaurant operations rather than having to stay current with digital marketing trends or develop their own brand.",
-            "check5":"No annual fees, no minimums, no setup fee. Grow week by week.",
+            "check3":"Full-Service handles branding and strategy for you. Everything!",
+            "check4":"Allows restauranteurs to focus on main restaurant operations vs staying current with digital trends.",
+            "check5":"No annual fees, no minimum weekly hours, no setup fee. Grow week by week.",
             "buttonText":"Get a free consultation"
         },
         "right":{
             "title":"Project-Based ",
-            "text":"Everything starts with the idea that each customer is a special project. A social media post, a flyer with a QR code, an online store, a corporate video, etc. In this “a la carte” service our team is tasked to “think outside the box” and deliver a striking design that will make your customers and prospect fall in love with your restaurant or food brand.",
+            "text":"Everything starts with the idea that each customer is a special project. A social media post, a flyer with a QR code, an online store, a corporate video, etc. With this “a la carte” service, our team produces an eye-catching design.",
             "check1":"Each design adheres to your branding. You will work directly with the designer.",
             "check2":"Quick turnaround times. You will have a first draft within the first 24 hrs.",
             "check3":"Unlimited revisions. Request unlimited changes to a work, before it is accepted.",
             "check4":"Own the copyrights of every created work",
             "check5":"No annual fees, no minimums, no setup fee. Pay as you order. Create an account for a discount.",
-            "buttonText":"GET STARTED"
+            "buttonText":"GET STARTED WITH A DESIGN"
         }
     },
 
-    "firstGreyContainer":"Coming soon: Restaurants and food companies will choose from a variety of branding and strategy services. Logos, Flyers, Social Media, Websites, T-shirts & More!",
+    "firstGreyContainer":"Need a graphic design for your restaurant or food brand? Choose any of our “a la carte” services. One Simple Flat Rate. No Contracts. Unlimited revisions",
 
     "carouselLink":"Coming soon.",
 
     "homeChef":{
         "title":"Get a FREE consultation with one of our experts",
-        "text1":"Our seasoned team has more than 40 years of combined experience. Our team consists of graphic designers, brand experts, restaurant owners, coffee roasters and Qgraders, POS experts, etc.",
-        "text2":"We've studied how customers, followers, and shoppers make decisions in order to understand what factors in the way they interact with food brands.",
-        "text3":"Learn more about our marketing process and discover how RDB may help you maximize results.",
-        "buttonText":"Book a 15 min call with us"
+        "text1":"We have more than 40 years of combined experience. Our team consists of graphic designers, brand experts, restaurant owners, coffee roasters, Qgraders, POS experts, etc.We deeply understand how customers make decisions and what factors in the way they interact with restaurants and food brands.",
+        "text2":"Learn more about our marketing process and discover how RDB may help you maximize results.",
+        "buttonText":"BOOK A 15 MIN CALL"
     },
 
-    "secondGreyContainer":"That's how easy it will be to place your order!",
+    "secondGreyContainer":"HOW IT WORKS",
 
     "steps":{
         "title1":"Step 1",

@@ -20,8 +20,6 @@ const HomeChef = ({setModal}) => {
 
             <p>{t("homeChef.text2")}</p>
 
-            <p>{t("homeChef.text3")}</p>
-
             <ButtonBannerToForm className="ButtonChef"  onClick={setModal}>
                 {t("homeChef.buttonText")}
             </ButtonBannerToForm>

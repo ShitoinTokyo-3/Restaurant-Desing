@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer/Footer"
 import Navbar from "../../components/Navbar/Navbar"
 
 const NotFoundPage = () => {
@@ -5,6 +6,7 @@ const NotFoundPage = () => {
     <>
         <Navbar/>
         <h1>404 not found</h1>
+        <Footer/>
     </>
   )
 }

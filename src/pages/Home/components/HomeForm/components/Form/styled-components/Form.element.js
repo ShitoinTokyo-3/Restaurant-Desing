@@ -16,9 +16,8 @@ export const FormInputSecondContainer = styled.div`
 
 export const FormInput = styled.input`
     width: 400px;
-    background-color: var(--Color-Bg-Input-Home);
     padding: 1rem;
-    border: 3px solid #fff;
+    border: 3px solid #f4f4f4;
     border-radius: 5px;
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -36,9 +35,8 @@ export const FormInput = styled.input`
 
 export const FormArea = styled.textarea`
     width: 400px;
-    background-color: var(--Color-Bg-Input-Home);
     padding: 1rem;
-    border: 3px solid #fff;
+    border: 3px solid #f4f4f4;
     border-radius: 5px;
     resize: none;
     height: 130px;

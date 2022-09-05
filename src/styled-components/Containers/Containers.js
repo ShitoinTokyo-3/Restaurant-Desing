@@ -14,6 +14,18 @@ export const GrayContainer = styled.div`
 
 `;
 
+export const GrayContainervariant = styled.div`
+    background-color: var(--Color-Container-Gray);
+    padding: 40px;
+    text-align: center;
+    padding-top: 10px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        padding-top: 2rem;
+    }
+`;
+
 export const BolderLetter = styled.p`
     text-align: center;
     font-family: var(--Font-Family-Titles);
