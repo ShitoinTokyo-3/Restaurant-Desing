@@ -30,7 +30,7 @@ export const BolderLetter = styled.p`
     text-align: center;
     font-family: var(--Font-Family-Titles);
     text-align: center;
-    font-size: 2rem;
+    font-size: rem;
     font-weight: 700;
     width: 65vw;
     margin: auto;

@@ -52,20 +52,20 @@
 
     "steps":{
         "title1":"Step 1",
-        "text1":"Choose the category to which your business or restaurant belongs.",
+        "text1":"Choose the category, style and colors of your brand. If you don't have them, don't worry!",
         "title2":"Step 2",
-        "text2":"Choose some logos for reference and the color palette of your brand.",
+        "text2":"Create a free account with us to access your order status and get revisions.",
         "title3":"Step 3",
-        "text3":"Type in your business information for the designer to start working.",
-        "titleReady":"And ready!",
-        "textReady":"Our designers will be ready to work on your order."
+        "text3":"Enter your payment information in our secure and easy to navigate payment gateway.",
+        "titleReady":"And that's it! We will get to work on your design",
+        "textReady":"Get all source files of the design with full ownership. Save and download."
     },
 
-    "titleForm":"Restaurant Graphic Design & Branding Services. Find an Expert for Anything",
+    "titleForm":" Proven Restaurant Marketing Solutions",
 
-    "textForm1":"A great brand identity will help your customers and prospects recognize you and consequently choose among your competitors.",
+    "textForm1":"We are looking for restaurants wanting to expand their customer reach, and create loyalty with their current ones.",
 
-    "textForm2":"The designs of your restaurant's menu, flyers, QR images, business cards, and logo should all convey your brand's essence and cuisine. Let us help you create a brand identity that will resonate with your customers' appetite.",
+    "textForm2":" Our services will help your potential customers recognize you and choose you among competitors. Get a free consultation today. No commitment. No hidden fees.",
 
     "form":{
         "placeholder1":"Name",
@@ -75,10 +75,8 @@
         "placeholder3":"Phone",
         "errorInput3":"Please enter a valid phone",
         "placeholder4":"I need help with...",
-        "buttonForm":"Send information",
-        "termsAndConditions1":"All Rights Reserved ",
-        "termsAndConditions2":"Restaurant Design Bar",
-        "termsAndConditions3":"Terms and Conditions"
+        "buttonForm":"BOOK A 15 MIN CALL",
+        "termsAndConditions1":"Don't worry, we won't spam you, nor will we ever give or sell your info to another party, because that's not cool."
     },
 
     "formModal":{

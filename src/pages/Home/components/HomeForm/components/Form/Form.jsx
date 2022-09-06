@@ -163,8 +163,7 @@ const Form = ({setOpenModal, isModal}) => {
             </FormInputSecondContainer>
             <InputSubmit type='submit' value={t('form.buttonForm')}/>
             <TermsAndConditions>
-                {t('form.termsAndConditions1')}<span>{t('form.termsAndConditions2')}</span><br/>
-                <span>{t('form.termsAndConditions3')}</span>
+                {t('form.termsAndConditions1')}
             </TermsAndConditions>
         </FormInputsContainer> : 
         <FormInputsContainer ref={formRef} onSubmit={handleSubmit}>
