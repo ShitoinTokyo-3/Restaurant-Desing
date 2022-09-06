@@ -19,6 +19,7 @@ const CarouselImgContainer = ({ img, srcText }) => {
                 style={{backgroundColor: `${srcText?.backgroundColor}`, color: `${srcText?.color}`}}
             >
                 <span className={s.embla__slide__img_text_span1}>{srcText?.title}</span>
+                {srcText?.subtitle && <span className={s.embla__slide__img_text_subtitle}>{srcText?.subtitle}</span>}
                 <p>{srcText?.description}</p>
                 <span className={s.embla__slide__img_text_span2}>{t('carouselLink')}</span>
             </div>

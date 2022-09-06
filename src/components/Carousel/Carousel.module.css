@@ -31,17 +31,22 @@
 
 .embla__slide {
   position: relative;
+
+  /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio de carrousel paso 1 */
   min-width: 444px;
+  /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio entre carrouseles */
   padding-left: 20px;
 }
 
 .embla__slide__inner {
   position: relative;
   overflow: hidden;
-  height: 370px;
+  /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio de carrouseles paso 2*/
   width: 444px;
+  height: 370px;
 }
 
+/* Tia Angie esto es lo unico que cambia */
 .carousel__img__container{
   width: 100%;
   height: 100%;
@@ -82,6 +87,8 @@
   opacity: 0.9;
 }
 
+/* TODO:Angie este es el texto dentro de los carrouseles Titulo*/
+
 .embla__slide__img_text .embla__slide__img_text_span1{
   font-size: 36px;
   font-weight: bold;
@@ -89,12 +96,20 @@
 
 }
 
+/* TODO:Angie este es el texto dentro de los carrouseles Subtitulo*/
+.embla__slide__img_text .embla__slide__img_text_subtitle{
+  font-size: 20px;
+  margin-top: -15px;
+}
+
+/* TODO:Angie este es el texto dentro de los carrouseles Texto */
 .embla__slide__img_text .embla__slide__img_text_span2{
-  font-size: 30px;
+  font-size: 23px;
   font-weight: bold;
   text-decoration: underline;
   margin-bottom: 60px;
 }
+
 
 .embla__slide__img_text p{
   font-size: 16px;
