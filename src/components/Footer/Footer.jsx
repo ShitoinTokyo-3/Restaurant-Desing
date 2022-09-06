@@ -1,5 +1,5 @@
 import { FooterContainer } from "./styled-component/container"
-import Logo from "../../assets/Logo/Logo_Restaurant_Design_Bar.png";
+import Logo from "../../assets/Logo/Restaurant Design Bar White.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

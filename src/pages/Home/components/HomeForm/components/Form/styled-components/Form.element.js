@@ -55,17 +55,21 @@ export const FormArea = styled.textarea`
 `;
 
 export const TermsAndConditions = styled.div`
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--Font-Family-Titles);
     text-align: center;
     cursor:default;
     margin-bottom: 1rem;
-    font-weight: 400;
+    width: 30vw;
     span{
         padding:0;
         margin:0;
         font-weight: bold;
         cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        width: 85%;
     }
 `;
 

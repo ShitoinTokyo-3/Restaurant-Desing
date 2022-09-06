@@ -13,7 +13,10 @@ export const StepsContainer = styled.div`
 
 export const StepsText = styled.div`
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.1;
+    padding-bottom: 2rem;
 
     h3{
         font-size: 2.3rem;
@@ -25,5 +28,15 @@ export const StepsText = styled.div`
         font-family: var(--Font-Family-Text);
         font-size: 1.2rem;
         font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        h3{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
     }
 `;
