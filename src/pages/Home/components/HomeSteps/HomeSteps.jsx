@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import Steps from "./components/Steps/Steps"
 //img
-import Steps1 from '../../../../assets/HomeSteps/HomeSteps1.jpg'
-import Steps2 from '../../../../assets/HomeSteps/HomeSteps2.jpg'
-import Steps3 from '../../../../assets/HomeSteps/HomeSteps3.jpg'
+import Steps1 from '../../../../assets/HomeSteps/HomeSteps1.png'
+import Steps2 from '../../../../assets/HomeSteps/HomeSteps2.png'
+import Steps3 from '../../../../assets/HomeSteps/HomeSteps3.png'
 import { StepsContainer, StepsText } from "./styled-components/container.element"
 
 const HomeSteps = () => {
