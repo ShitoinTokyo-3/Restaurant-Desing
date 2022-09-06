@@ -30,8 +30,8 @@ export const BolderLetter = styled.p`
     text-align: center;
     font-family: var(--Font-Family-Titles);
     text-align: center;
-    font-size: rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 900;
     width: 65vw;
     margin: auto;
     margin-top: 20px;
@@ -39,7 +39,7 @@ export const BolderLetter = styled.p`
 
 
     @media (max-width: 768px) {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 `;
 

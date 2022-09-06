@@ -8,7 +8,7 @@ export const StepsContainer = styled.div`
     text-align: center;
     margin: 0 1rem;
     img{
-        width: 90%;
+        width: 55%;
     }
     h3{
         font-size: 2.5rem; 
