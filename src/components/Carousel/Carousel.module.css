@@ -99,7 +99,7 @@
 /* TODO:Angie este es el texto dentro de los carrouseles Subtitulo*/
 .embla__slide__img_text .embla__slide__img_text_subtitle{
   font-size: 20px;
-  margin-top: -15px;
+  margin: 0;
 }
 
 /* TODO:Angie este es el texto dentro de los carrouseles Texto */
