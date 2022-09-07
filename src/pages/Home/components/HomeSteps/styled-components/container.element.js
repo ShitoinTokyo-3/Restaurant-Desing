@@ -19,7 +19,7 @@ export const StepsText = styled.div`
     padding-bottom: 2rem;
 
     h3{
-        font-size: 2.3rem;
+        font-size: 2rem;
         font-weight: bold;
         font-family: var(--Font-Family-Titles);
     }
@@ -27,12 +27,11 @@ export const StepsText = styled.div`
         margin: 0.5rem 0;
         font-family: var(--Font-Family-Text);
         font-size: 1.2rem;
-        font-weight: bold;
     }
 
     @media (max-width: 768px) {
         h3{
-            font-size: 1.7rem;
+            font-size: 1.6rem;
         }
         p{
             font-size: 1rem;

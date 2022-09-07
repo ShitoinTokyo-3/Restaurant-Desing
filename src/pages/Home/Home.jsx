@@ -55,7 +55,7 @@ const Home = () => {
                     <h3>{t('introUnderBanner.title')}</h3>
                     <p>{t('introUnderBanner.text')}</p>
                 </TextMain>
-                <HomeCheckList/>
+                <HomeCheckList setModal={setModalFormFunction}/>
 
             </GrayContainer>
             <BigLetter>

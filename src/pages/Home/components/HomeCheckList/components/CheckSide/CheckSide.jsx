@@ -1,9 +1,13 @@
 import { ButtonPurple, ButtonPurpleVariant, List, ListContainer } from "../../styled-components/ContainerCheck"
 import { BsCheckCircle, BsCheckCircleFill } from 'react-icons/bs'
 
-const CheckSide = ({ title, children, buttonText, checkList, variant }) => {
+const CheckSide = ({ title, children, buttonText, checkList, variant, setFunction, comingSoon }) => {
 
     const bgColor = variant ? 'transparent' : '#fff'
+
+    const handleButton = () => {
+        if(setFunction) setFunction()
+    }
   return (
     <ListContainer style={{ background: bgColor }}>
         <h2>{title}</h2>
@@ -25,10 +29,11 @@ const CheckSide = ({ title, children, buttonText, checkList, variant }) => {
             )
         })}
         {variant ?
-        <ButtonPurpleVariant>{buttonText}</ButtonPurpleVariant>
+        <ButtonPurpleVariant onClick={handleButton} >{buttonText}</ButtonPurpleVariant>
         :
-        <ButtonPurple>{buttonText}</ButtonPurple>
+        <ButtonPurple onClick={handleButton}>{buttonText}</ButtonPurple>
         }
+        {comingSoon && <p className="ComingSoon">{comingSoon}</p>}
     </ListContainer>
   )
 }

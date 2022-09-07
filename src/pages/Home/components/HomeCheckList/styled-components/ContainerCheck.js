@@ -30,6 +30,10 @@ export const ListContainer = styled.div`
         margin: 10px 0;
     }
 
+    .ComingSoon{
+        align-self: center;
+    }
+
     button{
         margin-top: 40px;
     }

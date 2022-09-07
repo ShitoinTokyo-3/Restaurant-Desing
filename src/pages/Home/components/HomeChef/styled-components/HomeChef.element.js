@@ -37,7 +37,7 @@ export const HomeChefRight = styled.div`
     text-align: center;
     padding: 0 3rem;
     h3{
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         font-family: var(--Font-Family-Titles);
         font-weight: bold;
         line-height: 1;

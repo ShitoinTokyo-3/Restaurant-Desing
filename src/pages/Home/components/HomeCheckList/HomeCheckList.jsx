@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import CheckSide from "./components/CheckSide/CheckSide"
 import { ContainerCheck } from "./styled-components/ContainerCheck"
 
-const HomeCheckList = () => {
+const HomeCheckList = ({ setModal }) => {
 
   const { t } = useTranslation(['home']);
 
@@ -28,6 +28,7 @@ const HomeCheckList = () => {
         variant={false}
         title={t('homeCheckList.right.title')}
         buttonText={t('homeCheckList.right.buttonText')}
+        comingSoon={t('homeCheckList.comingSoon')}
       >
         <p>
           {t('homeCheckList.right.text')}
@@ -38,6 +39,9 @@ const HomeCheckList = () => {
         checkList={listLeft}
         title={t('homeCheckList.left.title')}
         buttonText={t('homeCheckList.left.buttonText')}
+        comingSoon={''}
+        setFunction={setModal}
+
       >
         <p>
           {t('homeCheckList.left.text')}

@@ -45,7 +45,7 @@ export const fechCarouselInfo = ( data ) => {
                 "link":"/payment"
             },{     
                 "title": "Clothing and Merch",
-                "subtitle": "(Stickers, merchandise, mugs, totes, aprons, tshirts)",
+                "subtitle": "",
                 "description": "Get striking restaurant merch and clothing designs, including t-shirts, stickers, hats, and mugs, made by our creative team. Promotional merchandise can be used to add a personal touch to your interactions with your employees and customers.",
                 "backgroundColor": "#F5C835",
                 "color": "#000000",
