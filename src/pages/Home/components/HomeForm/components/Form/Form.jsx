@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from "react-i18next";
-import emailjs from 'emailjs-com';
+import { emailjsSend } from '../../../../../../services/Emailjs/emailjs';
 import { 
     FormArea, 
     FormInput, 
@@ -63,25 +63,11 @@ const Form = ({setOpenModal, isModal}) => {
         }
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (form.validname && form.validemail && form.validphone) {
-            //TODO: Send email to client
-            emailjs.sendForm('service_kq6dweb', 'template_mhhe01q', formRef.current, '3r_Z1z9M02a-v6kYV')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-
-            //TODO: Send email to our email
-            emailjs.sendForm('service_kq6dweb', 'template_o3alus2', formRef.current, '3r_Z1z9M02a-v6kYV')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+            await emailjsSend(formRef.current)
 
             setForm({
                 name: '',

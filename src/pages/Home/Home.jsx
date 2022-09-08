@@ -46,6 +46,10 @@ const Home = () => {
         setModalFormHome(true);
     }
 
+    const handleCheckEmail = () => {
+        setModalFormCheckEmail(false);
+    }
+
     return (
         <div>
             <Navbar modalOpen={modal} setModal={setModal}/>
@@ -80,7 +84,7 @@ const Home = () => {
                 openModal={setModal}
             />
             <ModalForm open={ModalFormHome} functionUse={setModalFormHomeFunction} />
-            <ModalCheckEmail open={ModalFormCheckEmail} functionUse={() => setModalCheckEmail(false)}/>
+            <ModalCheckEmail open={ModalFormCheckEmail} functionUse={handleCheckEmail}/>
 
         </div>
     )
