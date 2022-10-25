@@ -56,6 +56,7 @@ export const ButtonLoginEmail = styled.button`
     margin-bottom: 1rem;
     margin-top: .5rem;
     transition: var(--Transition-Button);
+    border-radius: 8px;
 
     &:hover {
         background-color: var(--Color-Button-Blue-Hover);

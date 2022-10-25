@@ -2,6 +2,15 @@
     "option1": "Upcoming Services",
     "option2": "About",
     "option3": "Help",
+    "dashboard": "Admin",
     "login": "Log in",
-    "logout": "Log out"
+    "logout": "Log out",
+
+    "admin":{
+        "opcion1": "Intro",
+        "opcion2": "Categories",
+        "opcion3": "Products",
+        "opcion4": "Products Examples",
+        "opcion5": "Orders"
+    }
 }

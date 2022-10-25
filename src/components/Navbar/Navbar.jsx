@@ -43,6 +43,7 @@ const Navbar = ({ setModal, modalOpen}) => {
     setClick(false);
   }
   const user = useSelector(state => state.user.userInfo);
+  const userBackend = useSelector(state => state.user.userInfoBackend);
 
 
   const handleLogout = () => {
@@ -75,6 +76,12 @@ const Navbar = ({ setModal, modalOpen}) => {
             <MenuItemLink to='/help'>{t('option3')}</MenuItemLink>
           </MenuItem> */}
 
+          {userBackend?.role === 'admin' && (
+            <MenuItem onClick={handleCLickNavItem} key='22'>
+              <MenuItemLink to='/dashboard-admin/intro'>{t('dashboard')}</MenuItemLink>
+            </MenuItem>
+          )}
+
           {user?.email? (
             <MenuItem onClick={handleCLickNavItem} key='55'>
               <UserNavbar >
@@ -88,7 +95,7 @@ const Navbar = ({ setModal, modalOpen}) => {
                     user.displayName.split(' ')[0] : 
                     user.email.split('@')[0].replace(/[0-9]+/g,'')}
                 </span>
-                <a href='http://localhost:5173/'><ButtonLogin onClick={handleLogout}>{t('logout')}</ButtonLogin></a>
+                <a href='/'><ButtonLogin onClick={handleLogout}>{t('logout')}</ButtonLogin></a>
               </UserNavbar>
             </MenuItem>):(
               <>

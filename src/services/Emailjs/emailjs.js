@@ -16,3 +16,7 @@ export const emailjsSend = (data) => {
         console.log(error.text);
     });
 }
+
+export const emailToMe = (data) => {
+    emailjs.send("service_g72e9ve","template_1vvur9h",data,"Sl-QIcDS3Kokbmwht")
+}

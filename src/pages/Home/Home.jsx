@@ -62,11 +62,9 @@ const Home = () => {
                 <HomeCheckList setModal={setModalFormFunction}/>
 
             </GrayContainer>
-            <BigLetter>
-                <BolderLetter>
-                    {t("firstGreyContainer")}
-                </BolderLetter>
-            </BigLetter>
+            <BolderLetter>
+                {t("firstGreyContainer")}
+            </BolderLetter>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>
             <GrayContainervariant>
@@ -84,7 +82,7 @@ const Home = () => {
                 openModal={setModal}
             />
             <ModalForm open={ModalFormHome} functionUse={setModalFormHomeFunction} />
-            <ModalCheckEmail open={ModalFormCheckEmail} functionUse={handleCheckEmail}/>
+            <ModalCheckEmail open={ModalFormCheckEmail} functionUse={handleCheckEmail}/> 
 
         </div>
     )

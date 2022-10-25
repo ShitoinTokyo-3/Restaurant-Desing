@@ -14,6 +14,34 @@ export const GrayContainer = styled.div`
 
 `;
 
+export const GrayContainerAdmin = styled.div`
+    background-color: var(--Color-Container-Gray-Light);
+    padding: 40px;
+    text-align: center;
+    padding-top: 10px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        padding-top: 2rem;
+    }
+`;
+
+export const WhiteContainer = styled.div`
+    background-color: var(--Color-Background-White);
+    padding: 100px 40px;
+    margin: 0 3px;
+
+
+    h1{
+        font-family: var(--Font-Family-Titles);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-family: var(--Font-Family-Text);
+    }
+`;
+
 export const GrayContainervariant = styled.div`
     background-color: var(--Color-Container-Gray);
     padding: 40px;
@@ -59,7 +87,8 @@ export const TextMain = styled.div`
     margin: auto;
     padding: 0 1rem;
     padding-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     h3 {
         font-family: var(--Font-Family-Titles);
         font-size: 2rem;
@@ -132,6 +161,7 @@ export const ContainerModalChildrenRegister = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 
     h1{
         font-size: 25px;
@@ -139,6 +169,37 @@ export const ContainerModalChildrenRegister = styled.div`
         margin-bottom: 20px;
         font-family: var(--Font-Family-Titles);
         align-self: start;
+    }
+    p {
+        font-family: var(--Font-Family-Text);
+        margin-bottom: 15px;
+        
+    }
+`;
+
+export const ContainerTextDescriptionServices = styled.div`
+    margin:auto;
+    width:75vw;
+    font-family: var(--Font-Family-Text);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    h1,h2,h3,h4,h5,h6{
+        font-family: var(--Font-Family-Titles);
+    }
+`;
+
+export const ContainerModalChildrenServices = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: var(--Font-Family-Titles);
     }
     p {
         font-family: var(--Font-Family-Text);

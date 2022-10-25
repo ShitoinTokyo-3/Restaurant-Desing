@@ -12,20 +12,20 @@ const CheckSide = ({ title, children, buttonText, checkList, variant, setFunctio
     <ListContainer style={{ background: bgColor }}>
         <h2>{title}</h2>
         {children}
-        {checkList.map((check, index) => {
+        {checkList.map((check) => {
             return (
-                <>
+                <div key={check.id}>
                 { variant ?
-                    <List key={index}>
+                    <List >
                         <BsCheckCircle color="var(--Color-Text-Purple)" className="iconCheck"/>
-                        <span>{check}</span>
+                        <span>{check.text}</span>
                     </List>:
-                    <List key={index}>
+                    <List>
                         <BsCheckCircleFill color="var(--Color-Text-Purple)" className="iconCheck"/>
-                        <span>{check}</span>
+                        <span>{check.text}</span>
                     </List>
                 }
-                </>
+                </div>
             )
         })}
         {variant ?

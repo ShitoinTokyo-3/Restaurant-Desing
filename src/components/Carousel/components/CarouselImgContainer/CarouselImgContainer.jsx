@@ -1,6 +1,7 @@
 import s from '../../Carousel.module.css';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const CarouselImgContainer = ({ img, srcText }) => {
     const { t } = useTranslation(['home']);
@@ -19,11 +20,17 @@ const CarouselImgContainer = ({ img, srcText }) => {
                 style={{backgroundColor: `${srcText?.backgroundColor}`, color: `${srcText?.color}`}}
             >
                 <span className={s.embla__slide__img_text_span1}>
-                    {srcText?.title}
+                    {srcText?.name}
                     {srcText?.subtitle && <span className={s.embla__slide__img_text_subtitle}>{srcText?.subtitle}</span>}
                 </span>
                 <p>{srcText?.description}</p>
-                <span className={s.embla__slide__img_text_span2}>{t('carouselLink')}</span>
+                <NavLink 
+                    to={`services/${srcText?.name.toLowerCase().replaceAll(' ', '-')}`}
+                    style={{color: `${srcText?.color}`}}
+                 >
+                 <span className={s.embla__slide__img_text_span2}>{t('carouselLink')}</span>
+                 </NavLink>
+                
             </div>
         </div>
     )

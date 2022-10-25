@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     userInfo: {},
+    userInfoBackend: {},
     loadingUser: true,
 };
 
@@ -12,11 +13,14 @@ const user = createSlice({
         setUserRedux: (state, action) => {
             state.userInfo = action.payload;
         },
+        setUserRedeuxBackend: (state, action) => {
+            state.userInfoBackend = action.payload;
+        },
         setLoadingUser: (state, action) => {
             state.loadingUser = action.payload;
         }
     }
 });
 
-export const { setUserRedux, setLoadingUser } = user.actions;
+export const { setUserRedux, setUserRedeuxBackend, setLoadingUser } = user.actions;
 export default user.reducer;

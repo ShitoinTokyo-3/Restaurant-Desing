@@ -10,6 +10,12 @@ export const StepsContainer = styled.div`
     img{
         width: 55%;
     }
+    .colorExample{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
     h3{
         font-size: 2.5rem; 
         font-weight: bold;

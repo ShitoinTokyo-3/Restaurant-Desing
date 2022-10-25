@@ -1,0 +1,14 @@
+{
+    "intro":{
+        "title":"Welcome to your administrator panel!",
+        "text":"From here you can manage the data of your company, as well as the data of the users who register on your website."
+    },
+
+    "categories":{
+        "title":"Categories",
+        "text":"Here you can manage the categories that you offer to your customers.",
+        "add":"Create Category",
+        "edit":"Edit Category"
+
+    }
+}

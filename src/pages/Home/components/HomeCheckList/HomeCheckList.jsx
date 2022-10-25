@@ -7,22 +7,52 @@ const HomeCheckList = ({ setModal }) => {
   const { t } = useTranslation(['home']);
 
   const listLeft =[
-    t('homeCheckList.left.check1'),
-    t('homeCheckList.left.check2'),
-    t('homeCheckList.left.check3'),
-    t('homeCheckList.left.check4'),
-    t('homeCheckList.left.check5'),
+    {
+      id:1,
+      text:t('homeCheckList.left.check1')
+    },
+    {
+      id:2,
+      text:t('homeCheckList.left.check2')
+    },
+    {
+      id:3,
+      text:t('homeCheckList.left.check3')
+    },
+    {
+      id:4,
+      text:t('homeCheckList.left.check4')
+    },
+    {
+      id:5,
+      text:t('homeCheckList.left.check5')
+    }
   ]
   const listRight =[
-    t('homeCheckList.right.check1'),
-    t('homeCheckList.right.check2'),
-    t('homeCheckList.right.check3'),
-    t('homeCheckList.right.check4'),
-    t('homeCheckList.right.check5'),
+    {
+      id:6,
+      text:t('homeCheckList.right.check1')
+    },
+    {
+      id:7,
+      text:t('homeCheckList.right.check2')
+    },
+    {
+      id:8,
+      text:t('homeCheckList.right.check3')
+    },
+    {
+      id:9,
+      text:t('homeCheckList.right.check4')
+    },
+    {
+      id:10,
+      text:t('homeCheckList.right.check5')
+    },
   ]
 
   return (
-    <ContainerCheck>
+    <ContainerCheck >
       <CheckSide 
         checkList={listRight} 
         variant={false}
@@ -41,7 +71,6 @@ const HomeCheckList = ({ setModal }) => {
         buttonText={t('homeCheckList.left.buttonText')}
         comingSoon={''}
         setFunction={setModal}
-
       >
         <p>
           {t('homeCheckList.left.text')}

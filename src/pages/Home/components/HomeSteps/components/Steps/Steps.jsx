@@ -1,9 +1,10 @@
 import { StepsContainer } from "./styled-components/Steps.elements"
 
-const Steps = ({children, img, step}) => {
+const Steps = ({children, img, step, colorExample}) => {
   return (
     <StepsContainer>
-        <img src={img} alt=""/>
+      {img && <img src={img} alt={step}/>}
+      {colorExample && <div className="colorExample" style={{'backgroundColor':colorExample}}/>}
         <h3>{step}</h3>
         <p>{children}</p>
     </StepsContainer>
