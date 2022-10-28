@@ -6,6 +6,7 @@ import { getCategories } from "../../../../redux/features/categories/actions"
 import { getExamples, deleteExample } from "../../../../redux/features/examples/actions"
 import { getProduct, getProducts } from "../../../../redux/features/products/actions"
 import { WhiteContainer } from "../../../../styled-components/Containers/Containers"
+import { ContainerProductsInExamples } from "../../../DashboardAdminCategories/components/styled-components/dashboardAdminCategory"
 import { TextContainer } from "../../../DashboardAdminIntro/components/styled-components/textContainer"
 import OptionsCategories from "../../../DashboardAdminProducts/components/OptionsCategories/OptionsCategories"
 import ExampleForm from "../ExampleForm/ExampleForm"
@@ -73,28 +74,31 @@ const ProductsExamples = () => {
                     listCategories={categories}
                     functionRestart={setCreateExamples}
                 />}
-                <DivProducts>
-                    {products.length > 0 ?
-                        <>
-                            {products.map(product => (
-                                <DivProduct
-                                    key={product.id}
-                                    id={product.id}
-                                >
-                                    <div 
-                                        onClick={() => handleOnClick(product.id, product.name)}
+                <ContainerProductsInExamples>
+                    <strong>Click on a product to update it</strong>
+                    <DivProducts>
+                        {products.length > 0 ?
+                            <>
+                                {products.map(product => (
+                                    <DivProduct
+                                        key={product.id}
+                                        id={product.id}
                                     >
-                                        <h2>{product.name}</h2>
-                                        <span>{product.price}</span>
-                                    </div>
-                                </DivProduct>
-                            ))}
-                        </>:
-                        <DivProduct>
-                            <h2>There are no registered products</h2>
-                        </DivProduct>
-                        }
-                    </DivProducts>
+                                        <div 
+                                            onClick={() => handleOnClick(product.id, product.name)}
+                                        >
+                                            <h2>{product.name}</h2>
+                                            <span>{product.price}</span>
+                                        </div>
+                                    </DivProduct>
+                                ))}
+                            </>:
+                            <DivProduct>
+                                <h2>There are no registered products</h2>
+                            </DivProduct>
+                            }
+                        </DivProducts>
+                </ContainerProductsInExamples>
                     {createExamples && 
                         <>
                             <ExamplesTitles/>

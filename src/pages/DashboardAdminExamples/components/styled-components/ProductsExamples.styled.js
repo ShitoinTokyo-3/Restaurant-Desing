@@ -7,6 +7,7 @@ export const DivProducts = styled.div`
     padding: 10px;
     text-align: left;
     margin-bottom: 2.5rem;
+    border: 1px solid var(--Color-Text-Black);
 `;
 
 

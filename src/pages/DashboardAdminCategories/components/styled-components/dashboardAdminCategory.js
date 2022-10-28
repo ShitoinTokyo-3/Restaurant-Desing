@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerCategories = styled.div`
     display: flex;
     margin: 40px 0;
+    font-family: var(--Font-Family-Titles);
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -20,6 +21,7 @@ export const DivCategories = styled.div`
     padding-top: 10px;
     width: 330px;
     height: 80vh;
+    font-family: var(--Font-Family-Titles);
     text-align: left;
 `;
 
@@ -108,4 +110,32 @@ export const SuccessCategory = styled.p`
     font-size: 20px;
 `;
 
+export const ContainerOptionsCategories = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--Font-Family-Titles);
+    align-items: center;
 
+    strong{
+        margin: 10px 0;
+    }
+
+    select{
+        padding: 5px 10px ;
+    }
+`;
+
+export const ContainerProductsInExamples = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--Font-Family-Titles);
+    margin: 1rem 0;
+    padding: 1rem 0;  
+    margin-bottom: 0;
+    padding-bottom: 0;  
+
+    strong{
+        padding: 5px 10px;
+        align-self: center;
+    }
+`;

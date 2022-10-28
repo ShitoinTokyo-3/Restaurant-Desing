@@ -24,6 +24,7 @@ const Categories = () => {
     }, []);
 
     const handleOnClick = (id, name) => {
+        console.log(id, name);
         if(name !== 'There are no registered categories'){
             setUpdateId(id);
             dispatch(getCategory(id));
@@ -52,25 +53,28 @@ const Categories = () => {
         </TextContainer>
         <ContainerCategories>
             <FormCategories/>
-            <DivCategories>
-                {categories.map(category => (
-                    <DivCategory 
-                        key={category.id} 
-                        id={category.id}
-                    >
-                    <div onClick={() => handleOnClick(category.id, category.name)}>
-                        <h2>{category.name}</h2>
-                        <span>{category.price}</span>
-                    </div>
-                    <div 
-                        className='iconAdminCategories'
-                        onClick={() => handleDelete(category.id, category.name)}
-                    >
-                        <FaWindowClose fontSize={'20px'} />
-                    </div>
-                    </DivCategory>
-                ))}
-            </DivCategories>
+            <div>
+                <strong>Click on a category to update it</strong>
+                <DivCategories>
+                    {categories.map(category => (
+                        <DivCategory 
+                            key={category.id} 
+                            id={category.id}
+                        >
+                        <div onClick={() => handleOnClick(category.id, category.name)}>
+                            <h2>{category.name}</h2>
+                            <span>{category.price}</span>
+                        </div>
+                        <div 
+                            className='iconAdminCategories'
+                            onClick={() => handleDelete(category.id, category.name)}
+                        >
+                            <FaWindowClose fontSize={'20px'} />
+                        </div>
+                        </DivCategory>
+                    ))}
+                </DivCategories>
+            </div>
 
         </ContainerCategories>
         {update && 

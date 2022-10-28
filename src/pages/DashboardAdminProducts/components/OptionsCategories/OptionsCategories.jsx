@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { getProducts } from "../../../../redux/features/products/actions"
 import { getCategory } from "../../../../redux/features/categories/actions"
+import { ContainerOptionsCategories } from "../../../DashboardAdminCategories/components/styled-components/dashboardAdminCategory"
 
 const OptionsCategories = ({ listCategories, functionRestart }) => {
 
@@ -35,7 +36,8 @@ const OptionsCategories = ({ listCategories, functionRestart }) => {
 
 
   return (
-    <div>
+    <ContainerOptionsCategories>
+      <strong>Choose a category</strong>
         <select
             onChange={(e) => handleOnClick(e.target.value)}
             value={category}
@@ -49,7 +51,7 @@ const OptionsCategories = ({ listCategories, functionRestart }) => {
                 </option>
             ))}
         </select>
-    </div>
+    </ContainerOptionsCategories>
   )
 }
 

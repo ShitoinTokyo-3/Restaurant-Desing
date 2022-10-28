@@ -69,34 +69,38 @@ const Products = () => {
                     listCategories={categories}
                     functionRestart={setUpdate}
                 />}
+
                 <ContainerCategories>
                     <FormProducts/>
-                    <DivCategories>
-                    {products.length > 0 ?
-                        <>
-                            {products.map(product => (
-                                <DivCategory
-                                    key={product.id}
-                                    id={product.id}
-                                >
-                                    <div onClick={() => handleOnClick(product.id, product.name)}>
-                                        <h2>{product.name}</h2>
-                                        <span>{product.price}</span>
-                                    </div>
-                                    <div 
-                                        className='iconAdminCategories'
-                                        onClick={() => handleDelete(product.id)}
+                    <div>
+                        <strong>Click on a product to update it</strong>
+                        <DivCategories>
+                        {products.length > 0 ?
+                            <>
+                                {products.map(product => (
+                                    <DivCategory
+                                        key={product.id}
+                                        id={product.id}
                                     >
-                                        <FaWindowClose fontSize={'20px'} />
-                                    </div>
-                                </DivCategory>
-                            ))}
-                        </>:
-                        <DivCategory>
-                            <h2>There are no registered products</h2>
-                        </DivCategory>
-                        }
-                    </DivCategories>
+                                        <div onClick={() => handleOnClick(product.id, product.name)}>
+                                            <h2>{product.name}</h2>
+                                            <span>{product.price}</span>
+                                        </div>
+                                        <div 
+                                            className='iconAdminCategories'
+                                            onClick={() => handleDelete(product.id)}
+                                        >
+                                            <FaWindowClose fontSize={'20px'} />
+                                        </div>
+                                    </DivCategory>
+                                ))}
+                            </>:
+                            <DivCategory>
+                                <h2>There are no registered products</h2>
+                            </DivCategory>
+                            }
+                        </DivCategories>
+                    </div>
                 </ContainerCategories>
                 {update && 
                     <FormUpdateProduct
