@@ -24,7 +24,6 @@ const Categories = () => {
     }, []);
 
     const handleOnClick = (id, name) => {
-        console.log(id, name);
         if(name !== 'There are no registered categories'){
             setUpdateId(id);
             dispatch(getCategory(id));

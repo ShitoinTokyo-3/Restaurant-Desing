@@ -21,6 +21,7 @@ export const getCategories = () => {
 export const getCategory = (id) => {
     return async (dispatch)=>{
         try {
+            console.log({id});
             const res = await axios.get(`${URL_BACKEND}/categories/${id}`);
             dispatch(setActualCategoryRedux(res.data)); 
         } catch (error) {
