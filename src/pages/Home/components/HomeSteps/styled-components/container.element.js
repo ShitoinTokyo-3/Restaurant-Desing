@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StepsContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 78%;
+    width: 75%;
     margin: 2.5rem auto;
 
     @media (max-width: 768px) {

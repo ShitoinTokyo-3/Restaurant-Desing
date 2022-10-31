@@ -105,8 +105,9 @@ export const ServicesBannerContainer = styled.div`
 
 export const InfoServicesBanner = styled.div`
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     background: transparent;
     display: flex;
@@ -120,7 +121,6 @@ export const TextServicesBanner = styled.div`
     font-family: var(--Font-Family-Titles);
 
     #LogoServicesbanner{
-        margin-top: 20px;
         width: 28rem;
     }
 `;

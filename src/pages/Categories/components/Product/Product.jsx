@@ -14,13 +14,15 @@ const Product = ({ name, price, img, children, params }) => {
           <span>{`$${price}`}</span>
         </div>
       </div>
-        <span className="productDescription">{children}</span>
+      <div className="productDescription">
+        <span>{children}</span>
+      </div>
       
       <NavLink
           to={`/services/${params}/${name.toLowerCase().replaceAll(' ', '-')}`}
           style={{ alignSelf: 'center' }}
       >
-          <ButtonLogin>GET MORE INFORMATION</ButtonLogin>
+          <ButtonLogin>GET STARTED NOW</ButtonLogin>
       </NavLink>
 
     </ContainerProduct>

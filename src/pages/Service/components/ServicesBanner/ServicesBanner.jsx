@@ -23,9 +23,9 @@ const ServicesBanner = ({ functionUse }) => {
                 {bannerImg && <>
                 <ListServicesContainer>
                     <div>
-                        <li><AiFillCheckCircle color="var(--Color-Text-Purple)" /> <span>GET A 1ST DRAFT WITHING 48 HRS</span></li>
-                        <li><AiFillCheckCircle color="var(--Color-Text-Purple)" /> <span>YOU KEEP EVERY FILE</span></li>
-                        <li><AiFillCheckCircle color="var(--Color-Text-Purple)" /> <span>100% MONEY BACK GUARANTEED</span></li>
+                        <li><AiFillCheckCircle color="var(--Color-Button-White)" /> <span>GET A 1ST DRAFT WITHING 48 HRS</span></li>
+                        <li><AiFillCheckCircle color="var(--Color-Button-White)" /> <span>YOU KEEP EVERY FILE</span></li>
+                        <li><AiFillCheckCircle color="var(--Color-Button-White)" /> <span>100% MONEY BACK GUARANTEED</span></li>
                     </div>
                 </ListServicesContainer>
                 <ButtonBannerServices 

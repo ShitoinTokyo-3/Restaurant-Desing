@@ -8,7 +8,7 @@ import step3 from '../../../../assets/HomeSteps/HomeSteps3.png'
 
 const ServicesSteps = ({ functionUse }) => {
   return (
-    <div style={{'display':'flex', 'flexDirection':'column' }}>
+    <div style={{'display':'flex', 'flexDirection':'column',}}>
         <BolderLetter>
             HOW IT WORKS
         </BolderLetter>

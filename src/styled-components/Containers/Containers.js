@@ -58,7 +58,7 @@ export const BolderLetter = styled.p`
     text-align: center;
     font-family: var(--Font-Family-Titles);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 900;
     width: 65vw;
     margin: auto;
@@ -114,6 +114,39 @@ export const TextMain = styled.div`
     }
 `;
 
+export const TextMainCategories = styled.div`
+    text-align: center;
+    margin: auto;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    h3 {
+        font-family: var(--Font-Family-Titles);
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    p {
+        width: 75vw;
+        max-width: 900px;
+        margin: auto;
+        margin-top: 0.9rem;
+        font-family: var(--Font-Family-Text);
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        h3 {
+            line-height: 1;
+            width:80vw;
+            margin: auto;
+            font-size: 1.7rem;
+        }
+        p{
+          font-size: 0.9rem;
+        }
+    }
+`;
 
 export const ContainerModalChildren = styled.div`
     display: flex;

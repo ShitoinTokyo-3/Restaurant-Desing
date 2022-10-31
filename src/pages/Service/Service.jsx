@@ -13,6 +13,7 @@ import ServicesModalExamples from "./components/ServicesModalExamples/ServicesMo
 import ServicesModalCategories from "./components/ServicesMoldalCategories/ServicesModalCategories"
 import ServicesSteps from "./components/ServicesSteps/ServicesSteps"
 import { ContainerProductExample, ContainerProductsExamples } from "./components/styled-components/select"
+import Footer from "../../components/Footer/Footer"
 
 const Service = () => {
 
@@ -113,6 +114,8 @@ const Service = () => {
             })}
           </ContainerProductsExamples>
         </>}
+
+        <Footer/>
 
         <ServicesModalCategories 
           open={modalFormCategories} 
