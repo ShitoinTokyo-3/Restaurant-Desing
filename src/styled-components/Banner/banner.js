@@ -29,14 +29,23 @@ export const RellenoDiv = styled.div`
     width: 15%;
 `;
 
-export const TextBanner = styled.div`
+export const ContainerTextBanner = styled.div`
     width: 71%;
-    height: 80%;
+    height: 100%;
+    position: relative;
+`;
+
+export const TextBanner = styled.div`
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+
     .TitleBanner {
         margin-top: 45px;
         font-size: 3rem;
@@ -59,13 +68,6 @@ export const TextBanner = styled.div`
         font-family:var(--Font-Family-Text);
         color: var(--Color-Text-White);
         font-size: .9rem;
-    }
-
-    @media (max-width: 1100px) {
-        width:78%;
-        height: 90%;
-
-        transform:scale(0.8);
     }
 `;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerCheck = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     @media (max-width: 768px) {
         flex-direction: column;

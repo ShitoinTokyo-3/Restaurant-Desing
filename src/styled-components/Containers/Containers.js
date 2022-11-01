@@ -71,6 +71,54 @@ export const BolderLetter = styled.p`
     }
 `;
 
+export const TextUpperCarrousel = styled.div`
+    text-align: center;
+    font-family: var(--Font-Family-Titles);
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+
+    h2{
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    p{
+        margin-top: 10px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+
+        span{
+            margin:0;
+            font-size: 1.2rem;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        width: 90vw;
+
+        h2{
+            font-size: 1.7rem;
+        }
+
+        div{
+            span{
+            font-size: 1rem;
+            }
+        }
+    }
+`;
+
 export const BigLetter = styled.p`
     font-family: var(--Font-Family-Text);
     padding: 2rem 0;

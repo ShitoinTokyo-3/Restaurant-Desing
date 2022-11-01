@@ -35,7 +35,7 @@
   /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio de carrousel paso 1 */
   min-width: 444px;
   /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio entre carrouseles */
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .embla__slide__inner {
@@ -43,7 +43,7 @@
   overflow: hidden;
   /* TODO:Angie este lo tienes que cambiar si quieres modificar espacio de carrouseles paso 2*/
   width: 444px;
-  height: 370px;
+  height: 444px;
 }
 
 /* Tia Angie esto es lo unico que cambia */

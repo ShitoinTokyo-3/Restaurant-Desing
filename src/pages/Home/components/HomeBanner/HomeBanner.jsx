@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from "react-i18next";
 import banner from '../../../../assets/MainBanner/NewBannerRestaD.jpg'
 import bannerRes from '../../../../assets/MainBanner/NewBannerRestDM.jpg'
-import { HomeBannerImg, InfoBanner, TextBanner, RellenoDiv, ButtonBannerToForm } from '../../../../styled-components/Banner/banner'
+import { HomeBannerImg, InfoBanner, TextBanner, RellenoDiv, ButtonBannerToForm, ContainerTextBanner } from '../../../../styled-components/Banner/banner'
 import { ButtonBannerToFormRes, HomeBannerImgRes, InfoBannerRes, TextBannerRes } from '../../../../styled-components/Banner/bannerResponsive'
 
 const HomeBanner = ({setModal}) => {
@@ -28,6 +28,7 @@ const HomeBanner = ({setModal}) => {
           {bannerImg &&
             <InfoBanner>
                 <RellenoDiv />
+                <ContainerTextBanner>
                 <TextBanner>
                     <h2 className='TitleBanner'>
                       {t('homeBanner.title')}
@@ -40,6 +41,7 @@ const HomeBanner = ({setModal}) => {
                     </ButtonBannerToForm>
                     <span>{t('homeBanner.underButtonText')}</span>
                 </TextBanner>
+                </ContainerTextBanner>
             </InfoBanner>
           }
       </HomeBannerImg>

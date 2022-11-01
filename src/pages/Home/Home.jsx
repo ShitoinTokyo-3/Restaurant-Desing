@@ -7,8 +7,17 @@ import {
     BolderLetter,
     TextMain,
     GrayContainer,
-    GrayContainervariant
+    GrayContainervariant,
+    TextUpperCarrousel
 } from "../../styled-components/Containers/Containers";
+//Icons
+import { 
+    AiOutlineHighlight,
+    AiOutlineDollar,
+    AiOutlineException
+} from "react-icons/ai";
+import { GrClear } from "react-icons/gr";
+
 //Components
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -62,9 +71,15 @@ const Home = () => {
                 <HomeCheckList setModal={setModalFormFunction}/>
 
             </GrayContainer>
-            <BolderLetter>
-                {t("firstGreyContainer")}
-            </BolderLetter>
+            <TextUpperCarrousel>
+                <h2>{t("firstGreyContainer")}</h2>
+                <p>{t("firstGreyContainer2")}</p>
+                <div>
+                    <span><AiOutlineDollar style={{'marginRight': '5px'}}/> {t("firstGreyContainer3")}</span>
+                    <span><AiOutlineHighlight style={{'marginRight': '5px'}}/> {t("firstGreyContainer5")}</span>
+                    <span><AiOutlineException style={{'marginRight': '5px'}}/> {t("firstGreyContainer4")}</span>
+                </div>
+            </TextUpperCarrousel>
             <HomeCarousel/>
             <HomeChef setModal={setModalFormFunction}/>
             <GrayContainervariant>

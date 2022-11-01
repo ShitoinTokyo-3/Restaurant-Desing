@@ -19,9 +19,10 @@ export const ContainerProduct = styled.div`
     flex-direction: column;
     font-family: var(--Font-Family-Text);
     width: 250px;
-    margin: 0 auto;
     cursor: default;
+    margin:0 1rem;
     margin-bottom: 2rem;
+    
     
     .productImgAndPriceContainer{
         position: relative;
