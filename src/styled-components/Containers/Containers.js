@@ -288,3 +288,10 @@ export const ContainerModalChildrenServices = styled.div`
         
     }
 `;
+
+export const ContainerFlexBottom = styled.div`
+    display: flex;
+    width: 100%;
+    padding: 1rem 0;
+    justify-content: space-evenly;
+`;

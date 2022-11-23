@@ -14,6 +14,7 @@ import ServicesModalCategories from "./components/ServicesMoldalCategories/Servi
 import ServicesSteps from "./components/ServicesSteps/ServicesSteps"
 import { ContainerProductExample, ContainerProductsExamples } from "./components/styled-components/select"
 import Footer from "../../components/Footer/Footer"
+import ModalLogin from "../../components/ModalLogin/ModalLogin"
 
 const Service = () => {
 
@@ -86,12 +87,17 @@ const Service = () => {
     localStorage.setItem('colorsForm', JSON.stringify(colors))
   }
 
-  console.log(product)
+
+  const [modal, setModal] = useState(false);
+
+  const setModalFunction = () => {
+      setModal(false);
+  }
 
   return (
     <>
-      <Navbar/>
-        {product.name && <>
+      {product.name && <>
+        <Navbar modalOpen={modal} setModal={setModal}/>
         <ServicesBanner functionUse={setModalFormCategories}/>
         <ServicesSteps functionUse={setModalFormCategories}/>
         <ContainerTextDescriptionServices>
@@ -116,6 +122,12 @@ const Service = () => {
         </>}
 
         <Footer/>
+
+        <ModalLogin
+          open={modal}
+          functionUse={setModalFunction}
+          openModal={setModal}
+        />
 
         <ServicesModalCategories 
           open={modalFormCategories} 

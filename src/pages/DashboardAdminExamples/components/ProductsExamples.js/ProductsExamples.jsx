@@ -2,8 +2,9 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { FaWindowClose } from "react-icons/fa"
 import { useDispatch, useSelector } from "react-redux"
+import ModalConfirmationDelete from "../../../../components/ModalConfirmationDelete/ModalConfirmationDelete"
 import { getCategories } from "../../../../redux/features/categories/actions"
-import { getExamples, deleteExample } from "../../../../redux/features/examples/actions"
+import { getExamples, deleteExample, cleanExamples } from "../../../../redux/features/examples/actions"
 import { getProduct, getProducts } from "../../../../redux/features/products/actions"
 import { WhiteContainer } from "../../../../styled-components/Containers/Containers"
 import { ContainerProductsInExamples } from "../../../DashboardAdminCategories/components/styled-components/dashboardAdminCategory"
@@ -46,14 +47,31 @@ const ProductsExamples = () => {
             , 100);
         }
     }
+
+    const [ updateIdExample, setUpdateIdExample ] = useState();
+    const [ openModalConfirmationDelete, setOpenModalConfirmationDelete ] = useState(false);
+
+    const setModalConfirmationDelete = () => {
+        setOpenModalConfirmationDelete(false);
+    }
+
     const handleDelete = (id) => {
-        deleteExample( actualProduct.id, id );
+        setUpdateIdExample(id);
+        setOpenModalConfirmationDelete(true);
+    }
+
+    const handleConfirmationDelete = () => {
+        setCreateExamples(false);
+        setOpenModalConfirmationDelete(false);
+        deleteExample( actualProduct.id, updateIdExample );
+        dispatch(cleanExamples());
         setTimeout(() => {
-            dispatch(getExamples(updateId));
-        }, 100);
+            dispatch(getExamples(actualProduct.id));
+        }, 2000);
     }
 
     const handleGetExamples = (id) => {
+        dispatch(cleanExamples());
         dispatch(getExamples(id));
     }
 
@@ -75,7 +93,7 @@ const ProductsExamples = () => {
                     functionRestart={setCreateExamples}
                 />}
                 <ContainerProductsInExamples>
-                    <strong>Click on a product to update it</strong>
+                    <strong>Click on a product to create examples</strong>
                     <DivProducts>
                         {products.length > 0 ?
                             <>
@@ -129,6 +147,12 @@ const ProductsExamples = () => {
                         </>}
             </WhiteContainer>
         )}
+        <ModalConfirmationDelete
+            open={openModalConfirmationDelete}
+            functionUse={setModalConfirmationDelete}
+            entity={'product example'}
+            functionToDelete={handleConfirmationDelete}
+        />
     </>
   )
 }

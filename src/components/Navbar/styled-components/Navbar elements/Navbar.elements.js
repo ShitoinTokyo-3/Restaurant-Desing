@@ -60,7 +60,7 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
     position: relative;
     height: 100%;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;

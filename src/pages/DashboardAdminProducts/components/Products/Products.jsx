@@ -13,7 +13,8 @@ import FormUpdateProduct from "../FormUpdateProduct/FormUpdateProduct"
 import OptionsCategories from "../OptionsCategories/OptionsCategories"
 //Redux
 import { getCategories } from "../../../../redux/features/categories/actions"
-import { deleteProduct, getProducts, getProduct } from "../../../../redux/features/products/actions"
+import { deleteProduct, cleanProducts, getProducts, getProduct } from "../../../../redux/features/products/actions"
+import ModalConfirmationDelete from "../../../../components/ModalConfirmationDelete/ModalConfirmationDelete"
 
 const Products = () => {
 
@@ -33,6 +34,12 @@ const Products = () => {
     const [ updateId, setUpdateId ] = useState();
     const [ update, setUpdate ] = useState(false);
 
+    const [ openModalConfirmationDelete, setOpenModalConfirmationDelete ] = useState(false);
+
+    const setModalConfirmationDelete = () => {
+        setOpenModalConfirmationDelete(false);
+    }
+
     const handleOnClick = (id, name) => {
         if(name !== 'There is no registered categories'){
             setUpdateId(id);
@@ -46,10 +53,20 @@ const Products = () => {
     }
 
     const handleDelete = (id) => {
-        deleteProduct( actualCategory.id, id );
+
+        setUpdateId(id);
+        setOpenModalConfirmationDelete(true);
+
+    }
+
+    const handleConfirmationDelete = () => {
+        setUpdate(false);
+        setOpenModalConfirmationDelete(false);
+        deleteProduct( actualCategory.id, updateId );
+        dispatch(cleanProducts());
         setTimeout(() => {
             dispatch(getProducts(actualCategory.id));
-        }, 100);
+        }, 2000);
     }
 
   return (
@@ -63,6 +80,7 @@ const Products = () => {
             (<WhiteContainer>
                 <TextContainer>
                     <h1>Products</h1>
+                    <p>Here you can see all the products of the selected category</p>
                 </TextContainer>
                 {categories[0]?.name &&
                 <OptionsCategories 
@@ -72,10 +90,9 @@ const Products = () => {
 
                 <ContainerCategories>
                     <FormProducts/>
-                    <div>
+                    <div style={{marginTop: '464px'}}>
                         <strong>Click on a product to update it</strong>
                         <DivCategories>
-                        {products.length > 0 ?
                             <>
                                 {products.map(product => (
                                     <DivCategory
@@ -86,19 +103,17 @@ const Products = () => {
                                             <h2>{product.name}</h2>
                                             <span>{product.price}</span>
                                         </div>
-                                        <div 
-                                            className='iconAdminCategories'
-                                            onClick={() => handleDelete(product.id)}
-                                        >
-                                            <FaWindowClose fontSize={'20px'} />
-                                        </div>
+                                        {product.name !== 'There is no registered products' &&
+                                            <div 
+                                                className='iconAdminCategories'
+                                                onClick={() => handleDelete(product.id)}
+                                            >
+                                                <FaWindowClose fontSize={'20px'} />
+                                            </div>
+                                        }
                                     </DivCategory>
                                 ))}
-                            </>:
-                            <DivCategory>
-                                <h2>There are no registered products</h2>
-                            </DivCategory>
-                            }
+                            </>
                         </DivCategories>
                     </div>
                 </ContainerCategories>
@@ -110,6 +125,12 @@ const Products = () => {
                 }
             </WhiteContainer>)
         }
+        <ModalConfirmationDelete
+            open={openModalConfirmationDelete}
+            functionUse={setModalConfirmationDelete}
+            entity={'product'}
+            functionToDelete={handleConfirmationDelete}
+        />
     </>
   )
 }

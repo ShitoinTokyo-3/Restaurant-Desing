@@ -1,5 +1,9 @@
 import axios from "axios";
-import { setProductsRedux,setActualProductRedux } from "..";
+import { 
+    setProductsRedux,
+    cleanProductsRedux,
+    setActualProductRedux 
+} from "..";
 import URL_BACKEND from "../../../../utilities/BackEnd/ruta";
 
 
@@ -15,6 +19,12 @@ export const getProducts = (id) => {
             }
             dispatch(setProductsRedux([message]));
         }
+    }
+}
+
+export const cleanProducts = () => {
+    return async (dispatch)=>{
+        dispatch(cleanProductsRedux());
     }
 }
 

@@ -70,6 +70,44 @@ export const FormCategory = styled.form`
 
 `;
 
+export const ContainerInputsColors = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+`;
+
+export const InputColorCategories = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label{
+        margin: 10px auto;
+    }
+    
+    #backgroundColor{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        border-radius: 15px;
+        border: 5px solid var(--Color-Text-Black);
+    }
+
+    #popover {
+          position: absolute,
+          zIndex: 2,
+    }
+    #cover {
+        position: fixed,
+        top: 0px,
+        right: 0px,
+        bottom: 0px,
+        left: 0px,
+    }
+`;
+
+
 export const InputCategories = styled.input`
     width:90%;
     padding: 10px;
@@ -137,5 +175,74 @@ export const ContainerProductsInExamples = styled.div`
     strong{
         padding: 5px 10px;
         align-self: center;
+    }
+`;
+
+export const ExampleCategorie = styled.div`
+    width: 444px;
+    height: 444px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 60px;
+
+    #slide__img {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        min-height: 100%;
+        min-width: 100%;
+        max-width: none;
+        transform: translate(-50%, -50%);
+    }
+
+    #slide__text{
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        min-height: 100%;
+        min-width: 100%;
+        max-width: none;
+        transform: translate(-50%, -50%);
+        font-family: var(--Font-Family-Text);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        align-items: flex-start;
+        text-align: left;
+        cursor: default;
+
+        &:hover{
+            opacity: 0.9;
+        }
+
+        #slide__text__title{
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 30px;
+            
+        }
+
+        #slide__text__link{
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 60px;
+            cursor: pointer;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        p,span{
+            display: inline-block;
+            margin: 0 50px;
+        }
     }
 `;

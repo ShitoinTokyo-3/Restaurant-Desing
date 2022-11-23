@@ -1,7 +1,15 @@
 {
     "intro":{
         "title":"Welcome to your administrator panel!",
-        "text":"From here you can manage the data of your company, as well as the data of the users who register on your website."
+        "text":"From here you can manage the data of your website. You can add, edit or delete data. You can do this by clicking on the menu items on the right.",
+        "text2":"",
+
+        "categories":{
+            "title":"Categories",
+            "text":"Here you can manage the categories of your products.You can add, edit or delete them."
+        
+        }
+    
     },
 
     "categories":{

@@ -1,23 +1,35 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux"
-import { getProducts, getProduct, updateProduct } from "../../../../redux/features/products/actions";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux"
+import { getProducts, updateProduct } from "../../../../redux/features/products/actions";
+import { useGetProductQuery } from "../../../../redux/restApi";
 import { ButtonCategories, ErrorCategory, FormCategory, InputCategories, SuccessCategory, TextareaCategories } from "../../../DashboardAdminCategories/components/styled-components/dashboardAdminCategory";
 
 const FormUpdateProduct = ({ idCategory, idProduct}) => {
 
-    const actualProduct = useSelector(state => state.products.actualProduct)
+    const { data , status } = useGetProductQuery(`${idCategory}/${idProduct}`);
 
     const dispatch = useDispatch()
 
     const [form, setForm] = useState({
-        name: actualProduct.name,
-        description: actualProduct.description,
-        descriptionModal: actualProduct.descriptionModal,
-        img: actualProduct.img,
-        link: actualProduct.link,
-        price: actualProduct.price,
+        name: '',
+        description: '',
+        descriptionModal: '',
+        img: '',
+        link: '',
+        price: '',
     });
+    useEffect(() => {
+        if( status === 'fulfilled' ){
+            setForm({
+                name: data?.name,
+                description: data?.description,
+                descriptionModal: data?.descriptionModal,
+                img: data?.img,
+                link: data?.link,
+                price: data?.price,
+            });
+        }
+    }, [data]);
 
     const [readyUpdate, setReadyUpdate] = useState(false);
 
@@ -62,7 +74,7 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
             const res = await updateProduct( idCategory , obj);
             if(res === 'Product updated') {
                 dispatch(getProducts(idCategory));
-                dispatch(getProduct(idCategory, idProduct));
+                useGetProductQuery(`${idCategory}/${idProduct}`);
                 setValidForm(null);
                 setErrorBack('');
                 setFineBack(res);
@@ -73,73 +85,73 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
             }
         }
     }
-
-    useEffect(() => {
-        dispatch((getProduct(idCategory, idProduct)));
-      }, []);
     
   return (
-    <FormCategory 
-        onSubmit={handleOnSubmit}
-    >
-        <h2>Update Product</h2>
-        <label htmlFor="name">Product name</label>
-        <InputCategories
-            type="text" 
-            name="name" 
-            value={form.name}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <label htmlFor="description">Description</label>
-        <TextareaCategories
-            type="text" 
-            name="description" 
-            value={form.description}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <label htmlFor="descriptionModal">Description Modal</label>
-        <TextareaCategories
-            type="text"
-            name="descriptionModal"
-            value={form.descriptionModal}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <label htmlFor="img">Image</label>
-        <InputCategories 
-            type="text" 
-            name="img" 
-            value={form.img}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <label htmlFor="link">Link to Stripe</label>
-        <InputCategories
-            type="text"
-            name="link"
-            value={form.link}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <label htmlFor="price">Price</label>
-        <InputCategories
-            type="number"
-            name="price"
-            value={form.price}
-            onChange={handleChange}
-            disabled={!readyUpdate}
-        />
-        <ButtonCategories 
-            type="submit" 
-            value={readyUpdate ? 'Update' : 'Click to update'}
-        />
-        
-        {validForm === false && <ErrorCategory>Complete all fields</ErrorCategory>}
-        {errorBack && <ErrorCategory>{errorBack}</ErrorCategory>}
-        {fineBack && <SuccessCategory>{fineBack}</SuccessCategory>}
-    </FormCategory>
+    <>
+        {data && (
+            <FormCategory 
+                onSubmit={handleOnSubmit}
+            >
+                <h2>Update Product</h2>
+                <label htmlFor="name">Product name</label>
+                <InputCategories
+                    type="text" 
+                    name="name" 
+                    value={form.name}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <label htmlFor="description">Preview Description</label>
+                <TextareaCategories
+                    type="text" 
+                    name="description" 
+                    value={form.description}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <label htmlFor="descriptionModal">Description Modal</label>
+                <TextareaCategories
+                    type="text"
+                    name="descriptionModal"
+                    value={form.descriptionModal}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <label htmlFor="img">Image</label>
+                <InputCategories 
+                    type="text" 
+                    name="img" 
+                    value={form.img}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <label htmlFor="link">Link to Stripe</label>
+                <InputCategories
+                    type="text"
+                    name="link"
+                    value={form.link}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <label htmlFor="price">Price</label>
+                <InputCategories
+                    type="number"
+                    name="price"
+                    value={form.price}
+                    onChange={handleChange}
+                    disabled={!readyUpdate}
+                />
+                <ButtonCategories 
+                    type="submit" 
+                    value={readyUpdate ? 'Update' : 'Click to update'}
+                />
+                
+                {validForm === false && <ErrorCategory>Complete all fields</ErrorCategory>}
+                {errorBack && <ErrorCategory>{errorBack}</ErrorCategory>}
+                {fineBack && <SuccessCategory>{fineBack}</SuccessCategory>}
+            </FormCategory>
+        )}
+    </>
   )
 }
 

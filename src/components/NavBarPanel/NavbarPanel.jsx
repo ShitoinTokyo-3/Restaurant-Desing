@@ -30,11 +30,11 @@ const NavbarPanel = () => {
                 {t('admin.opcion4')}
             </NavbarPanelLink>
         </NavbarPanelLinkContainer>
-        <NavbarPanelLinkContainer>
+        {/* <NavbarPanelLinkContainer>
             <NavbarPanelLink to="/dashboard-admin/orders">
                 {t('admin.opcion5')}
             </NavbarPanelLink>
-        </NavbarPanelLinkContainer>
+        </NavbarPanelLinkContainer> */}
     </ContainerNavbarPanel>
   )
 }

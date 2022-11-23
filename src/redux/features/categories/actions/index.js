@@ -1,5 +1,11 @@
 import axios from "axios";
-import { setCategoriesRedux, setActualCategoryRedux, setActualCategoryWithProductsRedux } from "..";
+import { 
+    setCategoriesRedux, 
+    cleanCategoriesRedux,
+    setActualCategoryRedux, 
+    setActualCategoryWithProductsRedux,
+    cleanActualCategoryWithProductsRedux
+} from "..";
 import URL_BACKEND from "../../../../utilities/BackEnd/ruta";
 
 
@@ -32,6 +38,18 @@ export const getCategory = (id) => {
                 dispatch(setActualCategoryRedux(message));
             }
         }
+    }
+}
+
+export const cleanCategories= () => {
+    return async (dispatch)=>{
+        dispatch(cleanCategoriesRedux());
+    }
+}
+
+export const cleanCategoryWithCategories = (id) => {
+    return async (dispatch)=>{
+        dispatch(cleanActualCategoryWithProductsRedux());
     }
 }
 
@@ -81,11 +99,11 @@ export const updateCategory = async(category) => {
     }
 }
 
-export const deleteCategory = async(id) => {
+export const deleteCategory = async (id) => {
     try {
         await axios.delete(`${URL_BACKEND}/categories/${id}`);
     } catch (error) {
-        console.log(error.response.data);
-        return error.response.data;
+        console.log(error);
+        return error;
     }
 }

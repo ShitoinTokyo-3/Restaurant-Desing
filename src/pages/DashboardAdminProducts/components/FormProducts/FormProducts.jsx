@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createProduct, getProducts } from "../../../../redux/features/products/actions";
+import { cleanProducts, createProduct, getProducts } from "../../../../redux/features/products/actions";
+import Product from "../../../Categories/components/Product/Product";
 import { ButtonCategories,ErrorCategory, FormCategory, InputCategories, SuccessCategory, TextareaCategories } from "../../../DashboardAdminCategories/components/styled-components/dashboardAdminCategory"
 
 
@@ -22,12 +23,24 @@ const FormProducts = () => {
       price: '',
       valid: null,
   });
+  
+  const [productInfo, setProductInfo] = useState({
+    name: 'Name',
+    price:'999',
+    img:'https://res.cloudinary.com/daqumb8mh/image/upload/v1666975790/Service%20Images/Logo_Design_hn5pni.png',
+    descriptionModal:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+})
 
   const handleChange = (e) => {
     setProduct({
         ...product,
         [e.target.name]: e.target.value
     })
+    setProductInfo({
+        ...productInfo,
+        [e.target.name]: e.target.value
+    })
+
     setFineBack('');
 }
 
@@ -55,6 +68,7 @@ const handleOnSubmit = async (e) => {
       }
       const response = await createProduct(actualCategory.id,obj);
       if(response  === 'Product created'){
+          dispatch(cleanProducts());
           dispatch(getProducts(actualCategory.id));
           setProduct({
             name: '',
@@ -74,56 +88,76 @@ const handleOnSubmit = async (e) => {
   }
 }
 
+
+
   return (
-    <FormCategory 
-      onSubmit={handleOnSubmit}
+    <div
+        style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            width: '100%',
+        }}
     >
-        <h2>Create Product</h2>
-        <InputCategories
-            type="text" 
-            placeholder="Product name" 
-            name="name"
-            value={product.name}
-            onChange={handleChange}
-        />        
-        <TextareaCategories
-            placeholder="Description Modal"
-            name="descriptionModal"
-            value={product.descriptionModal}
-            onChange={handleChange}
+        <Product 
+            name={productInfo.name}
+            price={productInfo.price}
+            img={productInfo.img}
+            children={productInfo.descriptionModal}
         />
-        <TextareaCategories
-            placeholder="Description"
-            name="description"
-            value={product.description}
-            onChange={handleChange}
-        />
-        <InputCategories
-            type="text"
-            placeholder="Image" 
-            name="img"
-            value={product.img}
-            onChange={handleChange}
-        />
-        <InputCategories
-            type="text"
-            placeholder="Link to Stripe"
-            name="link"
-            value={product.link}
-            onChange={handleChange}
-        />
-        <InputCategories
-            type="number"
-            placeholder="Price"
-            name="price"
-            value={product.price}
-            onChange={handleChange}
-        />
-        <ButtonCategories type='submit' value='Create' />
-        {product.valid === false && <ErrorCategory>Complete all fields</ErrorCategory>}
-        {errorBack && <ErrorCategory>{errorBack}</ErrorCategory>}
-        {fineBack && <SuccessCategory>{fineBack}</SuccessCategory>}
-    </FormCategory>
+
+        <FormCategory 
+        onSubmit={handleOnSubmit}
+        >
+            <h2>Create Product</h2>
+            <InputCategories
+                type="text" 
+                placeholder="Product name" 
+                name="name"
+                value={product.name}
+                onChange={handleChange}
+            />        
+            <TextareaCategories
+                placeholder="Preview Description"
+                name="descriptionModal"
+                value={product.descriptionModal}
+                onChange={handleChange}
+            />
+            <TextareaCategories
+                placeholder="Description"
+                name="description"
+                value={product.description}
+                onChange={handleChange}
+            />
+            <InputCategories
+                type="text"
+                placeholder="Image" 
+                name="img"
+                value={product.img}
+                onChange={handleChange}
+            />
+            <InputCategories
+                type="text"
+                placeholder="Link to Stripe"
+                name="link"
+                value={product.link}
+                onChange={handleChange}
+            />
+            <InputCategories
+                type="number"
+                placeholder="Price"
+                name="price"
+                value={product.price}
+                onChange={handleChange}
+            />
+            <ButtonCategories type='submit' value='Create' />
+            {product.valid === false && <ErrorCategory>Complete all fields</ErrorCategory>}
+            {errorBack && <ErrorCategory>{errorBack}</ErrorCategory>}
+            {fineBack && <SuccessCategory>{fineBack}</SuccessCategory>}
+        </FormCategory>
+
+    </div>
   )
 }
 

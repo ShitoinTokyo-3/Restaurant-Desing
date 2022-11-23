@@ -12,11 +12,18 @@ const products = createSlice({
         setProductsRedux: (state, action) => {
             state.products = action.payload;
         },
+        cleanProductsRedux: (state) => {
+            state.products = [];
+        },
         setActualProductRedux: (state, action) => {
             state.actualProduct = action.payload;
         },
     }
 });
 
-export const { setProductsRedux, setActualProductRedux} = products.actions;
+export const { 
+    setProductsRedux, 
+    cleanProductsRedux, 
+    setActualProductRedux
+} = products.actions;
 export default products.reducer;

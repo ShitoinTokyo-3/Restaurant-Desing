@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Navigate, useParams } from "react-router-dom"
 import ErrorInput from "../../components/ErrorInput/ErrorInput"
 import GoodMesage from "../../components/GoodMessage/GoodMesage"
+import ModalLogin from "../../components/ModalLogin/ModalLogin"
 import Navbar from "../../components/Navbar/Navbar"
 import { getCategoryByNames } from "../../redux/features/categories/actions"
 import {  getProductByNames } from "../../redux/features/products/actions"
@@ -132,9 +133,16 @@ const Payment = () => {
           setValidForm({...validForm, form: false})
         }
   }
+
+  const [modal, setModal] = useState(false);
+
+  const setModalFunction = () => {
+      setModal(false);
+  }
+
   return (
     <>
-      <Navbar/>
+      <Navbar modalOpen={modal} setModal={setModal}/>
       <ContainerFormPay
       >
         <h1>One more step to complete your order...</h1>
@@ -214,6 +222,11 @@ const Payment = () => {
         </Form>
       </ContainerFormPay>
 
+      <ModalLogin
+          open={modal}
+          functionUse={setModalFunction}
+          openModal={setModal}
+        />
     </>
   )
 }
