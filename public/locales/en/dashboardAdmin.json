@@ -2,14 +2,96 @@
     "intro":{
         "title":"Welcome to your administrator panel!",
         "text":"From here you can manage the data of your website. You can add, edit or delete data. You can do this by clicking on the menu items on the right.",
-        "text2":"",
 
         "categories":{
             "title":"Categories",
-            "text":"Here you can manage the categories of your products.You can add, edit or delete them."
+            "text":"Our categories group our services, an example of this is the Brand Identity category which contains services such as Logo Design, Business Cards, and Stationery Design.",
+            "text2":"When a category is created from this Dashboard it will be reflected in the Carousel of the main page, which will show the following information:",
         
+            "list1":{
+                "op1":"An image of the category",
+                "op2":"A title of the category (on mouse hover)",
+                "op3":"A description of the category (on mouse hover)",
+                "op4":"A background color for the carousel (on mouse hover)"
+            },
+
+            "text3":"In the Categories tab, the categories of our services are managed, we can create new ones, edit them and delete them if necessary.",
+
+            "Creation":{
+                "title":"Creation",
+                "text":"When entering the tab we will see a form that is necessary to fill all the boxes for the creation of a new Category, the data to enter are the following:",
+                "list2":{
+                    "op1":"Name: The name of the category",
+                    "op2":"Description: This information will be on the Carousel and on the category page.",
+                    "op3":"Image URL: The image of the category",
+                    "op4":"Background Color: Background color when the mouse hovers over the image, default is red (#D51313)",
+                    "op5":"Font Color: Font color of the letter, default is white (#ffffff)"
+                },
+                "text2":"Entering data in the form will see changes in the preview overhead.",
+                "text3":"After completely filling out the form, you will be allowed to create the category, these will be seen in the list on the right."
+            },
+            "Update":{
+                "title":"Update",
+                "text":"On the right side, there is a list of the categories created, here you can click on the box that has the name of the categories to update the one you choose.",
+                "text2":"When clicking, a form will appear at the bottom with the information about the chosen category.",
+                "text3":"To update you have to click on the button below, which will enable the form to be able to make changes, just like the creation form there are color selectors in case you have to make changes to these.",
+                "text4":"After making the necessary modifications, click the Update button to upload changes."
+            },
+            "Delete":{
+                "title":"Delete",
+                "text":"In the list located on the right, each category box has a close icon which, when selected, will open a delete confirmation modal."
+            }
+        },
+
+        "Services":{
+            "title":"Services",
+            "text":"Our services are grouped into categories, these will be reflected on the category page after entering the carousel on the main page, each service will also have a page with its specific information.",
+            "text2":"Our services will be created in this dashboard, very similar to how categories are created.",
+            "text3":"These products need the following information:",
+
+            "list1":{
+                "op1":"Name: The name of the service",
+                "op2":"Preview description: This information will be on the category page.",
+                "op3":"Description: This information will be on the service page.",
+                "op4":"Image URL: The image of the service",
+                "op5":"Share payment link from Stripe: The link to the payment page of the service",
+                "op6":"Price: The price of the service (It must have the same price that appears in the Share payment link of Stripe)"
+            },
+
+            "text4" : "Services are managed in the Services tab, we can create new ones, edit them and delete them if necessary.",
+            "text5": "Upon entering we will have the product creation form and at the top, there is a list, here we can choose to which category the service that we are going to create will be associated, if it is not chosen from the list and a service is created, this will be associated with the first option in the list of categories.",
+
+            "Creation":{
+                "title":"Creation",
+                "text":"After associating the category with the service we want to create, we will have to fill in all the boxes for the creation of a new service.",
+                "text2":"The data to enter are the following:",
+
+                "list":{
+                    "op1":"Name: The name of the service",
+                    "op2":"Preview description: This description should be short, as it is a preview only.",
+                    "op3":"Description: This description should be long, as it is the description of the service.",
+                    "op4":"Image URL: The image of the service",
+                    "op5":"Share payment link from Stripe: The link to the payment page of the service. To create these links look at the following information.",
+                    "op6":"Price: The price of the service (It must have the same price that appears in the Share payment link of Stripe)"
+                },
+
+                "text3":"Entering data in the form will see changes in the preview above.",
+                "text4":"After completing the form completely, you will be allowed to create the service, these will be seen in the list on the right."
+            },
+
+            "Update":{
+                "title":"Update",
+                "text":"On the right side, there is a list of the services created, here you can click on the box that has the name of the service to update the selected one.",
+                "text2":"When clicking, a form will appear at the bottom with the information about the picked service.",
+                "text3":"To update you have to click on the button below, which will enable the form to make changes.",
+                "text4":"After making the necessary modifications, click the Update button to upload modifications."
+            },
+
+            "Delete":{
+                "title":"Delete",
+                "text":"In the list located on the right, each service box has a close icon which, when selected, will open a delete confirmation modal."
+            }
         }
-    
     },
 
     "categories":{
