@@ -7,7 +7,6 @@ import { ButtonCategories, ErrorCategory, FormCategory, InputCategories, Success
 const FormUpdateProduct = ({ idCategory, idProduct}) => {
 
     const { data , status } = useGetProductQuery(`${idCategory}/${idProduct}`);
-
     const dispatch = useDispatch()
 
     const [form, setForm] = useState({
@@ -72,9 +71,8 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
                 price: price,
             }
             const res = await updateProduct( idCategory , obj);
-            if(res === 'Product updated') {
+            if(res === 'Service updated') {
                 dispatch(getProducts(idCategory));
-                useGetProductQuery(`${idCategory}/${idProduct}`);
                 setValidForm(null);
                 setErrorBack('');
                 setFineBack(res);
@@ -92,8 +90,8 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
             <FormCategory 
                 onSubmit={handleOnSubmit}
             >
-                <h2>Update Product</h2>
-                <label htmlFor="name">Product name</label>
+                <h2>Update Service</h2>
+                <label htmlFor="name">Service name</label>
                 <InputCategories
                     type="text" 
                     name="name" 
@@ -101,19 +99,19 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
                     onChange={handleChange}
                     disabled={!readyUpdate}
                 />
-                <label htmlFor="description">Preview Description</label>
+                <label htmlFor="description">Preview description</label>
                 <TextareaCategories
                     type="text" 
                     name="description" 
-                    value={form.description}
+                    value={form.descriptionModal}
                     onChange={handleChange}
                     disabled={!readyUpdate}
                 />
-                <label htmlFor="descriptionModal">Description Modal</label>
+                <label htmlFor="descriptionModal">Description</label>
                 <TextareaCategories
                     type="text"
                     name="descriptionModal"
-                    value={form.descriptionModal}
+                    value={form.description}
                     onChange={handleChange}
                     disabled={!readyUpdate}
                 />

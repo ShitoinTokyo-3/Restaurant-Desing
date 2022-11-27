@@ -8,13 +8,16 @@ import {
 } from "./styled-components/NavbarAdmin"
 import Logo from "../../assets/Logo/Logo_Restaurant_Design_Bar.png"
 import { BiHome } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const NavbarAdmin = () => {
   return (
     <NavbarAdminContainer>
         <NavbarAdminWrapper>
             <AdminIconLogo>
-                <img src={Logo} alt="logo" />
+                <Link to="/">
+                    <img src={Logo} alt="logo" />
+                </Link>
             </AdminIconLogo>
             <AdminMenu>
                 <AdminMenuItem>

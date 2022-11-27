@@ -79,8 +79,8 @@ const Products = () => {
             </WhiteContainer>:
             (<WhiteContainer>
                 <TextContainer>
-                    <h1>Products</h1>
-                    <p>Here you can see all the products of the selected category</p>
+                    <h1>Services</h1>
+                    <p>Here you can see all the services of the selected category</p>
                 </TextContainer>
                 {categories[0]?.name &&
                 <OptionsCategories 
@@ -91,7 +91,7 @@ const Products = () => {
                 <ContainerCategories>
                     <FormProducts/>
                     <div style={{marginTop: '464px'}}>
-                        <strong>Click on a product to update it</strong>
+                        <strong>Click on a service to update it</strong>
                         <DivCategories>
                             <>
                                 {products.map(product => (

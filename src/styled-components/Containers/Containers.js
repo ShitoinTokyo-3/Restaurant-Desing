@@ -17,7 +17,6 @@ export const GrayContainer = styled.div`
 export const GrayContainerAdmin = styled.div`
     background-color: var(--Color-Container-Gray-Light);
     padding: 40px;
-    text-align: center;
     padding-top: 10px;
 
     @media (max-width: 768px) {
@@ -30,16 +29,6 @@ export const WhiteContainer = styled.div`
     background-color: var(--Color-Background-White);
     padding: 100px 40px;
     margin: 0 3px;
-
-
-    h1{
-        font-family: var(--Font-Family-Titles);
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    p{
-        font-family: var(--Font-Family-Text);
-    }
 `;
 
 export const GrayContainervariant = styled.div`
@@ -266,6 +255,36 @@ export const ContainerTextDescriptionServices = styled.div`
     margin-bottom: 2rem;
     h1,h2,h3,h4,h5,h6{
         font-family: var(--Font-Family-Titles);
+    }
+`;
+
+export const ContainerDescriptionServices = styled.div`
+    margin:auto;
+    width:75vw;
+    font-family: var(--Font-Family-Text);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        max-width: 450px;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-size: 2.3rem;
+        font-family: var(--Font-Family-Titles);
+        padding: 0.5rem 0;
+    }
+
+    div{
+        padding: 5rem;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 `;
 

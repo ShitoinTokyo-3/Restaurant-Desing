@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import s from './Carousel.module.css'
 
-const Carousel = ({ slides, media, carouselInfo }) => {
+const Carousel = ({ slides, media, carouselInfo, example }) => {
 
 
 
@@ -61,6 +61,7 @@ const Carousel = ({ slides, media, carouselInfo }) => {
                 <CarouselImgContainer
                     img={media(index)}
                     srcText={carouselInfo[index]}
+                    example={example}
                 />
               </div>
             </div>

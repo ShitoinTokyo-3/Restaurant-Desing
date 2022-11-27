@@ -3,10 +3,10 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Navigate, useParams } from "react-router-dom"
 import Navbar from "../../components/Navbar/Navbar"
-import { getCategoryByNames, getCategoryWithProducts } from "../../redux/features/categories/actions"
+import { getCategoryByNames } from "../../redux/features/categories/actions"
 import { getProduct, getProductByNames } from "../../redux/features/products/actions"
 import { getExamples, cleanExamples } from "../../redux/features/examples/actions"
-import { BolderLetter, ContainerTextDescriptionServices } from "../../styled-components/Containers/Containers"
+import { BolderLetter, ContainerDescriptionServices, ContainerTextDescriptionServices } from "../../styled-components/Containers/Containers"
 import ServicesBanner from "./components/ServicesBanner/ServicesBanner"
 import ServicesModalColors from "./components/ServicesModalColors/ServicesModalColors"
 import ServicesModalExamples from "./components/ServicesModalExamples/ServicesModalExamples"
@@ -100,9 +100,13 @@ const Service = () => {
         <Navbar modalOpen={modal} setModal={setModal}/>
         <ServicesBanner functionUse={setModalFormCategories}/>
         <ServicesSteps functionUse={setModalFormCategories}/>
-        <ContainerTextDescriptionServices>
-          <div dangerouslySetInnerHTML={{__html: product.description}}></div>
-        </ContainerTextDescriptionServices>
+        <ContainerDescriptionServices>
+          <img src={product.img} alt={product.name}/>
+          <div >
+            <h2>{product.name}</h2>
+            {product.description}
+          </div>
+        </ContainerDescriptionServices>
         {examples[0]?.name && <>
         
           <BolderLetter>

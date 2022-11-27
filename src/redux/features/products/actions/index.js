@@ -61,7 +61,7 @@ export const getProductByNames = (idCategory , name) => {
 export const createProduct = async(id, product) => {
     try {
         await axios.post(`${URL_BACKEND}/products/${id}`, product);
-        return 'Product created';
+        return 'Service created';
     } catch (error) {
         return error.response.data.message;
     }
@@ -79,7 +79,7 @@ export const createExamplesDescription = async(idCategory, id, examplesDescripti
 export const updateProduct = async(id, product) => {
     try {
         await axios.put(`${URL_BACKEND}/products/${id}/${product.id}`, product);
-        return 'Product updated';
+        return 'Service updated';
     } catch (error) {
         return error.response.data;
     }

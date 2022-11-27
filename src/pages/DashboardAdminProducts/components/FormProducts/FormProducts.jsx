@@ -67,7 +67,7 @@ const handleOnSubmit = async (e) => {
           price: product.price,
       }
       const response = await createProduct(actualCategory.id,obj);
-      if(response  === 'Product created'){
+      if(response  === 'Service created'){
           dispatch(cleanProducts());
           dispatch(getProducts(actualCategory.id));
           setProduct({
@@ -80,7 +80,7 @@ const handleOnSubmit = async (e) => {
             valid: null,
           })
           setErrorBack('');
-          setFineBack(`Product created in ${actualCategory.name}`);
+          setFineBack(`Service created in ${actualCategory.name}`);
       }else {
           setErrorBack(response);
           setFineBack('');
@@ -110,10 +110,10 @@ const handleOnSubmit = async (e) => {
         <FormCategory 
         onSubmit={handleOnSubmit}
         >
-            <h2>Create Product</h2>
+            <h2>Create Service</h2>
             <InputCategories
                 type="text" 
-                placeholder="Product name" 
+                placeholder="Service name" 
                 name="name"
                 value={product.name}
                 onChange={handleChange}

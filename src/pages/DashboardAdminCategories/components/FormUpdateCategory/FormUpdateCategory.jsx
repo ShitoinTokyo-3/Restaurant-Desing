@@ -74,7 +74,6 @@ const FormUpdateCategory = ({ idCategory }) => {
             const res = await updateCategory(obj);
             if(res === 'Category updated') {
                 dispatch(getCategories());
-                useGetCategoriesQuery(idCategory);
                 setValidForm(null);
                 setErrorBack('');
                 setFineBack(res);

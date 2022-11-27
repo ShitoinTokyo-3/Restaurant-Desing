@@ -9,8 +9,8 @@
     "admin":{
         "opcion1": "Intro",
         "opcion2": "Categories",
-        "opcion3": "Products",
-        "opcion4": "Products Examples",
+        "opcion3": "Services",
+        "opcion4": "Services Examples",
         "opcion5": "Orders"
     }
 }
