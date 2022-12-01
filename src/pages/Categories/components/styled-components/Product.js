@@ -76,6 +76,8 @@ export const ContainerProduct = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        align-self: center;
+
         span{
             margin: 0;
             align-self: center;

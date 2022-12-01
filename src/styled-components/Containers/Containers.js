@@ -266,8 +266,9 @@ export const ContainerDescriptionServices = styled.div`
     margin-bottom: 2rem;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
     img{
         max-width: 450px;
@@ -280,11 +281,23 @@ export const ContainerDescriptionServices = styled.div`
     }
 
     div{
-        padding: 5rem;
+        padding: 4rem;
+        width: 500px;
+        box-sizing: border-box;
+
     }
 
     @media (max-width: 768px) {
         flex-direction: column;
+
+
+        div{
+            padding: 3rem 1rem;
+            width: 100%;
+        }
+        img{
+            max-width: 100%;
+        }
     }
 `;
 

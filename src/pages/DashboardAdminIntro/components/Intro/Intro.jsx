@@ -7,6 +7,10 @@ import CategoriesPanelEdit from "../../../../assets/DashboardAdmin/CategoriesUpd
 import CategoriesSquare from "../../../../assets/DashboardAdmin/CategoriesSquare.png"
 import CategoriesUpdateReady from "../../../../assets/DashboardAdmin/CategoriesUpdateReady.png"
 import CategoriesDelete from "../../../../assets/DashboardAdmin/CategoriesDelete.png"
+import ServicesCategories from '../../../../assets/DashboardAdmin/ServicesCategories.png'
+import ServiceExample from "../../../../assets/DashboardAdmin/ServiceExample.png"
+import ServicesCategoriesList from "../../../../assets/DashboardAdmin/ServicesCategoriesList.png"
+import ServicesForm from "../../../../assets/DashboardAdmin/ServicesForm.png"
 
 const Intro = () => {
     const { t } = useTranslation(['dashboardAdmin']);
@@ -20,9 +24,23 @@ const Intro = () => {
             color:"#fff"
         },
         {
+            img:"https://res.cloudinary.com/daqumb8mh/image/upload/v1665585806/Images%20of%20carousel%20%28Categories%29/van_wraps_newspaper_trade_show_etc_pj91hs.jpg",
+            name:"Advertisement Design",
+            description:"Promotion and marketing are crucial for connecting to a new customer base, and at Restaurant Design Bar, we have the creativity and resources to craft advertisements such as newspaper ads, trade show booth design, billboards, etc.",
+            backgroundColor:"#1A1A1A",
+            color:"#fff"
+        },
+        {
             img:"https://res.cloudinary.com/daqumb8mh/image/upload/v1665585806/Images%20of%20carousel%20%28Categories%29/Menu_Design_w9dcet.jpg",
             name:"Menu Design",
             description:"Restaurant menus are effective marketing tools since they encourage customers to visually explore what is being served. A menu can draw customers' attention and perhaps keep your brand in their minds so they will return.",
+            backgroundColor:"#008999",
+            color:"#fff"
+        },
+        {
+            img:"https://res.cloudinary.com/daqumb8mh/image/upload/v1665585806/Images%20of%20carousel%20%28Categories%29/Printing_Design_Flyers_postcards_posters_brochures_banner_etc_dbo1do.jpg",
+            name:"Printing Design",
+            description:"Ranging from takeout menus to disposable menus, flyers to postcards, posters to table inserts, brochures to banners, and more, our printing design services are designed to cater to all your printing needs.",
             backgroundColor:"#008999",
             color:"#fff"
         }
@@ -35,6 +53,13 @@ const Intro = () => {
         return item.img;
     });
     const mediaByIndex = index => imgArray[index % imgArray.length];
+
+    const productInfo = {
+        name: 'Name',
+        price:'999',
+        img:'https://res.cloudinary.com/daqumb8mh/image/upload/v1666975786/Service%20Images/Business_Card_Design_rg0cff.png',
+        descriptionModal:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+    }
 
     return (
     <WhiteContainer>
@@ -160,8 +185,15 @@ const Intro = () => {
                 <li>{t("intro.Services.list1.op5")}</li>
                 <li>{t("intro.Services.list1.op6")}</li>
             </ul>
+
+            <img src={ServicesCategories} alt="Categories Panel Create" id="dashboardImgBig"/>
+            <img src={ServiceExample} alt="Categories Panel Create" id="dashboardImgBig"/>
+
             <p>{t("intro.Services.text4")}</p>
             <p>{t("intro.Services.text5")}</p>
+
+            <img src={ServicesCategoriesList} alt="Categories Panel Create" id="dashboardImgBig"/>
+
             <h3
                 id="servicesCreate"
             >{t("intro.Services.Creation.title")}</h3>
@@ -175,6 +207,9 @@ const Intro = () => {
                 <li>{t("intro.Services.Creation.list.op5")}</li>
                 <li>{t("intro.Services.Creation.list.op6")}</li>
             </ul>
+
+            <img src={ServicesForm} alt="Categories Panel Create" id="dashboardImgBig"/>
+
             <p>{t("intro.Services.Creation.text3")}</p>
             <p>{t("intro.Services.Creation.text4")}</p>
             <h3

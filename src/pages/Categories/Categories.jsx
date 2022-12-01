@@ -49,6 +49,8 @@ const Categories = () => {
         }
     }, [])
 
+    console.log(actualCategoryWithProducts)
+
   return (
     <>
         {actualCategoryWithProducts?.name &&<> 

@@ -102,7 +102,7 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
                 <label htmlFor="description">Preview description</label>
                 <TextareaCategories
                     type="text" 
-                    name="description" 
+                    name="descriptionModal" 
                     value={form.descriptionModal}
                     onChange={handleChange}
                     disabled={!readyUpdate}
@@ -110,7 +110,7 @@ const FormUpdateProduct = ({ idCategory, idProduct}) => {
                 <label htmlFor="descriptionModal">Description</label>
                 <TextareaCategories
                     type="text"
-                    name="descriptionModal"
+                    name="description"
                     value={form.description}
                     onChange={handleChange}
                     disabled={!readyUpdate}
