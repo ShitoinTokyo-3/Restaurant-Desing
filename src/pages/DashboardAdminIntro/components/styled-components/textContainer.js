@@ -45,3 +45,30 @@ export const TextContainer = styled.div`
     }
 
 `; 
+
+
+export const NavToUp = styled.div`
+    position: fixed;
+    bottom: 2.5rem;
+    right: 4rem;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 3rem;
+    color: var(--Color-Button-Blue);
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.3rem;
+
+    &:hover{
+        transform: scale(1.1);
+        color: var(--Color-Button-Blue-Hover);
+    }
+    
+`;
+

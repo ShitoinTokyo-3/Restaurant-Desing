@@ -1,7 +1,6 @@
+//Node Modules
 import { useTranslation } from "react-i18next";
-import Carousel from "../../../../components/Carousel/Carousel";
-import { WhiteContainer } from "../../../../styled-components/Containers/Containers"
-import { TextContainer } from "../styled-components/textContainer"
+//Images
 import CategoriesPanleCreate from "../../../../assets/DashboardAdmin/CategoriesPanel.png"
 import CategoriesPanelEdit from "../../../../assets/DashboardAdmin/CategoriesUpdate.png"
 import CategoriesSquare from "../../../../assets/DashboardAdmin/CategoriesSquare.png"
@@ -11,15 +10,32 @@ import ServicesCategories from '../../../../assets/DashboardAdmin/ServicesCatego
 import ServiceExample from "../../../../assets/DashboardAdmin/ServiceExample.png"
 import ServicesCategoriesList from "../../../../assets/DashboardAdmin/ServicesCategoriesList.png"
 import ServicesForm from "../../../../assets/DashboardAdmin/ServicesForm.png"
+import ServicesDiv from "../../../../assets/DashboardAdmin/ServicesDiv.png"
+import ServicesUpdate from "../../../../assets/DashboardAdmin/ServicesUpdate.png"
+import ServicesUpdateReady from "../../../../assets/DashboardAdmin/ServicesUpdateReady.png"
+import ServiceDelete from "../../../../assets/DashboardAdmin/ServiceDelete.png"
+//Components
+import Carousel from "../../../../components/Carousel/Carousel";
+import { WhiteContainer } from "../../../../styled-components/Containers/Containers"
+import { NavToUp, TextContainer } from "../styled-components/textContainer"
+//Icons
+import { HiChevronDoubleUp } from "react-icons/hi"
 
 const Intro = () => {
     const { t } = useTranslation(['dashboardAdmin']);
 
     const mainCarouselInfo = [
         {
+            img:"https://res.cloudinary.com/daqumb8mh/image/upload/v1665585805/Images%20of%20carousel%20%28Categories%29/Brand_Identity_logo_stationery_business_cards_leterhead_etc_z9wotf.jpg",
+            name:"Brand Indentity",
+            description:"A logo is the foundation of your brand identity  while letterheads, business cards, and envelopes help create the exceptional brand image. It’s safe to say that logo design leaves a long-lasting impact on the customers, so make sure it’s on point!",
+            backgroundColor:"#F5B700",
+            color:"#fff"
+        },
+        {
             img:"https://res.cloudinary.com/daqumb8mh/image/upload/v1665585806/Images%20of%20carousel%20%28Categories%29/Social_Media_w131ru.jpg",
             name:"Social Media",
-            description:"Genera un recuerdo duradero en tus clientes con el logotipo de tu negocio y el diseño de tus tarjetas profesionales.",
+            description:"Ranging from Facebook to Twitter and Instagram posts, high-quality designs can support your social media campaigns to expand the sales funnel. At Restaurant Design Bar, we can create posts that resonate with your audience.",
             backgroundColor:"#D51313",
             color:"#fff"
         },
@@ -204,7 +220,7 @@ const Intro = () => {
                 <li>{t("intro.Services.Creation.list.op2")}</li>
                 <li>{t("intro.Services.Creation.list.op3")}</li>
                 <li>{t("intro.Services.Creation.list.op4")}</li>
-                <li>{t("intro.Services.Creation.list.op5")}</li>
+                <li>{t("intro.Services.Creation.list.op5")}  <a href="https://stripe.com/docs/payments/payment-links" target="_blank">Share payment links</a>   </li>
                 <li>{t("intro.Services.Creation.list.op6")}</li>
             </ul>
 
@@ -216,14 +232,31 @@ const Intro = () => {
                 id="servicesEdit"
             >{t("intro.Services.Update.title")}</h3>
             <p>{t("intro.Services.Update.text")}</p>
+
+            <img src={ServicesDiv} alt="Categories Panel Create" id="dashboardImg"/>
+
             <p>{t("intro.Services.Update.text2")}</p>
+
+            <img src={ServicesUpdate} alt="Services not found" id="dashboardImgBig"/>
+
             <p>{t("intro.Services.Update.text3")}</p>
+
+            <img src={ServicesUpdateReady} alt="Services not found" id="dashboardImgBig"/>
+
             <p>{t("intro.Services.Update.text4")}</p>
             <h3
                 id="servicesDelete"
             >{t("intro.Services.Delete.title")}</h3>
             <p>{t("intro.Services.Delete.text")}</p>
+
+            <img src={ServiceDelete} alt="Services not found" id="dashboardImgBig"/>
+
         </TextContainer>
+        <a href="#">
+            <NavToUp>
+                <HiChevronDoubleUp/>
+            </NavToUp>
+        </a>
     </WhiteContainer>
   )
 }
