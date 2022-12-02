@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useParams } from "react-router-dom"
 import Footer from "../../components/Footer/Footer";
+import Loading from "../../components/Loading/Loading";
 import ModalLogin from "../../components/ModalLogin/ModalLogin";
 import Navbar from "../../components/Navbar/Navbar";
 import { cleanCategories, cleanCategoryWithCategories, getCategoryByNames, getCategoryWithProducts } from "../../redux/features/categories/actions";
@@ -49,10 +50,12 @@ const Categories = () => {
         }
     }, [])
 
-    console.log(actualCategoryWithProducts)
+
+    if (actualCategoryWithProducts === null) return <Loading />
 
   return (
     <>
+    
         {actualCategoryWithProducts?.name &&<> 
             <Navbar modalOpen={modal} setModal={setModal}/>
             <TextMainCategories>

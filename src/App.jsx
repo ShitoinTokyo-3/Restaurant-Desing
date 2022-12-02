@@ -21,6 +21,7 @@ import DashboardAdminExamples from './pages/DashboardAdminExamples/DashboardAdmi
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 //CSS
 import './App.css';
+import Loading from './components/Loading/Loading';
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
     return () => unsubscribe();
   }, []);
   return (
-    <Suspense fallback='Loading....'>
+    <Suspense fallback={<Loading/>}>
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/services/:category" element={<Categories/>} />

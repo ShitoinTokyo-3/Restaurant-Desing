@@ -3,7 +3,9 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Navigate, useParams } from "react-router-dom"
 import ErrorInput from "../../components/ErrorInput/ErrorInput"
+import Footer from "../../components/Footer/Footer"
 import GoodMesage from "../../components/GoodMessage/GoodMesage"
+import Loading from "../../components/Loading/Loading"
 import ModalLogin from "../../components/ModalLogin/ModalLogin"
 import Navbar from "../../components/Navbar/Navbar"
 import { getCategoryByNames } from "../../redux/features/categories/actions"
@@ -139,6 +141,8 @@ const Payment = () => {
   const setModalFunction = () => {
       setModal(false);
   }
+ 
+  if(product === null) return <Loading/>
 
   return (
     <>
@@ -227,6 +231,7 @@ const Payment = () => {
           functionUse={setModalFunction}
           openModal={setModal}
         />
+      <Footer/>
     </>
   )
 }

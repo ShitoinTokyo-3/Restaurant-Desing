@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 //Styled Components
 import { 
-    BigLetter,
     BolderLetter,
     TextMain,
     GrayContainer,
@@ -16,8 +15,6 @@ import {
     AiOutlineDollar,
     AiOutlineException
 } from "react-icons/ai";
-import { GrClear } from "react-icons/gr";
-
 //Components
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";

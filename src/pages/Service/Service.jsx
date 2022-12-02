@@ -15,6 +15,7 @@ import ServicesSteps from "./components/ServicesSteps/ServicesSteps"
 import { ContainerProductExample, ContainerProductsExamples } from "./components/styled-components/select"
 import Footer from "../../components/Footer/Footer"
 import ModalLogin from "../../components/ModalLogin/ModalLogin"
+import Loading from "../../components/Loading/Loading"
 
 const Service = () => {
 
@@ -94,8 +95,11 @@ const Service = () => {
       setModal(false);
   }
 
+  if(!product.id  || !examples.length) return <Loading/>
+
   return (
     <>
+    
       {product.name && <>
         <Navbar modalOpen={modal} setModal={setModal}/>
         <ServicesBanner functionUse={setModalFormCategories}/>
