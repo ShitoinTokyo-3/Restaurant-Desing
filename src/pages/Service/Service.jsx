@@ -16,6 +16,7 @@ import { ContainerProductExample, ContainerProductsExamples } from "./components
 import Footer from "../../components/Footer/Footer"
 import ModalLogin from "../../components/ModalLogin/ModalLogin"
 import Loading from "../../components/Loading/Loading"
+import FrequentlyAsked from "../../components/FrequentlyAsked/FrequentlyAsked"
 
 const Service = () => {
 
@@ -128,6 +129,8 @@ const Service = () => {
             })}
           </ContainerProductsExamples>
         </>}
+
+        <FrequentlyAsked/>
 
         <Footer/>
 

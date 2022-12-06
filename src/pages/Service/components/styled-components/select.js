@@ -131,10 +131,12 @@ export const ContainerColors = styled.div`
 
 export const ContainerProductsExamples = styled.div`
     display:flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     padding: .2rem;
+    max-width: 900px;
+    margin: 0 auto;
 `;
 
 export const ContainerProductExample = styled.div`

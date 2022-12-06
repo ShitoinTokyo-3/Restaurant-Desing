@@ -327,3 +327,98 @@ export const ContainerFlexBottom = styled.div`
     padding: 1rem 0;
     justify-content: space-evenly;
 `;
+
+
+export const ContainerExamples = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1000px;
+    font-family: var(--Font-Family-Text);
+
+
+    h2{
+        font-size: 2.3rem;
+        text-align: center;
+        font-family: var(--Font-Family-Titles);
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+`;
+
+export const Accordion = styled.div`
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    font-family: var(--Font-Family-Text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .accordion-toggle{
+        width: 75%;
+        height: 0px;
+        padding: 1rem 2rem;
+        opacity: 0;
+        transition:  
+        opacity 0.3s ease-in-out,
+        height 0.3s 0.3s ease-in-out;
+        background-color: var(--Color-Container-Gray-Light);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        border-radius: 5px;
+        line-height: 1.5rem;
+
+
+    }
+    .animated {
+        opacity: 1;
+        transition:  
+        height 0.3s ease-in-out,
+        opacity 0.3s 0.3s ease-in-out;
+    }
+
+`;
+
+export const ContainerExamplesRow = styled.div`
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+
+    h3{
+        padding-left: 1rem;
+    }
+`;
+
+export const ContainerAccordion = styled.div`
+
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    font-family: var(--Font-Family-Text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container-accordion-down{
+        margin-bottom: 1rem;
+        margin-top: 0;
+        transition: margin-bottom 0.3s ease-in-out;
+    }
+    .container-accordion-up{
+        margin-top: -1rem;
+        transition: margin-bottom 0.3s ease-in-out;
+    }
+`;

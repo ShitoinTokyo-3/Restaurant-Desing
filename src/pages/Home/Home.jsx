@@ -28,6 +28,7 @@ import HomeForm from "./components/HomeForm/HomeForm";
 import ModalForm from "./components/HomeBanner/components/ModalForm/ModalForm";
 import ModalCheckEmail from "../../components/ModalCheckEmail/ModalCheckEmail";
 import HomeCheckList from "./components/HomeCheckList/HomeCheckList";
+import { useGetCarouselQuery } from "../../redux/restApi";
 
 const Home = () => {
     
@@ -56,6 +57,8 @@ const Home = () => {
         setModalFormCheckEmail(false);
     }
 
+    const { data } = useGetCarouselQuery();
+    
     return (
         <div>
             <Navbar modalOpen={modal} setModal={setModal}/>
@@ -77,7 +80,8 @@ const Home = () => {
                     <span><AiOutlineException style={{'marginRight': '5px'}}/> {t("firstGreyContainer4")}</span>
                 </div>
             </TextUpperCarrousel>
-            <HomeCarousel/>
+            {data?.length
+             && <HomeCarousel  mainCarouselInfo={data}/>}
             <HomeChef setModal={setModalFormFunction}/>
             <GrayContainervariant>
                 <BolderLetter>

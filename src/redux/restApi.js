@@ -11,6 +11,9 @@ export const restApi = createApi({
         getProduct: builder.query({
             query: (ids) => `/products/${ids}`,
         }),
+        getCarousel: builder.query({
+            query: () => `/carousel`,
+        })
     })
 });
-export const { useGetCategoriesQuery, useGetProductQuery } = restApi;
+export const { useGetCategoriesQuery, useGetProductQuery, useGetCarouselQuery } = restApi;
